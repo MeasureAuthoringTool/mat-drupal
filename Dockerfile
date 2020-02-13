@@ -1,5 +1,18 @@
 FROM drupal:8
 
+# Install extras; mysql-client is for Drush
+RUN apt-get update && apt-get install -y \
+	curl \
+	git \
+	mysql-client \
+	vim \
+	wget
+
+# Install Drush
+RUN wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar && \
+	chmod +x drush.phar && \
+	mv drush.phar /usr/local/bin/drush
+
 # Disabling unused Apache modules
 RUN a2dismod status -f
 RUN a2dismod autoindex -f
