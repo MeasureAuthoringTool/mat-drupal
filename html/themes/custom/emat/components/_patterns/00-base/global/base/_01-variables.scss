@@ -5,9 +5,50 @@
 // and breakpoint related vars into
 // components/_patterns/00-base/_breakpoints.scss
 
+@import "sass-rem/rem";
+
 // Fonts
-$font-body: Georgia, Times, "Times New Roman", serif;
-$font-heading: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+@font-face {
+  font-family: 'Biryani';
+  src: url('/fonts/Biryani-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/Muli-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/Muli-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/Muli-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/Muli-BoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+$font-body: "Muli", sans-serif;
+$font-heading: "Biryani", sans-serif;
+
+// @import url('https://fonts.googleapis.com/css?family=Biryani:900|Muli:400,400i,700,700i&display=swap');
+// $font-body: "Muli", "Helvetica Neue", Arial, sans-serif;
+// $font-heading: "Geometria", "Work Sans", "Helvetica Neue", Arial, sans-serif;
 
 // Spacing
 $space: 1rem;
