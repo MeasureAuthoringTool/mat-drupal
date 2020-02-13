@@ -6,7 +6,7 @@ items:
   - name: $charcoal
     value: '#323a45'
   - name: $white
-    value: '#ffffff'
+    value: '#fff'
   - name: $lime
     value: '#42e288'
   - name: $lemon
