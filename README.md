@@ -2,19 +2,22 @@
 - PHP >= 7.0.8 (just to run composer)
 - [Composer](https://getcomposer.org/)
 - [Docker](https://docs.docker.com/get-docker/)
+- [Node v11.15](https://nodejs.org/en/download)
 
 ## First-Time Setup
 1. Install composer dependencies `composer install`
-2. Copy `.env.example` to `.env` and provide some values for the MySQL variables. Doesn't really matter
+2. Install theme dependencies `cd html/themes/custom/emat && npm install`
+3. Build the theme `npm start`. You can stop this once it's done, or just leave it running and change to anoter terminal/tab.
+4. Copy `.env.example` to `.env` and provide some values for the MySQL variables. Doesn't really matter
 what you use, except that MYSQL_HOSTNAME should match docker-compose service name for MySQL ("database").
-2. Start docker-compose `docker-compose up -d --build`
-3. Run drupal installer `docker-compose exec drupal drush si`. You'll have to provide some values here for MySQL username and password, etc.
+5. Start docker-compose `docker-compose up -d --build`.
+6. Run drupal installer `docker-compose exec drupal drush si`. You'll have to provide some values here for MySQL username and password, etc.
+7. Import Drupal config `docker-compose exec drupal drush cim -y`.
 
-## Loggin into local site
+## Logging into local site
 The drush site installer command generates an admin username and password. You can optionally store this, or just use drush to generate a one-time login link:
 - `docker-compose exec drupal drush uli`. That command will generate a URL like `http://default/user/reset/1/1581541762/VGGpYbY3vxoFuzAIuXII7K2csKjpqCN9tU4Ed-fWos8/login`.
 - Copy everything after `default` and past that after the site url.
-
 
 ## Usage
 
