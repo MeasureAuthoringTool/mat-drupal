@@ -15,3 +15,9 @@
 .link {
   @include link;
 }
+
+.text-long {
+  a {
+    @extend .link;
+  }
+}
