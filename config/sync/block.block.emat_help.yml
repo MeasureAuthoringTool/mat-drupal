@@ -1,0 +1,22 @@
+uuid: 3397bd1d-765b-493e-bd79-61e1626aa2d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - emat
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: emat_help
+theme: emat
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
