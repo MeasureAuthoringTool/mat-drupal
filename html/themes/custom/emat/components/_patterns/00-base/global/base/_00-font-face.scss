@@ -1,0 +1,56 @@
+// Geometria
+@font-face {
+  font-family: "Geometria";
+  src: url("/fonts/geometria/fonts/5274692/7df46830-cc76-49e2-9a31-9b5e66f6d2f0.eot?#iefix");
+  src:
+    url("/fonts/geometria/fonts/5274692/7df46830-cc76-49e2-9a31-9b5e66f6d2f0.eot?#iefix") format("eot"),
+    url("/fonts/geometria/fonts/5274692/94b1cc1e-d807-42ca-aaf3-6bbf596ceb05.woff2") format("woff2"),
+    url("/fonts/geometria/fonts/5274692/f2ea151a-abb2-4dac-8927-6a9f59f18544.woff") format("woff"),
+    url("/fonts/geometria/fonts/5274692/48782685-d39e-4ac3-ae74-6a94efe87e2f.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: url("/fonts/geometria/fonts/5274776/b5470e9c-a7b0-44a5-ad3c-2435d7ea5f42.eot?#iefix");
+  src:
+    url("/fonts/geometria/fonts/5274776/b5470e9c-a7b0-44a5-ad3c-2435d7ea5f42.eot?#iefix") format("eot"),
+    url("/fonts/geometria/fonts/5274776/bf6f0d4d-fa1d-41b2-82ce-9121554d60d9.woff2") format("woff2"),
+    url("/fonts/geometria/fonts/5274776/5a7753c6-cea5-45bf-8af7-5116dc61c588.woff") format("woff"),
+    url("/fonts/geometria/fonts/5274776/3da9db10-14af-4289-9cd2-a503bf7b59b0.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+// Muli
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/muli/Muli-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/muli/Muli-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/muli/Muli-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muli';
+  src: url('/fonts/muli/Muli-BoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+$font-geo: 'Geometria', 'Work Sans', 'Helvetica Neue', Arial, sans-serif;
+$font-muli: 'Muli', 'Helvetica Neue', Arial, sans-serif;
