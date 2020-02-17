@@ -1,6 +1,6 @@
 {% set teaser_base_class = teaser_base_class|default('teaser') %}
 
-<div {{ bem(teaser_base_class, (teaser_modifiers), teaser_blockname) }}>
+<section {{ bem(teaser_base_class, (teaser_modifiers), teaser_blockname) }}>
 
   {% include "@atoms/tag/tag.twig" with {
     tag_text: teaser_tag,
@@ -28,5 +28,4 @@
   } %}
     {% block link_content %}Read More &raquo;{% endblock %}
   {% endembed %}
-</div>
-
+</section>

@@ -1,0 +1,23 @@
+{% set list_view_base_class = list_view_base_class|default('list-view') %}
+
+<article {{ bem(list_view_base_class, (list_view_modifiers), list_view_blockname) }}>
+
+  {% include "@atoms/02-text/00-headings/_heading.twig" with {
+    heading_level: 1,
+    heading: list_view_title,
+    heading_blockname: list_view_base_class,
+    heading_base_class: 'title',
+  } %}
+
+  {% block list_view_content %}
+    {% for item in items %}
+      {% include "@molecules/teaser/teaser.twig" with {
+        teaser_title: item.title,
+        teaser_url: item.url,
+        teaser_tag: item.tag,
+        teaser_body: item.body,
+      } %}
+    {% endfor %}
+  {% endblock %}
+
+</article>
