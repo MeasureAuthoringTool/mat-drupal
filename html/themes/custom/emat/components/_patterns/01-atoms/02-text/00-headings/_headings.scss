@@ -3,85 +3,9 @@
 // All arguments are optional. If not defined, the defaults below will be used
 //
 
-$color-heading: $gray-darker;
+$color-heading: $charcoal;
 
-@mixin heading-xl($font-family: $font-heading, $font-size: 2rem, $line-height: 1.4, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 700, $margin: 0 0 0.5em) {
-  color: #{$color};
-  font-family: #{$font-family};
-  font-weight: #{$font-weight};
-  font-style: normal;
-  font-size: #{$font-size};
-  line-height: #{$line-height};
-  margin: #{$margin};
-  width: auto;
-
-  &__link {
-    color: $color-link;
-
-    &:hover {
-      color: $color-link-hover;
-    }
-  }
-}
-
-@mixin heading-large($font-family: $font-heading, $font-size: 1.8rem, $line-height: 1.4, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 700, $margin: 0 0 0.5em) {
-  color: #{$color};
-  font-family: #{$font-family};
-  font-weight: #{$font-weight};
-  font-style: normal;
-  font-size: #{$font-size};
-  line-height: #{$line-height};
-  margin: #{$margin};
-  width: auto;
-
-  &__link {
-    color: $color-link;
-
-    &:hover {
-      color: $color-link-hover;
-    }
-  }
-}
-
-@mixin heading-medium($font-family: $font-heading, $font-size: 1.4rem, $line-height: 1.6, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 700, $margin: 0 0 0.5em) {
-  color: #{$color};
-  font-family: #{$font-family};
-  font-weight: #{$font-weight};
-  font-style: normal;
-  font-size: #{$font-size};
-  line-height: #{$line-height};
-  margin: #{$margin};
-  width: auto;
-
-  &__link {
-    color: $color-link;
-
-    &:hover {
-      color: $color-link-hover;
-    }
-  }
-}
-
-@mixin heading-small($font-family: $font-heading, $font-size: 1.2rem, $line-height: 1.6, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 600, $margin: 0 0 0.5em) {
-  color: #{$color};
-  font-family: #{$font-family};
-  font-weight: #{$font-weight};
-  font-style: normal;
-  font-size: #{$font-size};
-  line-height: #{$line-height};
-  margin: #{$margin};
-  width: auto;
-
-  &__link {
-    color: $color-link;
-
-    &:hover {
-      color: $color-link-hover;
-    }
-  }
-}
-
-@mixin heading-xs($font-family: $font-heading, $font-size: 1.1rem, $line-height: 2, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 600, $margin: 0 0 0.5em) {
+@mixin heading($font-family: $font-geo, $font-size: 1rem, $line-height: 1.4, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 900, $margin: 0 0 0.5em) {
   color: #{$color};
   font-family: #{$font-family};
   font-weight: #{$font-weight};
@@ -101,24 +25,47 @@ $color-heading: $gray-darker;
 }
 
 .h1 {
-  @include heading-xl();
+  @include heading($font-size: rem(40px));
+
+  &.title {
+    font-size: rem(44px);
+
+    &::after {
+      content: " ";
+      padding-top: $space;
+      display: block;
+      width: 100%;
+      max-width: 5rem;
+      border-bottom: 0.5rem solid $lime;
+    }
+  }
+
+  &.display {
+    font-size: rem(58px);
+  }
 }
 
 .h2 {
-  @include heading-large();
+  @include heading($font-size: rem(32px));
+
+  padding-bottom: $space-one-half;
+  border-bottom: 2px solid $charcoal20;
 }
 
 .h3 {
-  @include heading-medium();
+  @include heading($font-size: rem(24px));
 }
 
 .h4 {
-  @include heading-small();
+  @include heading($font-size: rem(20px));
 }
 
-.h5,
+.h5 {
+  @include heading($font-size: rem(18px));
+}
+
 .h6 {
-  @include heading-xs();
+  @include heading($font-size: rem(16px));
 }
 
 // TODO: BEM selectors should be applied to wysiwyg-created content

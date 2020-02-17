@@ -1,15 +1,23 @@
 /// Link
-$color-link: $gray-darker;
-$color-link--hover: $gray-light;
 
 @mixin link {
-  color: $color-link;
+  color: $dragonfruit;
+  font-weight: bold;
 
-  &:hover {
-    color: $color-link--hover;
+  &:active,
+  &:hover,
+  &:focus,
+  &:visited {
+    color: $blueberry;
   }
 }
 
 .link {
   @include link;
+}
+
+.text-long {
+  a {
+    @extend .link;
+  }
 }

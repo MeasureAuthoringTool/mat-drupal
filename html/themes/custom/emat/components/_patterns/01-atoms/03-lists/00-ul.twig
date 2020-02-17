@@ -21,6 +21,20 @@
         "li_modifiers": ul_item.li_modifiers,
         "li_blockname": ul_item.li_blockname,
       } %}
+      {% if ul_item.below %}
+      <ul {{ bem(ul_base_class, (ul_modifiers), ul_blockname) }}>
+        {% for ul_item_below in ul_item.below %}
+          {% include "@atoms/03-lists/_list-item.twig" with {
+            "list_item_label": ul_item_below.label,
+            "list_item_content": ul_item_below.content,
+            "li_base_class": ul_item_below.li_base_class,
+            "li_base_class": ul_item_below.li_base_class,
+            "li_modifiers": ul_item_below.li_modifiers,
+            "li_blockname": ul_item_below.li_blockname,
+          } %}
+        {% endfor %}
+      </ul>
+      {% endif %}
     {% endfor %}
   {% endblock %}
 </ul>

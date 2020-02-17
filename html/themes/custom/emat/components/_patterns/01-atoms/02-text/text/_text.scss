@@ -5,26 +5,40 @@
 }
 
 @mixin body-copy {
-  font-family: $font-body;
-  font-size: 0.9rem;
-  line-height: 1.6em;
+  font-family: $font-muli;
+  font-size: 1rem;
+  line-height: 1.5em;
 }
 
 body {
-  color: $gray;
+  color: $charcoal;
 
   @include body-copy;
 }
 
+
 .paragraph {
   @include paragraph;
+
+  line-height: 1.5em;
+
+  &--lead {
+    font-size: rem(20px);
+    font-style: italic;
+  }
+
+  &--small {
+    font-size: rem(12px);
+  }
 }
 
 .blockquote {
+  font-family: $font-geo;
   font-style: italic;
-  border-left: solid 3px $color-border;
-  margin-left: 1em;
-  padding-left: 1em;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: rem(20px);
+  line-height: 1.75em;
 }
 
 .hr {

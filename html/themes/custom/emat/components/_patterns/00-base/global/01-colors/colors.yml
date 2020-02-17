@@ -1,22 +1,24 @@
 items:
+  - name: $dragonfruit
+    value: '#c209f2'
+  - name: $blueberry
+    value: '#0c2499'
+  - name: $charcoal
+    value: '#323a45'
   - name: $white
-    value: white
-  - name: $near-white
-    value: '#f2f2f2'
-  - name: $gray-lightest
-    value: '#e5e5e5'
-  - name: $gray-lighter
-    value: '#ccc'
-  - name: $gray-light
-    value: '#999'
-  - name: $gray
-    value: '#666'
-  - name: $gray-dark
-    value: '#4c4c4c'
-  - name: $gray-darker
-    value: '#333'
-  - name: $black
-    value: black
+    value: '#fff'
+  - name: $lime
+    value: '#42e288'
+  - name: $lemon
+    value: '#ffe403'
+  - name: $charcoal70
+    value: '#6f757c'
+  - name: $charcoal3
+    value: '#fafafa'
+  - name: $charcoal10
+    value: '#eaebec'
+  - name: $charcoal20
+    value: '#d6d7d9'
 meta:
   description: >-
     To add to these items, use Sass variables that start with <code>$</code> in

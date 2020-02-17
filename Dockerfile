@@ -53,5 +53,5 @@ RUN echo 'RewriteOptions Inherit ' >> /etc/apache2/sites-enabled/000-default.con
 RUN sed -i 's/LogLevel warn/LogLevel notice core:info/' /etc/apache2/apache2.conf
 
 RUN echo '# LimitRequest*' >> /etc/apache2/conf-enabled/security.conf
-RUN echo 'LimitRequestline 512' >> /etc/apache2/conf-enabled/security.conf
+RUN echo 'LimitRequestline 4096' >> /etc/apache2/conf-enabled/security.conf
 RUN echo 'LimitRequestBody 20971520' >> /etc/apache2/conf-enabled/security.conf

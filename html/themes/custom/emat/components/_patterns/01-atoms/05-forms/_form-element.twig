@@ -44,12 +44,15 @@
  * @see template_preprocess_form_element()
  */
 #}
-{%
-  set classes = [
-    'js-form-item',
-    'form-item',
-  ]
-%}
+{% if classes is null %}
+  {%
+    set classes = [
+      'js-form-item',
+      'form-item',
+    ]
+  %}
+{% endif %}
+
 {%
   set description_classes = [
     'form-item__description',

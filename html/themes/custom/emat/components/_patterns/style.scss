@@ -3,6 +3,8 @@
 @import "normalize";
 // A cleaner way to do breakpoints/media queries, http://breakpoint-sass.com/
 @import "breakpoint-sass/stylesheets/breakpoint";
+// Library for converting px to rem units.
+@import "sass-rem/rem";
 // End libs
 
 @import "00-base/**/*.scss";

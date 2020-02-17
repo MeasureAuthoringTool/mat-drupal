@@ -1,10 +1,17 @@
 ol_items:
-  1:
-    content: "This is the first item in the <ol>."
-  2:
-    label: "This is the optional label"
-    content: "And here is the item that goes with the label."
-  3:
-    content: "Here's the third item."
-  4:
-    content: "And here's the last item."
+  - content: The Measure Authoring Tool is provided "as is" and "as available". The user assumes sole risk for use of the tool.
+  - content: >-
+      Measure Authoring Tool Web Site does not endorse and makes no representations or express or implied warranties of any nature with respect to
+      the Measure Authoring Tool, including, without limitation, implied warranties of merchantability and fitness for a particular purpose. In particular,
+      Measure Authoring Tool Web Site does not represent or warrant that:
+    below:
+      - content: Use of the Measure Authoring Tool will meet your requirements;
+      - content: Use of the Measure Authoring Tool will be uninterrupted, timely, or free from error;
+      - content: Electronic clinical quality measures (eCQMs) created by using the Measure Authoring Tool will meet your requirements;
+      - content: Use of the Measure Authoring Tool to create an eCQM will result in endorsement of that measure.
+  - content: >-
+      The Measure Authoring Tool Web Site is not responsible for the applications or outcomes, including decisions or actions taken as a result of eCQMs
+      generated with the Measure Authoring Tool.
+  - content: >-
+      Use of the Symantec™ Validation and ID Protection (VIP) software is subject to Terms of Use of Symantec™. The Measure Authoring Tool does not
+      warrant the suitability, nor is liable, for any damages caused by installing software from Symantec™.
