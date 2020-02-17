@@ -1,17 +1,37 @@
 .info-box {
-  background-color: $gray-lightest;
-  margin-bottom: 2%;
-  padding: 1em;
-  width: 100%;
-}
+  background-color: $white;
+  padding: $space + $space-one-half;
+  border-radius: 5px;
+  box-shadow: 0 0 $space $charcoal20;
+  display: block;
 
-.info-box__title {
-  @include heading($font-size: 1rem);
+  &__title {
+    @include heading($font-size: rem(24px));
+  }
 
-  font-weight: 400;
-  text-align: center;
-}
+  &__subtitle {
+    @include paragraph;
 
-.info-box__link {
-  @include link;
+    color: $charcoal70;
+  }
+
+  &__body {
+    @include paragraph;
+  }
+
+  &__link {
+    color: $blueberry;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    margin-top: auto;
+
+    .icon {
+      margin-left: $space;
+      color: $blueberry;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 }
