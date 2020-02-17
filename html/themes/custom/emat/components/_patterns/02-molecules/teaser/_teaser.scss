@@ -1,0 +1,21 @@
+.teaser {
+
+  &__title {
+    @include heading($font-size: rem(24px));
+
+    margin-top: $space-one-half;
+  }
+
+  &__title-link {
+    color: $charcoal;
+  }
+
+  &__body {
+    @include paragraph;
+  }
+
+  &__link {
+    color: $charcoal;
+  }
+
+}
