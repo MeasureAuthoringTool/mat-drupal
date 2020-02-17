@@ -1,9 +1,16 @@
 .info-box {
+  @include transition(box-shadow, 0.3s, ease-out);
+
   background-color: $white;
   padding: $space + $space-one-half;
   border-radius: 5px;
   box-shadow: 0 0 $space $charcoal20;
-  display: block;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    box-shadow: 0 0 $space $charcoal70;
+  }
 
   &__title {
     @include heading($font-size: rem(24px));
@@ -26,6 +33,10 @@
     text-decoration: none;
     display: flex;
     margin-top: auto;
+
+    &:hover {
+      text-decoration: underline;
+    }
 
     .icon {
       margin-left: $space;

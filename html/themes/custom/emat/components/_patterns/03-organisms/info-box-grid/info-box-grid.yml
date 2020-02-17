@@ -1,40 +1,38 @@
 grid_title:
-  "This is a Grid Title"
+  "Latest News & Alerts"
+
+grid_cta:
+  title: "View All"
+  url: "#"
+
 boxes:
   one:
     ib_modifiers:
       1:
         "grid-item"
-    infobox_title:
-      "Test Title that is fairly long for a reason"
-    infobox_text:
-      "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
+    infobox_title: "MAT Downtime Notification - September Monthly Maintenance"
+    infobox_subtitle: Sep 12, 2019
+    infobox_text: "The Measure Authoring Tool (MAT) will be unavailable from Friday, September 13, 2019 at…"
     infobox_link:
-      "#"
+      title: Read More
+      url: "#"
   two:
     ib_modifiers:
       1:
         "grid-item"
-    infobox_title:
-      "Short for a reason"
-    infobox_text:
-      "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a."
-    infobox_title_modifiers:
-      1:
-        centered
+    infobox_title: "Measure Authoring Tool version 5.8 Released"
+    infobox_subtitle: Aug 27, 2019
+    infobox_text: "The deployment of the MAT version 5.8 into the production environment was successful. Please note, the MAT is now …"
+    infobox_link:
+      title: Read More
+      url: "#"
   three:
     ib_modifiers:
       1:
         "grid-item"
-    infobox_title:
-      "Test Title that is whatever"
-    infobox_text:
-      "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
-  four:
-    ib_modifiers:
-      1:
-        "grid-item"
-    infobox_title:
-      "Test Title 4"
-    infobox_text:
-      "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
+    infobox_title: "MAT Downtime Notification - August Monthly Maintenance"
+    infobox_subtitle: Aug 8, 2019
+    infobox_text: "The Measure Authoring Tool (MAT) will be unavailable from Friday, August 9, 2019 at…"
+    infobox_link:
+      title: Read More
+      url: "#"
