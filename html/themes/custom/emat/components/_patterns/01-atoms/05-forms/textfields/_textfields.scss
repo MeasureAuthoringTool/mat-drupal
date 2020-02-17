@@ -1,0 +1,107 @@
+.form-item {
+  color: $charcoal;
+  margin-bottom: 1em;
+  max-width: 32em;
+  font-family: $font-muli;
+
+  @include clearfix;
+}
+
+.form-item__label {
+  display: block;
+  font-weight: bold;
+
+  &--required {
+    &::after {
+      color: $dragonfruit;
+      content: "*";
+      margin-left: $space-one-fourth;
+    }
+  }
+
+  @include xs {
+    display: block;
+    margin-right: 2%;
+    padding: $space-one-half 0;
+  }
+}
+
+.form-item__textfield {
+  border: 2px solid $charcoal20;
+  padding: $space-one-half;
+  max-width: 100%;
+
+  &:focus {
+    border-color: $black;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $charcoal70;
+    opacity: 1;
+  }
+
+  &:-moz-placeholder {
+    color: $charcoal70;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $charcoal70;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $charcoal70;
+    opacity: 1;
+  }
+}
+
+.form-item__description {
+  margin-top: $space;
+  font-size: rem(12px);
+}
+
+.form-fieldset {
+  border: none;
+  margin: 0 0 2em 0;
+  padding: 0;
+
+  .form-item {
+    max-width: 31em;
+  }
+}
+
+.form-item__file {
+  display: none;
+}
+
+.file-box {
+  max-width: 32em;
+  display: flex;
+
+  &__label {
+    @extend .form-item__textfield;
+
+    color: $charcoal70;
+    width: 100%;
+  }
+
+  .button,
+  &__button {
+    @include transition(color, 0.3s, ease-out);
+    @include transition(background-color, 0.3s, ease-out);
+
+    border: 2px solid $blueberry;
+    border-radius: 5px;
+    padding: $space-one-half ($space + $space-one-half);
+    margin-left: $space;
+    color: $blueberry;
+    background-color: $white;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $charcoal10;
+    }
+  }
+}

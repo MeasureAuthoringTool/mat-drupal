@@ -1,0 +1,22 @@
+uuid: 2d4ccef3-f1ad-45e4-b86b-4141df4b7211
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - emat
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: emat_breadcrumbs
+theme: emat
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

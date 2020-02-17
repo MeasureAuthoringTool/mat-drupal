@@ -1,0 +1,50 @@
+@mixin button($bg:$white, $color:$blueberry, $hoverBg: $charcoal10, $hoverColor: $white, $font-size: rem(20px)) {
+  @include transition(color, 0.3s, ease-out);
+  @include transition(background-color, 0.3s, ease-out);
+
+  background-color: $bg;
+  border: 2px solid $blueberry;
+  color: $color;
+  cursor: pointer;
+  line-height: 1.4;
+  padding: $space-one-half $space-triple;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-family: $font-geo;
+  font-size: $font-size;
+  font-weight: bold;
+  border-radius: $space-triple;
+
+  &:visited {
+    color: $color;
+  }
+
+  &:hover {
+    background-color: $hoverBg;
+  }
+}
+
+@mixin button-primary {
+  @include button($lime, $blueberry, lighten($lime, 10%));
+
+  border-color: darken($lime, 10%);
+}
+
+@mixin button-alt {
+  @include button($white, $charcoal);
+
+  border-color: $charcoal;
+}
+
+.button {
+  @include button;
+
+  &--primary {
+    @include button-primary;
+  }
+
+  &--alt {
+    @include button-alt;
+  }
+}
