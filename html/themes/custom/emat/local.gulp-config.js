@@ -5,7 +5,7 @@
   module.exports = {
     pa11y: {
       includeNotices: false,
-      includeWarnings: true,
+      includeWarnings: false,
       ignore: [
         'WCAG2AA.Principle2.Guideline2_4.2_4_2.H25.2',
         'WCAG2AA.Principle2.Guideline2_4.2_4_2.H25.1.NoTitleEl',
