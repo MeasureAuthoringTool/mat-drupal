@@ -1,7 +1,13 @@
-.branding {
+.site-branding {
   display: flex;
+  align-items: center;
+  background-color: $white;
 
-  .logo {
-    display: inline-block;
+  .branding {
+    flex: 1 1 40%;
+  }
+
+  .inline-nav {
+    flex: 1 1 30%;
   }
 }
