@@ -1,26 +1,21 @@
-.inline-menu {
-  @include list-reset;
-}
+.inline-nav {
 
-.inline-menu__item {
-  margin: 0 1em 0.5em 0;
-
-  @include large {
-    display: inline;
-    margin-bottom: 1em;
+  &__items {
+    @include list-reset;
   }
 
-  &:last-child {
-    margin-right: 0;
+  &__item {
+    margin-right: $space-double;
+    display: inline-flex;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
-}
 
-.inline-menu__link {
-  @include link;
-
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  text-decoration: none;
-  text-transform: uppercase;
+  &__link {
+    font-weight: normal;
+    text-decoration: none;
+    color: $charcoal;
+  }
 }
