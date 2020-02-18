@@ -12,6 +12,11 @@
 {% endif %}
 
 <div {{ bem('layout-container', (layout_modifiers)) }}>
+
+  {% block page_site_branding %}
+    {% include "@organisms/site/site-branding/site-branding.twig" %}
+  {% endblock %}
+
   {% block page_header %}
     {% include "@organisms/site/site-header/site-header.twig" %}
   {% endblock %}

@@ -1,13 +1,6 @@
 <header class="header">
   <div class="header__wrap">
     {% block header_content %}
-      {% include "@atoms/04-images/00-image/figure.twig" with {
-        img_src: '../../images/logo.png',
-        img_alt: 'Logo',
-        img_url: logo_link_url|default('/'),
-        image_figure_base_class: 'logo',
-        image_link_blockname: 'logo',
-      } %}
       {% include "@molecules/menus/main-nav/main-nav.twig" with {
         items: main_nav_items
       } %}

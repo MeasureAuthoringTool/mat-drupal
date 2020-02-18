@@ -49,6 +49,12 @@
 {% endif %}
 
 {% extends "@templates/_default.twig" %}
+  {% block page_site_branding %}
+    {% if page.site_branding %}
+      {{ page.site_branding }}
+    {% endif %}
+  {% endblock %}
+
   {% block page_header %}
     {% if page.header %}
       {{ page.header }}
