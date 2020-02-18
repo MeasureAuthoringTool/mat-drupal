@@ -1,0 +1,10 @@
+main_nav_modifiers: ['pl-demo']
+
+items:
+  - title: "Item 1"
+    url: "#"
+    in_active_trail: true
+  - title: "Item 2"
+    url: "#"
+  - title: "Item 3"
+    url: "#"

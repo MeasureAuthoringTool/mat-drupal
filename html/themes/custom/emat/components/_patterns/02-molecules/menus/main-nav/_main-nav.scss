@@ -1,0 +1,35 @@
+.main-nav {
+
+  &--pl-demo {
+    background-image: linear-gradient(to right, #44499b, #4481ca);
+  }
+
+  &__items {
+    @include list-reset;
+  }
+
+  &__item {
+    display: inline-flex;
+    margin-right: $space-double;
+    padding: $space 0;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-family: $font-geo;
+    font-size: rem(20px);
+    font-weight: 700;
+    color: $white;
+    text-decoration: none;
+    line-height: 1.5;
+
+    &--active,
+    &:hover {
+      border-bottom: 0.25rem solid $lemon;
+    }
+  }
+
+}
