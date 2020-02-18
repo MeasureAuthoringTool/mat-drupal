@@ -1,0 +1,17 @@
+<div class="icons-demo" id="icons">
+  {% for item in items %}
+    <div>
+      {% include "@atoms/04-images/icons/_social-icon.twig" with {
+        link_url: item.url,
+        icon_name: item.value,
+        icon_role: item.role,
+        icon_title: item.title,
+        icon_desc: item.desc,
+        icon_decorative: item.decorative,
+        icon_modifiers: icon_modifiers,
+      } %}
+      <p>{{ item.value }}</p>
+    </div>
+  {% endfor %}
+</div>
+<br>
