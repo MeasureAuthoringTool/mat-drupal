@@ -1,6 +1,6 @@
 .site-branding {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   background-color: $white;
 
   .branding {
@@ -9,5 +9,13 @@
 
   .inline-nav {
     flex: 1 1 30%;
+    padding-right: $space-double;
+  }
+
+  .search-form {
+    flex: 1 0 1px;
+    border-left: 2px solid $charcoal20;
+    display: flex;
+    justify-content: center;
   }
 }
