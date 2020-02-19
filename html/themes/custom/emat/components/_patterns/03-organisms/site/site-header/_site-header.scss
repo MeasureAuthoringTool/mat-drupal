@@ -1,6 +1,9 @@
 .header {
-  // Temporary until we get the actual image to use here.
-  background-image: linear-gradient(to right, #44499b, #4481ca);
+  background-image: url('/images/Hero-Background@1x.png');
+
+  &--hero {
+    background-image: url('/images/Hero-Background@2x.png');
+  }
 
   &__wrap {
     @include wrapper;

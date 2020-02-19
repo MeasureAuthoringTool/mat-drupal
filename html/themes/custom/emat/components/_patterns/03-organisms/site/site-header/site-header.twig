@@ -1,4 +1,4 @@
-<header class="header">
+<header {{ bem('header', (site_header_modifiers)) }}>
   <div class="header__wrap">
     {% block header_content %}
       {% include "@molecules/menus/main-nav/main-nav.twig" with {
