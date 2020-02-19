@@ -1,0 +1,9 @@
+.list-view {
+
+  &__title {
+    @include page-title;
+
+    margin-bottom: $space-triple;
+  }
+
+}

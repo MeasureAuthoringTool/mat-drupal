@@ -1,0 +1,32 @@
+{#
+/**
+ * Available variables:
+ * - tag_base_class - the base class
+ * - tag_modifiers - array of modifiers to add to the base classname
+ * - tag_blockname - blockname prepended to the base classname
+ *
+ * - tag_text - Text to be displayed in the tag.
+ *
+ * - tag_url - (optional) the url the heading should poing to
+ * - tag_link_attributes - key/value attributes to pass to link
+ * - tag_link_base_class - override the link base class
+ * - tag_link_modifiers - override the link modifiers
+ * - tag_link_blockname - override the link block name (defaults to tag_base_class)
+ */
+#}
+{% set tag_base_class = tag_base_class|default('tag') %}
+
+<span {{ bem(tag_base_class, (tag_modifiers), tag_blockname) }}>
+  {% if tag_url %}
+    {% include "@atoms/01-links/link/link.twig" with {
+      "link_content": tag_text,
+      "link_url": tag_url,
+      "link_attributes": tag_link_attributes,
+      "link_base_class": tag_link_base_class,
+      "link_modifiers": tag_link_modifiers,
+      "link_blockname": tag_link_blockname|default(tag_base_class),
+    } %}
+  {% else %}
+    {{ tag_text }}
+  {% endif %}
+</span>

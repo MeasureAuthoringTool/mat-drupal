@@ -24,20 +24,24 @@ $color-heading: $charcoal;
   }
 }
 
+@mixin page-title {
+  @include heading($font-size: rem(44px));
+
+  &::after {
+    content: " ";
+    padding-top: $space;
+    display: block;
+    width: 100%;
+    max-width: 5rem;
+    border-bottom: 0.5rem solid $lime;
+  }
+}
+
 .h1 {
   @include heading($font-size: rem(40px));
 
   &.title {
-    font-size: rem(44px);
-
-    &::after {
-      content: " ";
-      padding-top: $space;
-      display: block;
-      width: 100%;
-      max-width: 5rem;
-      border-bottom: 0.5rem solid $lime;
-    }
+    @include page-title;
   }
 
   &.display {
