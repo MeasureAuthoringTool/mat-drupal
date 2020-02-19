@@ -3,7 +3,7 @@
   "htmlClass": "pl",
   "bodyClass": "body",
   "branding": {
-    "logo": "../../images/Logo-CMSgov.svg",
+    "logo": "/images/Logo-CMSgov.svg",
     "slogan": "The Centers for Medicare & Medicaid Services"
   },
   "img": {
@@ -102,8 +102,7 @@
     },
     {
       "title": "News & Alerts",
-      "url": "#",
-      "in_active_trail": true
+      "url": "#"
     },
     {
       "title": "Training & Resources",

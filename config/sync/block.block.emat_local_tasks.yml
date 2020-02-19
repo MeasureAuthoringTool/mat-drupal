@@ -9,7 +9,7 @@ _core:
 id: emat_local_tasks
 theme: emat
 region: content
-weight: -40
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

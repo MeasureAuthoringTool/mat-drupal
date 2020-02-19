@@ -23,9 +23,12 @@ ckeditor_stylesheets:
   - dist/style.css
 
 regions:
+  branding: Branding
   header: Header
   content: Content  # the content region is required
   sidebar: 'Sidebar'
+  footer_left: Footer Blocks Left
+  footer_right: Footer Blocks Right
   footer: Footer
 
 # Remove unwanted system stylesheets
