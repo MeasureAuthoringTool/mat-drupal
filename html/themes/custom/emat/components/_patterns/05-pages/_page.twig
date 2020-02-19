@@ -76,6 +76,18 @@
     {{ page.content }}
   {% endblock %}
 
+  {% block page_footer_left %}
+    {% if page.footer_left %}
+      {{ page.footer_left }}
+    {% endif %}
+  {% endblock %}
+
+  {% block page_footer_right %}
+    {% if page.footer_right %}
+      {{ page.footer_right }}
+    {% endif %}
+  {% endblock %}
+
   {% block page_footer %}
     {% if page.footer %}
       {{ page.footer }}

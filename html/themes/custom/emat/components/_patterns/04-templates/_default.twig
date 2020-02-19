@@ -39,6 +39,15 @@
 
   </main>
 
+  <footer class="footer-blocks">
+    {% block page_footer_left %}
+      {% include "@organisms/site/footer-left/footer-left.twig" %}
+    {% endblock %}
+    {% block page_footer_right %}
+      {% include "@organisms/site/footer-right/footer-right.twig" %}
+    {% endblock %}
+  </footer>
+
   {% block page_footer %}
     {% include "@organisms/site/site-footer/site-footer.twig" %}
   {% endblock %}

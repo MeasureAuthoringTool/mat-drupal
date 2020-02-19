@@ -207,5 +207,27 @@
       "title": "Inspector General",
       "url": "#"
     }
-  ]
+  ],
+  "footer_right": {
+    "hhs_cms": {
+      "body": [
+        "A federal government website managed and paid for by the U.S. Centers for Medicare & Medicaid Services.",
+        "7500 Security Boulevard, Baltimore, MD 21244"
+      ],
+      "social": [
+        {
+          "url": "#",
+          "icon": "facebook-f"
+        },
+        {
+          "url": "#",
+          "icon": "twitter"
+        },
+        {
+          "url": "#",
+          "icon": "linkedin-in"
+        }
+      ]
+    }
+  }
 }
