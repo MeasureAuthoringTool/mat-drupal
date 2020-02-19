@@ -1,17 +1,48 @@
 .info-box {
-  background-color: $gray-lightest;
-  margin-bottom: 2%;
-  padding: 1em;
-  width: 100%;
-}
+  @include transition(box-shadow, 0.3s, ease-out);
 
-.info-box__title {
-  @include heading($font-size: 1rem);
+  background-color: $white;
+  padding: $space + $space-one-half;
+  border-radius: 5px;
+  box-shadow: 0 0 $space $charcoal20;
+  display: flex;
+  flex-direction: column;
 
-  font-weight: 400;
-  text-align: center;
-}
+  &:hover {
+    box-shadow: 0 0 $space $charcoal70;
+  }
 
-.info-box__link {
-  @include link;
+  &__title {
+    @include heading($font-size: rem(24px));
+  }
+
+  &__subtitle {
+    @include paragraph;
+
+    color: $charcoal70;
+  }
+
+  &__body {
+    @include paragraph;
+  }
+
+  &__link {
+    color: $blueberry;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    margin-top: auto;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    .icon {
+      margin-left: $space;
+      color: $blueberry;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
 }
