@@ -12,6 +12,11 @@
 {% endif %}
 
 <div {{ bem('layout-container', (layout_modifiers)) }}>
+
+  {% block page_site_branding %}
+    {% include "@organisms/site/site-branding/site-branding.twig" %}
+  {% endblock %}
+
   {% block page_header %}
     {% include "@organisms/site/site-header/site-header.twig" %}
   {% endblock %}
@@ -33,6 +38,15 @@
     </div>
 
   </main>
+
+  <footer class="footer-blocks">
+    {% block page_footer_left %}
+      {% include "@organisms/site/footer-left/footer-left.twig" %}
+    {% endblock %}
+    {% block page_footer_right %}
+      {% include "@organisms/site/footer-right/footer-right.twig" %}
+    {% endblock %}
+  </footer>
 
   {% block page_footer %}
     {% include "@organisms/site/site-footer/site-footer.twig" %}

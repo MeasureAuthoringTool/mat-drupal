@@ -1,0 +1,20 @@
+{% set inline_nav_base_class = inline_nav_base_class|default('inline-nav') %}
+
+<nav {{ bem(inline_nav_base_class, (inline_nav_modifiers), inline_nav_blockname) }}>
+  <ul {{ bem('items', '', inline_nav_base_class) }}>
+    {% for item in items %}
+      {% set item_modifiers = [] %}
+      {% if item.in_active_trail == TRUE %}
+        {% set item_modifiers = ['active'] %}
+      {% endif %}
+      <li {{ bem('item', item_modifiers, inline_nav_base_class) }}>
+        {% include "@atoms/01-links/link/link.twig" with {
+          "link_content": item.title,
+          "link_url": item.url,
+          "link_blockname": inline_nav_base_class,
+          "link_modifiers": item_modifiers,
+        } %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

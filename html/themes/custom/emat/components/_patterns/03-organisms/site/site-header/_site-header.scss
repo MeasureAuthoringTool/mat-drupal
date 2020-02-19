@@ -1,1 +1,11 @@
-//  Empty
+.header {
+  background-image: url('/images/Hero-Background@1x.png');
+
+  &--hero {
+    background-image: url('/images/Hero-Background@2x.png');
+  }
+
+  &__wrap {
+    @include wrapper;
+  }
+}

@@ -1,7 +1,9 @@
 <footer class="footer">
-  {% block footer_content %}
-    {% include "@molecules/menus/inline-menu/inline-menu.twig" with {
-      items: footer_menu_items
-    } %}
-  {% endblock %}
+  <div class="footer__wrap">
+    {% block footer_content %}
+      {% include "@molecules/menus/inline-nav/inline-nav.twig" with {
+        items: footer_nav_items
+      } %}
+    {% endblock %}
+  </div>
 </footer>

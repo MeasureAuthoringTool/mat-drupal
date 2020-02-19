@@ -1,0 +1,40 @@
+{% set hhs_cms_base_class = hhs_cms_base_class|default('hhs-cms') %}
+<section {{ bem(hhs_cms_base_class, (hhs_cms_modifiers), hhs_cms_blockname) }}>
+
+  <div {{ bem('logos', '', hhs_cms_base_class) }}>
+    {% include "@atoms/04-images/00-image/figure.twig" with {
+      img_src: '../../images/Logo-HHS@3x.png',
+      img_alt: 'Logo',
+      img_url: logo_link_url|default('/'),
+      image_figure_base_class: 'logo',
+      image_link_blockname: 'logo',
+    } %}
+    {% include "@atoms/04-images/00-image/figure.twig" with {
+      img_src: '../../images/Logo-CMS@3x.png',
+      img_alt: 'Logo',
+      img_url: logo_link_url|default('/'),
+      image_figure_base_class: 'logo',
+      image_link_blockname: 'logo',
+    } %}
+  </div>
+
+  <div {{ bem('body', '', hhs_cms_base_class) }}>
+    {% block hhs_cms_body_content %}
+      {% for item in hhs_cms_body %}
+        <p>{{ item }}</p>
+      {% endfor %}
+    {% endblock %}
+  </div>
+
+  <ul {{ bem('social', '', hhs_cms_base_class) }}>
+    {% for item in social_links %}
+      <li {{ bem('social-item', '', hhs_cms_base_class) }}>
+        {% include "@atoms/04-images/icons/_social-icon.twig" with {
+          icon_name: item.icon,
+          link_url: item.url,
+        } %}
+      </li>
+    {% endfor %}
+  </ul>
+
+</section>

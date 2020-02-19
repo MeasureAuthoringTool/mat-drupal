@@ -1,0 +1,14 @@
+.social-link {
+  width: 4rem;
+  height: 4rem;
+  background-color: $charcoal70;
+  border-radius: 50%;
+  padding: 1rem;
+  display: inline-block;
+
+  &__icon {
+    color: $white;
+    width: 2rem;
+    height: 2rem;
+  }
+}

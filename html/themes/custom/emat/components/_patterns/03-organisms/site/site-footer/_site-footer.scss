@@ -1,3 +1,41 @@
 .footer {
-  clear: both;
+  padding: $space-quadruple 0;
+
+  &__wrap {
+    @include wrapper;
+  }
+}
+
+.footer-blocks {
+  display: flex;
+  border-style: solid;
+  border-color: #EBEFF8;
+  border-width: 2px 0 2px 0;
+
+  &__left {
+    flex: 1 1 60%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: $space;
+    background-color: #F6F8FC;
+
+    .resource-nav {
+      max-width: calc(60vw - calc(calc(100vw - #{$max-width}) / 2));
+      margin-left: auto;
+    }
+  }
+
+  &__right {
+    flex: 1 1 40%;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: $space-triple;
+    padding-right: $space;
+    background-color: #E9F0F9;
+
+    .hhs-cms {
+      max-width: calc(40vw - calc(calc(100vw - #{$max-width}) / 2));
+      margin-right: auto;
+    }
+  }
 }

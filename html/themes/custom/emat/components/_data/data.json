@@ -2,6 +2,10 @@
   "title" : "Pattern Lab",
   "htmlClass": "pl",
   "bodyClass": "body",
+  "branding": {
+    "logo": "../../images/Logo-CMSgov.svg",
+    "slogan": "The Centers for Medicare & Medicaid Services"
+  },
   "img": {
     "landscape_4x3": {
       "src": "../../images/fpo_4x3.png",
@@ -90,5 +94,140 @@
     { },
     { },
     { }
-  ]
+  ],
+  "main_nav_items": [
+    {
+      "title": "Home",
+      "url": "#"
+    },
+    {
+      "title": "News & Alerts",
+      "url": "#",
+      "in_active_trail": true
+    },
+    {
+      "title": "Training & Resources",
+      "url": "#"
+    },
+    {
+      "title": "Open Source Community",
+      "url": "#"
+    },
+    {
+      "title": "Contact Us",
+      "url": "#"
+    }
+  ],
+  "secondary_nav_items": [
+    {
+      "title": "About Us",
+      "url": "#"
+    },
+    {
+      "title": "Newsroom",
+      "url": "#"
+    },
+    {
+      "title": "Data & Research",
+      "url": "#"
+    }
+  ],
+  "resource_nav_items": [
+    {
+      "title": "CMS & HHS Websites",
+      "url": "#",
+      "below": [
+        {
+          "title": "Medicare.gov",
+          "url": "#"
+        },
+        {
+          "title": "MyMedicare.gov",
+          "url": "#"
+        },
+        {
+          "title": "Medicaid.gov",
+          "url": "#"
+        },
+        {
+          "title": "InsureKidsNow.gov",
+          "url": "#"
+        },
+        {
+          "title": "HealthCare.gov",
+          "url": "#"
+        },
+        {
+          "title": "HHS.gov",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "title": "Helpful Links",
+      "url": "#",
+      "below": [
+        {
+          "title": "Acronyms",
+          "url": "#"
+        },
+        {
+          "title": "Contacts",
+          "url": "#"
+        },
+        {
+          "title": "Glossary",
+          "url": "#"
+        },
+        {
+          "title": "Archive",
+          "url": "#"
+        }
+      ]
+    }
+  ],
+  "footer_nav_items": [
+    {
+      "title": "Web Policies",
+      "url": "#"
+    },
+    {
+      "title": "Plain Language",
+      "url": "#"
+    },
+    {
+      "title": "No Fear Act",
+      "url": "#"
+    },
+    {
+      "title": "Freedom of Information Act",
+      "url": "#"
+    },
+    {
+      "title": "Inspector General",
+      "url": "#"
+    }
+  ],
+  "footer_right": {
+    "hhs_cms": {
+      "body": [
+        "A federal government website managed and paid for by the U.S. Centers for Medicare & Medicaid Services.",
+        "7500 Security Boulevard, Baltimore, MD 21244"
+      ],
+      "social": [
+        {
+          "url": "#",
+          "icon": "facebook-f"
+        },
+        {
+          "url": "#",
+          "icon": "twitter"
+        },
+        {
+          "url": "#",
+          "icon": "linkedin-in"
+        }
+      ]
+    }
+  }
 }
