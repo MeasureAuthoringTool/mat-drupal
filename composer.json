@@ -24,6 +24,7 @@
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/devel": "^2.1",
+        "drupal/menu_trail_by_path": "^1.2",
         "drupal/pathauto": "^1.6",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "fourkitchens/emulsify": "^3.1",

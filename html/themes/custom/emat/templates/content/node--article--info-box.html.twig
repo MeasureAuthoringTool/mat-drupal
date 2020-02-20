@@ -73,7 +73,7 @@
 
 {% embed "@molecules/info-box/info-box.twig" with {
   infobox_title: label,
-  infobox_subtitle: date,
+  infobox_subtitle: node.created.value|format_date('medium_date'),
   infobox_link_url: url,
   ib_modifiers: ["grid-item"],
 } %}

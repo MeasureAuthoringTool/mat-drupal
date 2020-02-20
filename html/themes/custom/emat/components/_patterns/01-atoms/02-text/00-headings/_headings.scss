@@ -25,7 +25,7 @@ $color-heading: $charcoal;
 }
 
 @mixin page-title {
-  @include heading($font-size: rem(44px));
+  @include heading($font-size: rem(44px), $margin: 0 0 3rem);
 
   &::after {
     content: " ";
