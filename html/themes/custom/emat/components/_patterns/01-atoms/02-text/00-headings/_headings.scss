@@ -5,7 +5,7 @@
 
 $color-heading: $charcoal;
 
-@mixin heading($font-family: $font-geo, $font-size: 1rem, $line-height: 1.25, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 900, $margin: 0 0 0.5em) {
+@mixin heading($font-family: $font-heading, $font-size: 1rem, $line-height: 1.25, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 800, $margin: 0 0 0.5em) {
   color: #{$color};
   font-family: #{$font-family};
   font-weight: #{$font-weight};
@@ -40,7 +40,7 @@ $color-heading: $charcoal;
 .h1 {
   @include heading($font-size: rem(40px));
 
-  &.title {
+  &--page-title {
     @include page-title;
   }
 
