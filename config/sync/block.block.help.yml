@@ -1,0 +1,20 @@
+uuid: dead82f5-6dbb-4caa-baa6-9c75e4e68553
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - emat
+id: help
+theme: emat
+region: system
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

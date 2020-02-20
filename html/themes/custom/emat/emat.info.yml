@@ -25,6 +25,7 @@ ckeditor_stylesheets:
   - dist/style.css
 
 regions:
+  system: System
   branding: Branding
   header: Header
   content: Content  # the content region is required

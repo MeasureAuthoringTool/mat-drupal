@@ -62,10 +62,9 @@
   {% endblock %}
 
   {% block page_system %}
-    {{ page.breadcrumb }}
-    {{ page.highlighted }}
-    {{ page.help }}
-    {{ messages }}
+    {% if page.system %}
+      {{ page.system }}
+    {% endif %}
   {% endblock %}
 
   {% block page_sidebar %}
