@@ -26,9 +26,7 @@
  */
 #}
 
-{# {{ kint(content) }} #}
-
 {% include "@molecules/blocks/branding/branding.twig" with {
-  site_logo: "/" ~ directory ~ "/images/Logo-CMSgov.svg",
+  site_logo: content.site_logo['#uri'],
   site_slogan: content.site_slogan,
 } %}
