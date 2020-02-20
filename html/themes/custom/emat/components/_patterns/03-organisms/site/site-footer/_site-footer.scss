@@ -9,7 +9,7 @@
 .footer-blocks {
   display: flex;
   border-style: solid;
-  border-color: #EBEFF8;
+  border-color: $footer-block-border;
   border-width: 2px 0 2px 0;
 
   &__left {
@@ -17,7 +17,7 @@
     padding-top: 8rem;
     padding-bottom: 8rem;
     padding-left: $space;
-    background-color: #F6F8FC;
+    background-color: $footer-block-left-bg;
 
     .resource-nav {
       max-width: calc(60vw - calc(calc(100vw - #{$max-width}) / 2));
@@ -31,7 +31,7 @@
     padding-bottom: 8rem;
     padding-left: $space-triple;
     padding-right: $space;
-    background-color: #E9F0F9;
+    background-color: $footer-block-right-bg;
 
     .hhs-cms {
       max-width: calc(40vw - calc(calc(100vw - #{$max-width}) / 2));
