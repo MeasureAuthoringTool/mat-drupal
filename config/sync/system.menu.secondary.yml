@@ -1,0 +1,8 @@
+uuid: 708a08ed-b754-4f79-bafd-bbf3ef183845
+langcode: en
+status: true
+dependencies: {  }
+id: secondary
+label: 'Secondary nav'
+description: 'Secondary nav for placement in the branding region.'
+locked: false

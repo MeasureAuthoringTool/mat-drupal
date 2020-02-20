@@ -18,14 +18,19 @@ libraries:
 #       component:
 #         css/chosen-drupal.css: false
 
+logo: 'images/Logo-CMSgov@3x.png'
+
 # CKEditor stylesheet loads in wysiwyg to give content editors a better experience
 ckeditor_stylesheets:
   - dist/style.css
 
 regions:
+  branding: Branding
   header: Header
   content: Content  # the content region is required
   sidebar: 'Sidebar'
+  footer_left: Footer Blocks Left
+  footer_right: Footer Blocks Right
   footer: Footer
 
 # Remove unwanted system stylesheets

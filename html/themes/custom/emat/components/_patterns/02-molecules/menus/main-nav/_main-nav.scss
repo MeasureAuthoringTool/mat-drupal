@@ -25,10 +25,11 @@
     color: $white;
     text-decoration: none;
     line-height: 1.5;
+    border-bottom: 0.25rem solid transparent;
 
     &--active,
     &:hover {
-      border-bottom: 0.25rem solid $lemon;
+      border-color: $lemon;
     }
   }
 

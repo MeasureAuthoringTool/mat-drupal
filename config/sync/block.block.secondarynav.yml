@@ -1,0 +1,25 @@
+uuid: fafef680-66ca-47d2-93e1-2eebd2cf300e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.secondary
+  module:
+    - system
+  theme:
+    - emat
+id: secondarynav
+theme: emat
+region: branding
+weight: -4
+provider: null
+plugin: 'system_menu_block:secondary'
+settings:
+  id: 'system_menu_block:secondary'
+  label: 'Secondary nav'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }
