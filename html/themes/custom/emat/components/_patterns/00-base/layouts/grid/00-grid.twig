@@ -9,7 +9,7 @@
       } %}
       {% if grid_cta %}
         {% embed "@atoms/01-links/link/link.twig" with {
-          href: grid_cta.url,
+          link_url: grid_cta.url,
         } %}
           {% block link_content %}
             {{ grid_cta.title }}
