@@ -2,8 +2,6 @@
 .tabs__nav {
   @include list-reset;
 
-  border-bottom: 1px solid $gray-lightest;
-
   @include large {
     border-left: 1px solid $gray-lightest;
     display: flex;
@@ -32,10 +30,17 @@
 
 // Drupal Local Tasks variant
 .tabs__nav--local-tasks {
-  margin: 1em 0 0.5em;
   padding: 0;
+  justify-content: flex-end;
 }
 
 .tabs__link--local-tasks {
   padding: 0.3em 1.5em;
+  color: $charcoal;
+
+  &:hover,
+  &.is-active {
+    color: $blueberry;
+    border-bottom: 1px solid $blueberry;
+  }
 }
