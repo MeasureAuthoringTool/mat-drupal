@@ -70,4 +70,12 @@
  *   in different view modes.
  */
 #}
-{% include "@organisms/_node.twig" %}
+
+{% set attributes = attributes.addClass([
+  "node--type-" ~ (node.type.target_id|clean_class),
+  "node--view-mode-" ~ view_mode
+]) %}
+
+{% include "@organisms/_node.twig" with {
+  date_fmt: node.created.value|format_date('short_date')
+} %}
