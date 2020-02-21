@@ -1,5 +1,5 @@
 .teaser {
-  margin-top: $space-double;
+  margin-top: $space-triple;
 
   &:first-of-type {
     margin-top: 0;
@@ -8,7 +8,7 @@
   &__title {
     @include heading($font-size: rem(24px));
 
-    margin-top: $space-one-half;
+    margin-top: $space;
   }
 
   &__title-link {
@@ -22,5 +22,4 @@
   &__link {
     color: $charcoal;
   }
-
 }

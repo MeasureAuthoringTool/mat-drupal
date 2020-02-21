@@ -1,0 +1,30 @@
+uuid: a4d24e6a-ad64-4378-b84c-072226ff6385
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_alerts
+  module:
+    - system
+    - views
+  theme:
+    - emat
+id: views_block__news_alerts_info_box_list
+theme: emat
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:news_alerts-info_box_list'
+settings:
+  id: 'views_block:news_alerts-info_box_list'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

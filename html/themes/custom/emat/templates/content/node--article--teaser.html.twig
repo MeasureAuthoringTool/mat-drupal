@@ -71,18 +71,12 @@
  */
 #}
 
-
-{% embed "@molecules/card/01-card.twig" with {
-  card_modifiers: ["grid-item"],
-  card_title: label,
-  card_body: content.body,
-  card_link_url: url,
+{% embed "@molecules/teaser/teaser.twig" with {
+  teaser_tag: node.created.value|format_date('short_date'),
+  teaser_title: label,
+  teaser_url: url,
 } %}
-  {% block card_img %}
-    {{ content.field_image }}
-  {% endblock %}
-
-  {% block card_info %}
-    {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+  {% block teaser_content %}
+    {{ content.body }}
   {% endblock %}
 {% endembed %}

@@ -1,7 +1,13 @@
 uuid: 5a6d07c9-acbd-4118-b687-ff2a91ea62ab
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 _core:
   default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
 name: Article

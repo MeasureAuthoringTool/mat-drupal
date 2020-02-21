@@ -1,5 +1,4 @@
 .main-nav {
-
   &--pl-demo {
     background-image: linear-gradient(to right, #44499b, #4481ca);
   }
@@ -19,7 +18,7 @@
   }
 
   &__link {
-    font-family: $font-geo;
+    font-family: $font-heading;
     font-size: rem(20px);
     font-weight: 700;
     color: $white;
@@ -32,5 +31,4 @@
       border-color: $lemon;
     }
   }
-
 }

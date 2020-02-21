@@ -16,11 +16,13 @@
     heading_link_base_class: 'title-link'
   } %}
 
-  {% include "@atoms/02-text/text/01-paragraph.twig" with {
-    "paragraph_content": teaser_body,
-    "paragraph_blockname": teaser_base_class,
-    "paragraph_base_class": 'body',
-  } %}
+  {% block teaser_content %}
+    {% include "@atoms/02-text/text/01-paragraph.twig" with {
+      "paragraph_content": teaser_body,
+      "paragraph_blockname": teaser_base_class,
+      "paragraph_base_class": 'body',
+    } %}
+  {% endblock %}
 
   {% embed "@atoms/01-links/link/link.twig" with {
     link_url: teaser_url,

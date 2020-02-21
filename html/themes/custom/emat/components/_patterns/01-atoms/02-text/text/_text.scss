@@ -5,7 +5,7 @@
 }
 
 @mixin body-copy {
-  font-family: $font-muli;
+  font-family: $font-body;
   font-size: 1rem;
   line-height: 1.5em;
 }
@@ -32,7 +32,7 @@ body {
 }
 
 .blockquote {
-  font-family: $font-geo;
+  font-family: $font-heading;
   font-style: italic;
   margin-left: 0;
   padding-left: 0;

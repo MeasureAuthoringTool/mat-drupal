@@ -19,6 +19,12 @@ items:
     value: '#eaebec'
   - name: $charcoal20
     value: '#d6d7d9'
+  - name: $footer-block-border
+    value: '#ebeff8'
+  - name: $footer-block-left-bg
+    value: '#f6f8fc'
+  - name: $footer-block-right-bg
+    value: '#e9f0f9'
 meta:
   description: >-
     To add to these items, use Sass variables that start with <code>$</code> in

@@ -1,27 +1,20 @@
-{% embed "@base/layouts/grid/00-grid.twig" with {
-  "grid_blockname": "info-box",
-  "grid_label": grid_title,
-  "grid_cta": grid_cta,
-} %}
+{% set grid_base_class = 'grid' %}
+{% set grid_blockname = 'info-box' %}
+
+{% extends "@base/layouts/grid/00-grid.twig" %}
 
 {% block grid_content %}
-  {# Drupal content #}
-  {% if grid_content %}
-    {{ grid_content }}
-  {# PL content in yml #}
-  {% else %}
-    {% for box in boxes %}
-      {% set class = "info-box" %}
-      {% include "@molecules/info-box/info-box.twig" with {
-        "ib_modifiers": box.ib_modifiers,
-        "ib_blockname": box.ib_blockname,
-        "infobox_title": box.infobox_title,
-        "infobox_title_modifiers": box.infobox_title_modifiers,
-        "infobox_link": box.infobox_link,
-        "infobox_text": box.infobox_text
-      } %}
-    {% endfor %}
-  {% endif %}
+  {% for box in boxes %}
+    {% set class = "info-box" %}
+    {% include "@molecules/info-box/info-box.twig" with {
+      "ib_modifiers": box.ib_modifiers,
+      "ib_blockname": box.ib_blockname,
+      "infobox_title": box.infobox_title,
+      "infobox_subtitle": box.infobox_subtitle,
+      "infobox_title_modifiers": box.infobox_title_modifiers,
+      "infobox_link_title": box.infobox_link_title,
+      "infobox_link_url": box.infobox_link_url,
+      "infobox_text": box.infobox_text
+    } %}
+  {% endfor %}
 {% endblock %}
-
-{% endembed %}

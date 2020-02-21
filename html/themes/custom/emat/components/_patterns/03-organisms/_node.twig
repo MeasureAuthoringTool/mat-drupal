@@ -85,13 +85,9 @@
   {% endif %}
   {{ title_suffix }}
 
-  {% if display_submitted %}
+  {% if display_submitted and date_fmt %}
     <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
+      <div{{ author_attributes.addClass('article__date') }}>{{ date_fmt }}</div>
     </footer>
   {% endif %}
 

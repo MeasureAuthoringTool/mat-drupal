@@ -11,6 +11,9 @@
   {% set main_content_modifiers = main_content_modifiers|merge(['with-sidebar']) %}
 {% endif %}
 
+{% block page_system %}
+{% endblock %}
+
 <div {{ bem('layout-container', (layout_modifiers)) }}>
 
   {% block page_branding %}
@@ -21,8 +24,6 @@
     {% include "@organisms/site/site-header/site-header.twig" %}
   {% endblock %}
 
-  {% block page_system %}
-  {% endblock %}
 
   <main role="main" {{ bem(main_base_class, (main_modifiers), main_blockname) }}>
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}

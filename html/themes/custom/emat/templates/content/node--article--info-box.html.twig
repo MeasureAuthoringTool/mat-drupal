@@ -71,11 +71,13 @@
  */
 #}
 
-{% set attributes = attributes.addClass([
-  "node--type-" ~ (node.type.target_id|clean_class),
-  "node--view-mode-" ~ view_mode
-]) %}
-
-{% include "@organisms/_node.twig" with {
-  date_fmt: node.created.value|format_date('short_date')
+{% embed "@molecules/info-box/info-box.twig" with {
+  infobox_title: label,
+  infobox_subtitle: node.created.value|format_date('medium_date'),
+  infobox_link_url: url,
+  ib_modifiers: ["grid-item"],
 } %}
+  {% block infobox_content %}
+    {{ content.body }}
+  {% endblock %}
+{% endembed %}
