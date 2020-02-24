@@ -11,6 +11,20 @@
         {% include "@molecules/menus/main-nav/main-nav.twig" with {
           items: main_nav_items
         } %}
+        {% include "@organisms/hero/hero.twig" with {
+          hero_heading: "Measure Authoring Tool",
+          hero_subhead: "The Measure Authoring Tool (MAT) is a web-based tool that allows measure developers to author electronic Clinical Quality Measures (eCQMs).",
+          hero_cta_title: "Secure Login",
+          hero_cta_text: "To log in to the MAT, a user accuont is required. If you are unable to log in to your MAT account, please contact the MAT Support desk.",
+          hero_cta_login_link: {
+            title: "Log in to the MAT",
+            url: "#",
+          },
+          hero_cta_register_link: {
+            title: "New User Registration",
+            url: "#",
+          }
+        } %}
       {% endblock %}
     {% endembed %}
   {% endblock %}

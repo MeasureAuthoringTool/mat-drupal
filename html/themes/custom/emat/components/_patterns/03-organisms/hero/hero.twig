@@ -1,0 +1,19 @@
+{% set hero_base_class = hero_base_class|default('hero') %}
+
+<section {{ bem(hero_base_class, (hero_modifiers), hero_blockname) }}>
+  <div {{ bem('header', '', hero_base_class) }}>
+    <h1 {{ bem('title', '', hero_base_class) }}>{{ hero_heading }}</h1>
+    <p {{ bem('lead', '', hero_base_class) }}>{{ hero_subhead }}</p>
+  </div>
+
+  <div {{ bem('cta', '', hero_base_class) }}>
+    {% include "@molecules/info-box/info-box-cta.twig" with {
+      cta_label: hero_cta_title,
+      cta_login_text: hero_cta_login_link.title,
+      cta_login_url: hero_cta_login_link.url,
+      cta_register_text: hero_cta_register_link.title,
+      cta_register_url: hero_cta_register_link.url,
+      cta_text: hero_cta_text,
+    } %}
+  </div>
+</section>
