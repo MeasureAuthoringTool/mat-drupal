@@ -1,0 +1,26 @@
+uuid: b151bf44-387a-43fa-8fa3-7233688956bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - emat_blocks
+  theme:
+    - emat
+id: hhscmsbrandingblock
+theme: emat
+region: footer_right
+weight: 0
+provider: null
+plugin: emat_cms_branding_block
+settings:
+  id: emat_cms_branding_block
+  label: 'HHS/CMS Branding Block'
+  provider: emat_blocks
+  label_display: '0'
+  description:
+    value: "A federal government website managed and paid for by the U.S. Centers for Medicare & Medicaid Services.\r\n\r\n7500 Security Boulevard, Baltimore, MD 21244"
+    format: plain_text
+  facebook_url: 'https://www.facebook.com/pages/Centers-for-Medicare-and-Medicaid-Services/130543856995834'
+  twitter_url: 'https://twitter.com/cmsgov'
+  linkedin_url: 'https://www.linkedin.com/company/centers-for-medicare-&-medicaid-services/'
+visibility: {  }

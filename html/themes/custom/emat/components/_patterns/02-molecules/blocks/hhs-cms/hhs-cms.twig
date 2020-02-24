@@ -1,16 +1,20 @@
 {% set hhs_cms_base_class = hhs_cms_base_class|default('hhs-cms') %}
+
+{% set hhs_logo = hhs_logo|default('/' ~ directory ~ '/images/Logo-HHS@3x.png') %}
+{% set cms_logo = cms_logo|default('/' ~ directory ~ '/images/Logo-CMS@3x.png') %}
+
 <section {{ bem(hhs_cms_base_class, (hhs_cms_modifiers), hhs_cms_blockname) }}>
 
   <div {{ bem('logos', '', hhs_cms_base_class) }}>
     {% include "@atoms/04-images/00-image/figure.twig" with {
-      img_src: '../../images/Logo-HHS@3x.png',
+      img_src: hhs_logo,
       img_alt: 'Logo',
       img_url: logo_link_url|default('/'),
       image_figure_base_class: 'logo',
       image_link_blockname: 'logo',
     } %}
     {% include "@atoms/04-images/00-image/figure.twig" with {
-      img_src: '../../images/Logo-CMS@3x.png',
+      img_src: cms_logo,
       img_alt: 'Logo',
       img_url: logo_link_url|default('/'),
       image_figure_base_class: 'logo',
@@ -27,14 +31,33 @@
   </div>
 
   <ul {{ bem('social', '', hhs_cms_base_class) }}>
-    {% for item in social_links %}
+
+    {% if hhs_cms_facebook_url %}
       <li {{ bem('social-item', '', hhs_cms_base_class) }}>
         {% include "@atoms/04-images/icons/_social-icon.twig" with {
-          icon_name: item.icon,
-          link_url: item.url,
+          icon_name: 'facebook-f',
+          link_url: hhs_cms_facebook_url,
         } %}
       </li>
-    {% endfor %}
+    {% endif %}
+
+    {% if hhs_cms_twitter_url %}
+      <li {{ bem('social-item', '', hhs_cms_base_class) }}>
+        {% include "@atoms/04-images/icons/_social-icon.twig" with {
+          icon_name: 'twitter',
+          link_url: hhs_cms_twitter_url,
+        } %}
+      </li>
+    {% endif %}
+
+    {% if hhs_cms_linkedin_url %}
+      <li {{ bem('social-item', '', hhs_cms_base_class) }}>
+        {% include "@atoms/04-images/icons/_social-icon.twig" with {
+          icon_name: 'linkedin-in',
+          link_url: hhs_cms_linkedin_url,
+        } %}
+      </li>
+    {% endif %}
   </ul>
 
 </section>

@@ -28,6 +28,12 @@ function emat_blocks_help($route_name, RouteMatchInterface $route_match) {
  */
 function emat_blocks_theme() {
   return [
+    'emat_cms_branding_block' => [
+      'variables' => [
+        'content' => NULL
+      ],
+      'render element' => 'children',
+    ],
     'emat_hero_block' => [
       'variables' => [
         'content' => NULL
