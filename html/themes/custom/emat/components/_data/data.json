@@ -131,11 +131,10 @@
       "url": "#"
     }
   ],
-  "resource_nav_items": [
+  "resource_navs": [
     {
       "title": "CMS & HHS Websites",
-      "url": "#",
-      "below": [
+      "items": [
         {
           "title": "Medicare.gov",
           "url": "#"
@@ -164,8 +163,7 @@
     },
     {
       "title": "Helpful Links",
-      "url": "#",
-      "below": [
+      "items": [
         {
           "title": "Acronyms",
           "url": "#"
@@ -185,48 +183,17 @@
       ]
     }
   ],
-  "footer_nav_items": [
-    {
-      "title": "Web Policies",
-      "url": "#"
-    },
-    {
-      "title": "Plain Language",
-      "url": "#"
-    },
-    {
-      "title": "No Fear Act",
-      "url": "#"
-    },
-    {
-      "title": "Freedom of Information Act",
-      "url": "#"
-    },
-    {
-      "title": "Inspector General",
-      "url": "#"
-    }
-  ],
   "footer_right": {
+    "hhs_logo": "/images/Logo-HHS@3x.png",
+    "cms_logo": "/images/Logo-CMS@3x.png",
     "hhs_cms": {
       "body": [
         "A federal government website managed and paid for by the U.S. Centers for Medicare & Medicaid Services.",
         "7500 Security Boulevard, Baltimore, MD 21244"
       ],
-      "social": [
-        {
-          "url": "#",
-          "icon": "facebook-f"
-        },
-        {
-          "url": "#",
-          "icon": "twitter"
-        },
-        {
-          "url": "#",
-          "icon": "linkedin-in"
-        }
-      ]
+      "facebook_url": "#",
+      "twitter_url": "#",
+      "linkedin_url": "#"
     }
   }
 }

@@ -1,0 +1,13 @@
+uuid: 55e2c2c9-bd7a-40a5-a2f0-1ee50eb70050
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_trail_by_path
+third_party_settings:
+  menu_trail_by_path:
+    trail_source: disabled
+id: cms-hhs-websites
+label: 'CMS & HHS Websites'
+description: ''
+locked: false

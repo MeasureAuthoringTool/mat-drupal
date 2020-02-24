@@ -1,7 +1,12 @@
 <section {{ bem('left', (footer_left_modifiers), 'footer-blocks') }}>
-  {% block footer_left_content %}
-    {% include "@molecules/menus/resource-nav/resource-nav.twig" with {
-      items: resource_nav_items
-    } %}
-  {% endblock %}
+  <div class="wrapper">
+    {% block footer_left_content %}
+      {% for nav in resource_navs %}
+        {% include "@molecules/menus/resource-nav/resource-nav.twig" with {
+          label: nav.title,
+          items: nav.items,
+        } %}
+      {% endfor %}
+    {% endblock %}
+  </div>
 </section>

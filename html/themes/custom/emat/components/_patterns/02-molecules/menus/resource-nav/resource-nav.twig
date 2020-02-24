@@ -1,23 +1,13 @@
 {% set resource_nav_base_class = resource_nav_base_class|default('resource-nav') %}
 
 <nav {{ bem(resource_nav_base_class, (resource_nav_modifiers), resource_nav_blockname) }}>
-  {% for item in items %}
-    <nav {{ bem('nav', '', resource_nav_base_class) }}>
-      <p {{ bem('label', '', resource_nav_base_class) }}>
-        {{ item.title }}
-      </p>
-      <ul {{ bem('items', '', resource_nav_base_class) }}>
-        {% for sub_item in item.below %}
-          <li {{ bem('item', ['sub'], resource_nav_base_class) }}>
-            {% include "@atoms/01-links/link/link.twig" with {
-              "link_content": sub_item.title,
-              "link_url": sub_item.url,
-              "link_blockname": resource_nav_base_class,
-              "link_modifiers": sub_item_modifiers,
-            } %}
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
-  {% endfor %}
+  {{ title_prefix }}
+  {% if label %}
+    <h3 {{ bem('label', '', resource_nav_base_class) }}>{{ label }}</h3>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% block menu_content %}
+    {% include "@molecules/menus/resource-nav/_resource-nav-list.twig" %}
+  {% endblock %}
 </nav>

@@ -1,0 +1,25 @@
+uuid: 662927a5-9ae1-4a96-8b6d-a4c9b3d6ac74
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.helpful-links
+  module:
+    - system
+  theme:
+    - emat
+id: helpfullinks
+theme: emat
+region: footer_left
+weight: -7
+provider: null
+plugin: 'system_menu_block:helpful-links'
+settings:
+  id: 'system_menu_block:helpful-links'
+  label: 'Helpful Links'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

@@ -1,0 +1,59 @@
+{% set ib_base_class = 'info-box-cta' %}
+{% set infobox_text = cta_text %}
+
+{% extends "@molecules/info-box/info-box.twig" %}
+
+{% block infobox_label %}
+  <div {{ bem('label', '', ib_base_class) }}>
+    {{ title_prefix }}
+    {% include "@atoms/02-text/00-headings/_heading.twig" with {
+      "heading_level": 3,
+      "heading": cta_label,
+      "heading_blockname": ib_base_class,
+      "heading_base_class": 'title',
+      "heading_link_blockname": ib_base_class,
+      "heading_link_base_class": 'link',
+    } %}
+
+    {% include "@atoms/04-images/icons/_icon.twig" with {
+      icon_name: 'lock',
+      icon_blockname: ib_base_class,
+    } %}
+  </div>
+{% endblock %}
+
+{% block infobox_actions %}
+  {% embed "@atoms/06-buttons/01-button.twig" with {
+    button_blockname: ib_base_class,
+  } %}
+    {% block button_content %}
+      {% embed "@atoms/01-links/link/link.twig" with {
+        link_url: cta_primary_link_url,
+        link_blockname: ib_base_class,
+        link_base_class: 'link',
+      } %}
+        {% block link_content %}
+          {{ cta_primary_link_text }}
+          {% include "@atoms/04-images/icons/_icon.twig" with {
+            icon_name: 'angle-right',
+          } %}
+        {% endblock %}
+      {% endembed %}
+    {% endblock %}
+  {% endembed %}
+
+  {% embed "@atoms/01-links/link/link.twig" with {
+    link_url: cta_secondary_link_url,
+    link_blockname: ib_base_class,
+    link_base_class: 'link',
+    link_modifiers: ['secondary'],
+  } %}
+    {% block link_content %}
+      {{ cta_secondary_link_text }}
+      {% include "@atoms/04-images/icons/_icon.twig" with {
+        icon_name: 'angle-right',
+      } %}
+    {% endblock %}
+  {% endembed %}
+
+{% endblock %}

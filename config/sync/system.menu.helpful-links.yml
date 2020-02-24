@@ -1,0 +1,13 @@
+uuid: bce125d0-0628-4f76-a6f2-8e5c00d5cb75
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_trail_by_path
+third_party_settings:
+  menu_trail_by_path:
+    trail_source: disabled
+id: helpful-links
+label: 'Helpful Links'
+description: ''
+locked: false
