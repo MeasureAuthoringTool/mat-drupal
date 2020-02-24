@@ -9,10 +9,10 @@
   <div {{ bem('cta', '', hero_base_class) }}>
     {% include "@molecules/info-box/info-box-cta.twig" with {
       cta_label: hero_cta_title,
-      cta_login_text: hero_cta_login_link.title,
-      cta_login_url: hero_cta_login_link.url,
-      cta_register_text: hero_cta_register_link.title,
-      cta_register_url: hero_cta_register_link.url,
+      cta_primary_link_text: hero_cta_primary_link_text,
+      cta_primary_link_url: hero_cta_primary_link_url,
+      cta_secondary_link_text: hero_cta_secondary_link_text,
+      cta_secondary_link_url: hero_cta_secondary_link_url,
       cta_text: hero_cta_text,
     } %}
   </div>

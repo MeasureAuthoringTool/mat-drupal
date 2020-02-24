@@ -1,0 +1,7 @@
+name: 'MAT Blocks'
+type: module
+description: 'Provides custom blocks for MAT site.'
+core: 8.x
+package: 'CMS'
+dependencies:
+  - block

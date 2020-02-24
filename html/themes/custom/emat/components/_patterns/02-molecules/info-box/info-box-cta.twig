@@ -1,7 +1,7 @@
 {% set ib_base_class = 'info-box-cta' %}
 {% set infobox_text = cta_text %}
 
-{% extends "info-box.twig" %}
+{% extends "@molecules/info-box/info-box.twig" %}
 
 {% block infobox_label %}
   <div {{ bem('label', '', ib_base_class) }}>
@@ -28,12 +28,12 @@
   } %}
     {% block button_content %}
       {% embed "@atoms/01-links/link/link.twig" with {
-        link_url: cta_login_url,
+        link_url: cta_primary_link_url,
         link_blockname: ib_base_class,
         link_base_class: 'link',
       } %}
         {% block link_content %}
-          {{ cta_login_text }}
+          {{ cta_primary_link_text }}
           {% include "@atoms/04-images/icons/_icon.twig" with {
             icon_name: 'angle-right',
           } %}
@@ -43,13 +43,13 @@
   {% endembed %}
 
   {% embed "@atoms/01-links/link/link.twig" with {
-    link_url: cta_register_url,
+    link_url: cta_secondary_link_url,
     link_blockname: ib_base_class,
     link_base_class: 'link',
     link_modifiers: ['secondary'],
   } %}
     {% block link_content %}
-      {{ cta_register_text }}
+      {{ cta_secondary_link_text }}
       {% include "@atoms/04-images/icons/_icon.twig" with {
         icon_name: 'angle-right',
       } %}
