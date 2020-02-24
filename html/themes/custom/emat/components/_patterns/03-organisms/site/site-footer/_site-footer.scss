@@ -19,9 +19,12 @@
     padding-left: $space;
     background-color: $footer-block-left-bg;
 
-    .resource-nav {
+    .wrapper {
       max-width: calc(60vw - calc(calc(100vw - #{$max-width}) / 2));
       margin-left: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
     }
   }
 

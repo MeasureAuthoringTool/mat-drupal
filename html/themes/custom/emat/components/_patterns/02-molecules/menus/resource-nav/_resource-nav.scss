@@ -1,14 +1,8 @@
 .resource-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  margin-right: $space-triple;
 
-  &__nav {
-    margin-right: $space-triple;
-
-    &:last-child {
-      margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
   }
 
   &__label {

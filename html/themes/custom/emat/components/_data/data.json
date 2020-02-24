@@ -131,11 +131,10 @@
       "url": "#"
     }
   ],
-  "resource_nav_items": [
+  "resource_navs": [
     {
       "title": "CMS & HHS Websites",
-      "url": "#",
-      "below": [
+      "items": [
         {
           "title": "Medicare.gov",
           "url": "#"
@@ -164,8 +163,7 @@
     },
     {
       "title": "Helpful Links",
-      "url": "#",
-      "below": [
+      "items": [
         {
           "title": "Acronyms",
           "url": "#"
@@ -183,28 +181,6 @@
           "url": "#"
         }
       ]
-    }
-  ],
-  "footer_nav_items": [
-    {
-      "title": "Web Policies",
-      "url": "#"
-    },
-    {
-      "title": "Plain Language",
-      "url": "#"
-    },
-    {
-      "title": "No Fear Act",
-      "url": "#"
-    },
-    {
-      "title": "Freedom of Information Act",
-      "url": "#"
-    },
-    {
-      "title": "Inspector General",
-      "url": "#"
     }
   ],
   "footer_right": {
