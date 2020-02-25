@@ -17,3 +17,12 @@ function emat_preprocess_file_link(&$variables) {
   }
 
 }
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function emat_page_attachments_alter(array &$attachments) {
+  if (in_array('extlink/drupal.extlink', $attachments['#attached']['library'])) {
+    $attachments['#attached']['library'][] = 'emat/external-link';
+  }
+}
