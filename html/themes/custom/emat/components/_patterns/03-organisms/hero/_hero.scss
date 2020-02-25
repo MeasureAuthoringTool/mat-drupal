@@ -16,18 +16,8 @@
 
   &__header {
     @include medium {
-      flex: 1 1 50%;
-      margin-right: $space-double;
-    }
-
-    @include large {
-      flex: 1 1 60%;
-      margin-right: $space-quadruple;
-    }
-
-    @include xl {
       flex: 1 1 66%;
-      margin-right: $space-quadruple;
+      padding-right: $space-quadruple;
     }
   }
 

@@ -89,11 +89,27 @@
     { }
   ],
   "latest_posts" : [
-    { },
-    { },
-    { },
-    { },
-    { }
+    {
+      "title": "MAT Downtime Notification - September Monthly Maintenance",
+      "date": "Sep 12, 2019",
+      "text": "The Measure Authoring Tool (MAT) will be unavailable from Friday, September 13, 2019 at…",
+      "link_title": "Read More",
+      "link_url": "#"
+    },
+    {
+      "title": "MAT Downtime Notification - September Monthly Maintenance",
+      "date": "Sep 12, 2019",
+      "text": "The Measure Authoring Tool (MAT) will be unavailable from Friday, September 13, 2019 at…",
+      "link_title": "Read More",
+      "link_url": "#"
+    },
+    {
+      "title": "MAT Downtime Notification - September Monthly Maintenance",
+      "date": "Sep 12, 2019",
+      "text": "The Measure Authoring Tool (MAT) will be unavailable from Friday, September 13, 2019 at…",
+      "link_title": "Read More",
+      "link_url": "#"
+    }
   ],
   "main_nav_items": [
     {
