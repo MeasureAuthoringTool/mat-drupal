@@ -28,7 +28,9 @@
         });
 
         Drupal.extlink.popupClickHandler = function(event, originalLink) {
-          $('#js-extlink-continue').attr('href', originalLink.href)
+          var externalHref = originalLink.href;
+          $('#js-extlink-continue').attr('href', externalHref);
+          $('#js-extlink-preview').html(externalHref);
           $.magnificPopup.open({
             items: {
               src: "#extlink-disclaimer",
