@@ -1,0 +1,18 @@
+{% set extlink_base_class = 'extlink-disclaimer' %}
+{% set extlink_js_classes = extlink_js_classes|default(['mfp-hide']) %}
+
+<div id="{{ extlink_base_class }}" {{ bem(extlink_base_class, (extlink_modifiers), extlink_blockname, (extlink_js_classes)) }}>
+  <h2 {{ bem('title', '', extlink_base_class)}}>External Link Disclaimer</h2>
+  <div id="js-extlink-alert-text" {{ bem('text', '' , extlink_base_class) }}>You are leaving the Measure Authoring Tool web site and entering another web site. The Measure Authoring Tool cannot attest to the accuracy of information provided by linked sites. You will be subject to the destination site's Privacy Policy when you leave the Measure Authoring Tool website.</div>
+  <div {{ bem('question', '', extlink_base_class)}}> Would you like to continue to: <span {{ bem('link', '', extlink_base_class) }}>{{ extlink_url }}</span>?</div>
+  <div {{ bem('actions', '', extlink_base_class, ['js-extlink-allow']) }}>
+    <a id="js-extlink-continue" {{ bem('confirm', '', extlink_base_class, ['js-extlink-continue']) }} href="" target="_blank">
+      Yes, continue
+      {% include "@atoms/04-images/icons/_icon.twig" with {
+        icon_name: "angle-right",
+        icon_blockname: extlink_base_class,
+      } %}
+    </a>
+    <a {{ bem('decline', '', extlink_base_class, ['js-extlink-decline']) }} href="#">No, go back</a>
+  </div>
+</div>

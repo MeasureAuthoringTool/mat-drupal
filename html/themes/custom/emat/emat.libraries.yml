@@ -24,3 +24,11 @@ tabs:
 file-fields:
   js:
     dist/01-atoms/05-forms/file-input-label.js: {}
+
+external-link:
+  js:
+    libraries/magnific/jquery.magnific-popup.js: {}
+    dist/02-molecules/extlink/external-link.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
