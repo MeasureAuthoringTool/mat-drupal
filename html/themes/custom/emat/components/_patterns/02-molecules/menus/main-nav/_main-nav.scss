@@ -10,7 +10,7 @@
   &__item {
     display: inline-flex;
     margin-right: $space-double;
-    padding: $space 0;
+    padding: $space-double 0;
 
     &:last-of-type {
       margin-right: 0;
