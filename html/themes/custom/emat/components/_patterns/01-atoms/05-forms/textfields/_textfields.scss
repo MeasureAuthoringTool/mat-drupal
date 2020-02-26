@@ -4,20 +4,24 @@
   max-width: 32em;
   font-family: $font-body;
 
-  @include clearfix;
+  &--error-message {
+    color: $dragonfruit;
+  }
+}
+
+.form-required {
+  display: inline-block;
+
+  &::after {
+    color: $dragonfruit;
+    content: "*";
+    margin: 0 $space-one-fourth;
+  }
 }
 
 .form-item__label {
   display: block;
   font-weight: bold;
-
-  &--required {
-    &::after {
-      color: $dragonfruit;
-      content: "*";
-      margin-left: $space-one-fourth;
-    }
-  }
 
   @include xs {
     display: block;
