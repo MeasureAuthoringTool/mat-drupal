@@ -35,10 +35,13 @@
   @include grid;
   @include margin;
 
+  margin-top: $space-quadruple;
+
   .grid__label {
     @include ib-grid-item;
 
     padding: $space + $space-one-half;
+    padding-left: 0;
 
     .h2 {
       @include heading($font-size: rem(44px));

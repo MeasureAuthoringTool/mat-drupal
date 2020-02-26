@@ -1,0 +1,10 @@
+uuid: ee5f3925-2321-4fd8-a757-1491ee55e469
+langcode: en
+status: true
+dependencies: {  }
+id: cta_with_image
+label: 'CTA With Image'
+icon_uuid: null
+icon_default: null
+description: 'Element with title, lead, text, CTA button, and an image.'
+behavior_plugins: {  }

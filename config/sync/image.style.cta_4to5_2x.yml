@@ -1,0 +1,15 @@
+uuid: 8c8cbb92-97c7-4e42-a717-aed94710a578
+langcode: en
+status: true
+dependencies: {  }
+name: cta_4to5_2x
+label: 'CTA 4:5 2x'
+effects:
+  b5e92043-f371-49cd-ad2c-ee1a2c11d92a:
+    uuid: b5e92043-f371-49cd-ad2c-ee1a2c11d92a
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 704
+      height: 880
+      anchor: center-center

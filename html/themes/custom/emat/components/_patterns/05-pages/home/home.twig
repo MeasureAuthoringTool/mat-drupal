@@ -27,13 +27,44 @@
 
   {% block page_content %}
 
-    {% if site_title %}
-      {% include "@atoms/02-text/00-headings/_heading.twig" with {
-        "heading_level": 1,
-        "heading": "Home",
-        "heading_modifiers": ["margin"],
-      } %}
-    {% endif %}
+    {% include "@organisms/cta-with-image/cta-with-image.twig" with {
+      cwi_heading: "Measure Authoring Tool Overview",
+      cwi_lead_text: "Using the tool, authors create Clinical Quality Language (CQL) expressions, which have the conceptual portion of the Quality Data Model (QDM) as their foundation.",
+      cwi_body: "The tool provides the capability to express complex measure logic and export measures in several formats, including a human-readable document that can be viewed in a web browser, an eCQM HQMF XML document which provides metadata, terminology, data elements and specific population definitions respective to the measure, a CQL file which contains the terminology and expression logic used by the measure, an ELM XML export that is a computer-readable XML version of the CQL file, and a Javascipt Object Notation (JSON) export which is a serialized format of the ELM file. The data expressed in the tool by the users serves as the input for the creation of the defined export files.",
+      cwi_cta: {
+        title: "Learn More in Training & Resources",
+        url: "#",
+      },
+      cwi_image: {
+        alt: "Female Doctor",
+        title: "Female Doctor",
+        src: "/images/Female-Doctor@2x.png",
+      }
+    } %}
+
+    {% embed "@organisms/info-box-grid/info-box-grid.twig" with {
+      grid_label: 'Latest News & Alerts',
+      grid_blockname: 'info-box',
+      grid_cta_title: more['#title'],
+      grid_cta: {
+        title: more['#title'],
+        url: more['#url'],
+      }
+    } %}
+
+      {% block grid_content %}
+        {% for item in latest_posts %}
+          {% include "@molecules/info-box/info-box.twig" with {
+            infobox_title: item.title,
+            infobox_subtitle: item.date,
+            infobox_link_url: item.link_url,
+            infobox_text: item.text,
+            ib_modifiers: ["grid-item"],
+          } %}
+        {% endfor %}
+      {% endblock %}
+
+    {% endembed %}
 
   {% endblock %}
 

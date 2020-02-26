@@ -1,0 +1,10 @@
+uuid: 6c38665a-007f-4bc3-b08b-9c2fad625fd1
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.cta_with_image
+label: 'CTA With Image'
+targetEntityType: media
+cache: true
