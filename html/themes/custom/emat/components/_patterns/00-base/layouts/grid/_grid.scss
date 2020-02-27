@@ -39,6 +39,10 @@
   }
 }
 
+.layout-builder-form {
+  margin-top: $space-double;
+}
+
 @media screen and (min-width: 40em) {
   .main {
     .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--first {
