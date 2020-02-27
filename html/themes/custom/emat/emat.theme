@@ -5,6 +5,15 @@
  * Functions to support theming in the Pattern Lab theme.
  */
 
+/**
+ * Implements template_preprocess_page().
+ */
+function emat_preprocess_page(&$variables) {
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['attributes']['class'][] = 'front';
+  }
+ }
+
  /**
   * Implemenets template_preprocess_file_link().
   */

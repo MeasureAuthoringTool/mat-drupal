@@ -81,6 +81,12 @@ $color-heading: $charcoal;
 
   h2 {
     @extend .h2;
+
+    margin-top: $space-double;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   h3 {
