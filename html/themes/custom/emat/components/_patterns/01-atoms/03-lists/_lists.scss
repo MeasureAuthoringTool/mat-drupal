@@ -8,30 +8,60 @@
 
 ul,
 ol {
-  padding-left: $space-double;
-}
+  padding-left: $space;
 
-ul {
-  list-style-type: disc;
-
-  ul {
-    list-style-type: circle;
+  ul,
+  ol {
+    padding-left: $space-double;
   }
 }
 
+ul {
+  list-style: none;
+}
+
 ol {
-  list-style-type: decimal;
+  list-style: none;
+  counter-reset: li;
+
+  & > li {
+    counter-increment: li;
+  }
 
   ol {
-    list-style-type: lower-alpha;
+    counter-reset: nested;
+
+    & > li {
+      counter-increment: nested;
+    }
   }
 }
 
 .list-item {
   margin-bottom: $space;
+  position: relative;
 
-  &::marker {
+  &::before {
     color: $dragonfruit;
+    position: absolute;
+    top: 0;
+    left: -1rem;
+  }
+
+  ul &::before {
+    content: "\2022";
+  }
+
+  ul ul &::before {
+    content: "\25cb";
+  }
+
+  ol &::before {
+    content: counter(li) ".";
+  }
+
+  ol ol &::before {
+    content: counter(nested, lower-alpha) ".";
   }
 }
 
