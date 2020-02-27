@@ -1,3 +1,5 @@
+$half-max-width: $max-width/2;
+
 .footer {
   padding: $space-quadruple 0;
 
@@ -20,7 +22,7 @@
     background-color: $footer-block-left-bg;
 
     .wrapper {
-      max-width: calc(60vw - calc(calc(100vw - #{$max-width}) / 2));
+      max-width: calc(10vw + #{$half-max-width});
       margin-left: auto;
       display: flex;
       justify-content: flex-start;
@@ -37,7 +39,7 @@
     background-color: $footer-block-right-bg;
 
     .hhs-cms {
-      max-width: calc(40vw - calc(calc(100vw - #{$max-width}) / 2));
+      max-width: calc(-10vw + #{$half-max-width});
       margin-right: auto;
     }
   }
