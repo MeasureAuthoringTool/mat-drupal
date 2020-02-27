@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbbdfca3a145f2e98a299355c7961627",
+    "content-hash": "ada0f65e5b9a8a8438dbaac21dec5683",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3230,6 +3230,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Layout Builder + Paragraphs Langcode Issue #29": "https://www.drupal.org/files/issues/2019-07-10/paragraphs-set_langcode_widgets-2901390-29.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
