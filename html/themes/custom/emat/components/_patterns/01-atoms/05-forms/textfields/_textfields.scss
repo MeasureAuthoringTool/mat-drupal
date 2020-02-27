@@ -9,6 +9,17 @@
   }
 }
 
+.webform-required {
+  position: relative;
+  max-width: 32em;
+
+  .form-required__label {
+    position: absolute;
+    right: 0;
+    bottom: -2rem;
+  }
+}
+
 .form-required {
   display: inline-block;
 
