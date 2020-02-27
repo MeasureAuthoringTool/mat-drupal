@@ -6,3 +6,53 @@
 .grid {
   @include grid;
 }
+
+.layout-container {
+  background-color: $charcoal3;
+
+  &.front {
+    .layout {
+      background-color: $white;
+
+      &:nth-child(2n) {
+        background-color: $charcoal3;
+      }
+    }
+  }
+
+  .layout {
+    padding-top: $space-double;
+    padding-bottom: $space-double;
+
+    @include large {
+      padding-top: $space-triple;
+      padding-bottom: $space-triple;
+    }
+
+    &--onecol {
+      @include breakout;
+
+      .layout__region--content {
+        @include wrapper;
+      }
+    }
+  }
+}
+
+.layout-builder-form {
+  margin-top: $space-double;
+}
+
+@media screen and (min-width: 40em) {
+  .main {
+    .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--first {
+      flex: 1 1 30%;
+      margin-right: $space-double;
+    }
+
+    .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--second {
+      flex: 1 1 30%;
+      margin-left: $space-double;
+    }
+  }
+}

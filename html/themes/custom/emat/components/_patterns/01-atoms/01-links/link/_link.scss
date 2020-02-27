@@ -18,6 +18,8 @@
 
 .text-long {
   a {
-    @extend .link;
+    color: $charcoal;
+    font-weight: normal;
+    text-decoration: underline;
   }
 }

@@ -48,3 +48,12 @@
 @mixin no-bottom {
   margin-bottom: 0;
 }
+
+@mixin info-box($box-shadow-color: $charcoal20) {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 0 $space $box-shadow-color;
+  display: flex;
+  flex-direction: column;
+  padding: $space + $space-one-half;
+}
