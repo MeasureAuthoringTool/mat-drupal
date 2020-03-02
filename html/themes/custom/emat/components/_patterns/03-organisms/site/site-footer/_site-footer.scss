@@ -13,34 +13,50 @@ $half-max-width: $max-width/2;
   border-style: solid;
   border-color: $footer-block-border;
   border-width: 2px 0 2px 0;
+  flex-direction: column;
+
+  @include large {
+    flex-direction: row;
+  }
 
   &__left {
-    flex: 1 1 60%;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    padding-left: $space;
     background-color: $footer-block-left-bg;
+    padding: $space-quadruple $space;
 
     .wrapper {
-      max-width: calc(10vw + #{$half-max-width});
-      margin-left: auto;
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
     }
+
+    @include large {
+      flex: 1 1 60%;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+
+      .wrapper {
+        max-width: calc(10vw + #{$half-max-width});
+        margin-left: auto;
+      }
+    }
   }
 
   &__right {
-    flex: 1 1 40%;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    padding-left: $space-triple;
-    padding-right: $space;
     background-color: $footer-block-right-bg;
+    flex: 1 0 100%;
+    padding: $space-quadruple $space;
 
-    .hhs-cms {
-      max-width: calc(-10vw + #{$half-max-width});
-      margin-right: auto;
+    @include large {
+      flex: 1 1 40%;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+      padding-left: $space-triple;
+      padding-right: $space;
+
+      .hhs-cms {
+        max-width: calc(-10vw + #{$half-max-width});
+        margin-right: auto;
+      }
     }
   }
 }
