@@ -10,6 +10,59 @@
 .layout-container {
   background-color: $charcoal3;
 
+  .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--first,
+  .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--second {
+    flex: 1 0 100%;
+  }
+
+  .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--first {
+    flex: 1 0 100%;
+  }
+
+  .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--second {
+    flex: 1 0 100%;
+    display: block;
+    margin-top: $space-triple;
+
+    @include medium {
+      display: flex;
+      flex-wrap: wrap;
+
+      .block {
+        flex: 1 0 40%;
+        max-width: calc(50% - #{$space-double});
+        margin-left: $space;
+        margin-right: $space;
+      }
+    }
+  }
+
+  @include large {
+    .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--first,
+    .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--second {
+      flex: 1 0 67%;
+    }
+
+    .layout--twocol-section--33-67 > .layout__region--first {
+      flex: 1 1 30%;
+      margin-right: 3%;
+    }
+
+    .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--second {
+      flex: 1 1 30%;
+      margin-left: 3%;
+      display: block;
+      margin-top: 0;
+
+      .block {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
   &.front {
     .layout {
       background-color: $white;
@@ -41,18 +94,4 @@
 
 .layout-builder-form {
   margin-top: $space-double;
-}
-
-@media screen and (min-width: 40em) {
-  .main {
-    .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--first {
-      flex: 1 1 30%;
-      margin-right: $space-double;
-    }
-
-    .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--second {
-      flex: 1 1 30%;
-      margin-left: $space-double;
-    }
-  }
 }
