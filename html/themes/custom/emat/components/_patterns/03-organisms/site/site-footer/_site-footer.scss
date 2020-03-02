@@ -1,7 +1,7 @@
 $half-max-width: $max-width/2;
 
 .footer {
-  padding: $space-quadruple 0;
+  padding: $space-triple 0;
 
   &__wrap {
     @include wrapper;

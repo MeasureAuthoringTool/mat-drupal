@@ -9,6 +9,8 @@
 
   &__item {
     margin-right: $space-double;
+    margin-top: $space-one-half;
+    margin-bottom: $space-one-half;
     display: inline-flex;
 
     &:last-child {
