@@ -14,7 +14,7 @@
 {% block page_system %}
 {% endblock %}
 
-<div {{ bem('layout-container', (layout_modifiers)) }}>
+<div {{ bem('layout-container', (layout_modifiers), '', (layout_extra_classes)) }}>
 
   {% block page_branding %}
     {% include "@organisms/site/site-branding/site-branding.twig" %}

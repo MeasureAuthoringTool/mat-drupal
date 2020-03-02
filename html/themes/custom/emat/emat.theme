@@ -9,6 +9,11 @@
  * Implements template_preprocess_page().
  */
 function emat_preprocess_page(&$variables) {
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+    $variables['attributes']['class'][] = 'node--' . $node->getType();
+  }
+
   if (\Drupal::service('path.matcher')->isFrontPage()) {
     $variables['attributes']['class'][] = 'front';
   }
