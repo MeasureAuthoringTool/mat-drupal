@@ -1,7 +1,7 @@
 {% set inline_nav_base_class = inline_nav_base_class|default('inline-nav') %}
 
-<nav {{ bem(inline_nav_base_class, (inline_nav_modifiers), inline_nav_blockname) }}>
-  <ul {{ bem('items', '', inline_nav_base_class) }}>
+<ul {{ bem(inline_nav_base_class, (inline_nav_modifiers), inline_nav_blockname) }}>
+  {# <ul {{ bem('items', '', inline_nav_base_class) }}> #}
     {% for item in items %}
       {% set item_modifiers = [] %}
       {% if item.in_active_trail == TRUE %}
@@ -16,5 +16,5 @@
         } %}
       </li>
     {% endfor %}
-  </ul>
-</nav>
+  {# </ul> #}
+</ul>

@@ -31,9 +31,7 @@
  */
 #}
 
-{% if label %}
-  {% set attributes = attributes.setAttribute('aria-label', label) %}
-{% endif %}
+{% set attributes = attributes.setAttribute('aria-label', 'Footer menu') %}
 
 {% extends "@molecules/menus/resource-nav/resource-nav.twig" %}
 

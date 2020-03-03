@@ -1,4 +1,6 @@
 .main-nav {
+  @include list-reset;
+
   display: none;
 
   &::after {
@@ -20,10 +22,6 @@
 
   &--pl-demo {
     background-image: linear-gradient(to right, #44499b, #4481ca);
-  }
-
-  &__items {
-    @include list-reset;
   }
 
   &__item {

@@ -1,11 +1,9 @@
 .inline-nav {
+  @include list-reset;
+
   display: inline-flex;
   justify-content: flex-end;
   align-items: center;
-
-  &__items {
-    @include list-reset;
-  }
 
   &__item {
     margin-right: $space-double;
