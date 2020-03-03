@@ -76,6 +76,10 @@ body.js-mobile-nav-active {
       display: none;
     }
 
+    .inline-nav {
+      display: block;
+    }
+
     .inline-nav__item {
       display: list-item;
       padding: $space $space 0 $space;
