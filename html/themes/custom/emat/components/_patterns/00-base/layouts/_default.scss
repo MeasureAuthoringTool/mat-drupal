@@ -15,6 +15,16 @@ $main-width: calc(100% - (#{$sidebar-width} + #{$gutter}));
   @include large {
     display: flex;
   }
+
+  .node--article & {
+    padding-top: $space-double;
+    padding-bottom: $space-double;
+
+    @include large {
+      padding-top: $space-triple;
+      padding-bottom: $space-triple;
+    }
+  }
 }
 
 .main-sidebar {

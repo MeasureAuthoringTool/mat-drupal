@@ -1,7 +1,11 @@
 .site-branding {
-  display: flex;
-  align-items: stretch;
-  background-color: $white;
+  display: none;
+
+  @include large {
+    display: flex;
+    align-items: stretch;
+    background-color: $white;
+  }
 
   .branding {
     flex: 1 1 40%;

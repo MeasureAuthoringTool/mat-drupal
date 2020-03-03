@@ -14,15 +14,17 @@
 {% block page_system %}
 {% endblock %}
 
-<div {{ bem('layout-container', (layout_modifiers)) }}>
+<div {{ bem('layout-container', (layout_modifiers), '', (layout_extra_classes)) }}>
 
-  {% block page_branding %}
-    {% include "@organisms/site/site-branding/site-branding.twig" %}
-  {% endblock %}
+  <header class="header">
+    {% block page_branding %}
+      {% include "@organisms/site/site-branding/site-branding.twig" %}
+    {% endblock %}
 
-  {% block page_header %}
-    {% include "@organisms/site/site-header/site-header.twig" %}
-  {% endblock %}
+    {% block page_header %}
+      {% include "@organisms/site/site-header/site-header.twig" %}
+    {% endblock %}
+  </header>
 
 
   <main role="main" {{ bem(main_base_class, (main_modifiers), main_blockname) }}>
@@ -40,16 +42,18 @@
 
   </main>
 
-  <footer class="footer-blocks">
-    {% block page_footer_left %}
-      {% include "@organisms/site/footer-left/footer-left.twig" %}
-    {% endblock %}
-    {% block page_footer_right %}
-      {% include "@organisms/site/footer-right/footer-right.twig" %}
+  <footer class="footer">
+    <div class="footer-blocks">
+      {% block page_footer_left %}
+        {% include "@organisms/site/footer-left/footer-left.twig" %}
+      {% endblock %}
+      {% block page_footer_right %}
+        {% include "@organisms/site/footer-right/footer-right.twig" %}
+      {% endblock %}
+    </div>
+
+    {% block page_footer %}
+      {% include "@organisms/site/site-footer/site-footer.twig" %}
     {% endblock %}
   </footer>
-
-  {% block page_footer %}
-    {% include "@organisms/site/site-footer/site-footer.twig" %}
-  {% endblock %}
 </div>

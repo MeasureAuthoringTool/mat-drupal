@@ -10,11 +10,12 @@
   }
 
   &__left {
-    order: 2;
+    margin-bottom: $space-double;
 
     @include medium {
       flex: 1 0 66%;
       padding-right: $space-quadruple;
+      margin-bottom: 0;
     }
   }
 
@@ -52,13 +53,11 @@
   }
 
   &__image {
-    order: 1;
     box-shadow: 0 0 $space $charcoal70;
     border-radius: 5px;
-    margin-bottom: $space;
 
     @include medium {
-      order: 2;
+      display: block;
       margin-bottom: 0;
     }
 

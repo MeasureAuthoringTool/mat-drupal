@@ -1,14 +1,14 @@
 .inline-nav {
+  @include list-reset;
+
   display: inline-flex;
   justify-content: flex-end;
   align-items: center;
 
-  &__items {
-    @include list-reset;
-  }
-
   &__item {
     margin-right: $space-double;
+    margin-top: $space-one-half;
+    margin-bottom: $space-one-half;
     display: inline-flex;
 
     &:last-child {
@@ -20,5 +20,10 @@
     font-weight: normal;
     text-decoration: none;
     color: $charcoal;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-bottom: 2px solid $charcoal;
+    }
   }
 }
