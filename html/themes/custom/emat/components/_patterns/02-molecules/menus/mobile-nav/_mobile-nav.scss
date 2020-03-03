@@ -87,6 +87,10 @@ body.js-mobile-nav-active {
 
     .inline-nav__link {
       color: $white;
+
+      &:hover {
+        border-bottom: 2px solid $white;
+      }
     }
   }
 
