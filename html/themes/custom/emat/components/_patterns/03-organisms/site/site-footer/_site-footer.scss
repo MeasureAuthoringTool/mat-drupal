@@ -1,10 +1,8 @@
 $half-max-width: $max-width/2;
 
 .footer {
-  padding: $space-triple 0;
-
   &__wrap {
-    @include wrapper;
+    @include wrapper($v-padding: $space-triple);
   }
 }
 
