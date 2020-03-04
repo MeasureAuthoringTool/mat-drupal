@@ -17,14 +17,6 @@ FROM drupal:8
 # Copy precompiled codebase into the container.
 COPY --from=vendor /app/ /var/www
 
-# Copy other required configuration into the contianer.
-COPY config/ /var/www/config/
-COPY load.environment.php /var/www/load.environment.php
-COPY mat.settings.php /var/www/html/sites/default/settings.php
-
-# Fix file ownership on docroot.
-RUN chown -R www-data:www-data /var/www/html
-
 # Install extras; mysql-client is for Drush
 RUN apt-get update && apt-get install -y \
 	curl \
@@ -83,3 +75,14 @@ RUN sed -i 's/LogLevel warn/LogLevel notice core:info/' /etc/apache2/apache2.con
 RUN echo '# LimitRequest*' >> /etc/apache2/conf-enabled/security.conf
 RUN echo 'LimitRequestline 4096' >> /etc/apache2/conf-enabled/security.conf
 RUN echo 'LimitRequestBody 20971520' >> /etc/apache2/conf-enabled/security.conf
+
+# Copy other required configuration into the contianer.
+COPY config/ /var/www/config/
+COPY load.environment.php /var/www/load.environment.php
+COPY mat.settings.php /var/www/html/sites/default/settings.php
+
+# Fix file ownership on docroot.
+RUN chown -R www-data:www-data /var/www/html
+
+# So that drush works from outside the container.
+WORKDIR /var/www
