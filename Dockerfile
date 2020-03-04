@@ -1,4 +1,21 @@
+# PHP Dependency install via Composer.
+FROM composer as vendor
+
+COPY composer.json composer.json
+COPY composer.lock composer.lock
+COPY scripts/ scripts/
+COPY html/ html/
+
+RUN composer install \
+  --ignore-platform-reqs \
+  --no-interaction \
+  --no-dev \
+  --prefer-dist
+
 FROM drupal:8
+
+# Copy precompiled codebase into the container.
+COPY --from=vendor /app/ /var/www
 
 # Install extras; mysql-client is for Drush
 RUN apt-get update && apt-get install -y \
@@ -12,6 +29,9 @@ RUN apt-get update && apt-get install -y \
 RUN wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar && \
 	chmod +x drush.phar && \
 	mv drush.phar /usr/local/bin/drush
+
+# Grab DB PEM from AWS.
+RUN wget -O /var/www/html/sites/default/rds-combined-ca-bundle.pem https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
 
 # Disabling unused Apache modules
 RUN a2dismod status -f
@@ -55,3 +75,14 @@ RUN sed -i 's/LogLevel warn/LogLevel notice core:info/' /etc/apache2/apache2.con
 RUN echo '# LimitRequest*' >> /etc/apache2/conf-enabled/security.conf
 RUN echo 'LimitRequestline 4096' >> /etc/apache2/conf-enabled/security.conf
 RUN echo 'LimitRequestBody 20971520' >> /etc/apache2/conf-enabled/security.conf
+
+# Copy other required configuration into the contianer.
+COPY config/ /var/www/config/
+COPY load.environment.php /var/www/load.environment.php
+COPY mat.settings.php /var/www/html/sites/default/settings.php
+
+# Fix file ownership on docroot.
+RUN chown -R www-data:www-data /var/www/html
+
+# So that drush works from outside the container.
+WORKDIR /var/www
