@@ -1,4 +1,29 @@
+# PHP Dependency install via Composer.
+FROM composer as vendor
+
+COPY composer.json composer.json
+COPY composer.lock composer.lock
+COPY scripts/ scripts/
+COPY html/ html/
+
+RUN composer install \
+  --ignore-platform-reqs \
+  --no-interaction \
+  --no-dev \
+  --prefer-dist
+
 FROM drupal:8
+
+# Copy precompiled codebase into the container.
+COPY --from=vendor /app/ /var/www
+
+# Copy other required configuration into the contianer.
+COPY config/ /var/www/config/
+COPY load.environment.php /var/www/load.environment.php
+COPY mat.settings.php /var/www/html/sites/default/settings.php
+
+# Fix file ownership on docroot.
+RUN chown -R www-data:www-data /var/www/html
 
 # Install extras; mysql-client is for Drush
 RUN apt-get update && apt-get install -y \
