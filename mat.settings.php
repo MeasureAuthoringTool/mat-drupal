@@ -16,6 +16,7 @@ $settings['file_scan_ignore_directories'] = [
 ];
 
 // Get DB connection info from env.
+// Comment out 'pdo' option for local dev.
 $databases['default']['default'] = [
   'database' => getenv('MYSQL_DATABASE'),
   'username' => getenv('MYSQL_USER'),
@@ -25,4 +26,7 @@ $databases['default']['default'] = [
   'port' => getenv('MYSQL_PORT'),
   'namespace' => 'Drupal\Core\Database\Driver\mysql',
   'driver' => 'mysql',
+  'pdo' => array(
+    PDO::MYSQL_ATTR_SSL_CA => '/var/www/html/sites/default/rds-combined-ca-bundle.pem',
+  ),
 ];
