@@ -1,0 +1,107 @@
+//
+// Generic header styles:
+// All arguments are optional. If not defined, the defaults below will be used
+//
+
+$color-heading: $charcoal;
+
+@mixin heading($font-family: $font-heading, $font-size: 1rem, $line-height: 1.25, $color: $color-heading, $color-link: inherit, $color-link-hover: inherit, $font-weight: 800, $margin: 0 0 0.5em) {
+  color: #{$color};
+  font-family: #{$font-family};
+  font-weight: #{$font-weight};
+  font-style: normal;
+  font-size: #{$font-size};
+  line-height: #{$line-height};
+  margin: #{$margin};
+  width: auto;
+
+  &__link {
+    color: $color-link;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+  }
+}
+
+@mixin page-title {
+  @include heading($font-size: rem(44px), $margin: 0 0 3rem);
+
+  &::after {
+    content: " ";
+    padding-top: $space;
+    display: block;
+    width: 100%;
+    max-width: 5rem;
+    border-bottom: 0.5rem solid $lime;
+  }
+}
+
+.h1 {
+  @include heading($font-size: rem(40px));
+
+  &--page-title {
+    @include page-title;
+  }
+
+  &.display {
+    font-size: rem(58px);
+  }
+}
+
+.h2 {
+  @include heading($font-size: rem(32px));
+
+  padding-bottom: $space-one-half;
+  border-bottom: 2px solid $charcoal20;
+}
+
+.h3 {
+  @include heading($font-size: rem(24px));
+}
+
+.h4 {
+  @include heading($font-size: rem(20px));
+}
+
+.h5 {
+  @include heading($font-size: rem(18px));
+}
+
+.h6 {
+  @include heading($font-size: rem(16px));
+}
+
+// TODO: BEM selectors should be applied to wysiwyg-created content
+
+.text-long {
+  h1 {
+    @extend .h1;
+  }
+
+  h2 {
+    @extend .h2;
+
+    margin-top: $space-double;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  h3 {
+    @extend .h3;
+  }
+
+  h4 {
+    @extend .h4;
+  }
+
+  h5 {
+    @extend .h5;
+  }
+
+  h6 {
+    @extend .h6;
+  }
+}

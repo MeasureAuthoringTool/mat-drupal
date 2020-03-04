@@ -1,0 +1,76 @@
+.extlink-disclaimer {
+  position: relative;
+  background: $white;
+  padding: $space-double;
+  width: auto;
+  max-width: $small;
+  margin: 0 auto;
+
+  &__title {
+    @extend .h2;
+  }
+
+  &__text {
+    margin-bottom: $space;
+  }
+
+  &__question {
+    font-weight: bold;
+    margin-bottom: $space-double;
+  }
+
+  &__link {
+    color: $blueberry;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include large {
+      flex-direction: row;
+    }
+  }
+
+  &__confirm {
+    @include button;
+
+    display: flex;
+    margin-bottom: $space-double;
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+
+    @include large {
+      margin-bottom: 0;
+      margin-right: $space-double;
+    }
+  }
+
+  &__decline,
+  &__decline {
+    @include link;
+
+    color: $charcoal;
+    font-size: rem(20px);
+
+    &:visited {
+      color: $charcoal;
+    }
+
+    &:hover {
+      color: $blueberry;
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  @include large {
+    max-width: $medium;
+  }
+}

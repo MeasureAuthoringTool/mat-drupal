@@ -1,0 +1,19 @@
+{% set mobile_nav_base_class = 'mobile-nav' %}
+{% set site_logo = site_logo|default('/'~directory~'/images/Logo-CMSgov.svg') %}
+{{ attach_library('emat/mobile-nav') }}
+
+<nav {{ bem(mobile_nav_base_class) }}>
+  {% include "@atoms/04-images/00-image/figure.twig" with {
+    img_src: site_logo,
+    img_alt: 'Logo',
+    img_url: logo_link_url|default('/'),
+    image_figure_base_class: 'logo',
+    image_figure_blockname: mobile_nav_base_class
+  } %}
+
+  <button href="#" {{ bem('toggle', '', mobile_nav_base_class, ['js-mobile-toggle']) }} aria-label="Mobile nav toggle">
+    <div {{ bem('bar', ['first'], mobile_nav_base_class) }}></div>
+    <div {{ bem('bar', ['second'], mobile_nav_base_class) }}></div>
+    <div {{ bem('bar', ['third'], mobile_nav_base_class) }}></div>
+  </button>
+</nav>

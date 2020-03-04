@@ -1,0 +1,22 @@
+uuid: 296c5057-0b08-4129-8bb0-d5df14dba26c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: article
+label: Article
+type: 'canonical_entities:node'
+pattern: '/news-alerts/[node:title]'
+selection_criteria:
+  7ee701dc-b58e-41d4-83c3-fcde3740125d:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 7ee701dc-b58e-41d4-83c3-fcde3740125d
+selection_logic: and
+weight: -5
+relationships: {  }

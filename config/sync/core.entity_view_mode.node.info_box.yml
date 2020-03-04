@@ -1,0 +1,10 @@
+uuid: 8756a7ac-cd9b-4ab6-9953-fd540ae2074a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.info_box
+label: 'Info Box'
+targetEntityType: node
+cache: true

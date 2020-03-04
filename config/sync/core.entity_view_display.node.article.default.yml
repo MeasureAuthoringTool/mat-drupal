@@ -1,0 +1,30 @@
+uuid: 4eca9f8a-47ea-4140-92e2-7c05e76d71fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.body
+    - node.type.article
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: ChmU3AVqDKU32A_fyChG0W9dTRKmVBR58B6OClCLvZI
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,24 @@
+extlink_target: false
+extlink_target_no_override: false
+extlink_nofollow: false
+extlink_follow_no_override: false
+extlink_subdomains: true
+extlink_alert: true
+extlink_alert_text: 'You are leaving the Measure Authoring Tool web site and entering another web site. The Measure Authoring Tool cannot attest to the accuracy of information provided by linked sites. You will be subject to the destination site''s Privacy Policy when you leave the Measure Authoring Tool website.'
+extlink_exclude: ''
+extlink_include: ''
+extlink_class: '0'
+extlink_label: '(link is external)'
+extlink_img_class: false
+extlink_css_exclude: .js-extlink-allow
+extlink_css_explicit: ''
+extlink_mailto_class: '0'
+extlink_mailto_label: '(link sends email)'
+extlink_use_font_awesome: false
+extlink_font_awesome_classes:
+  links: 'fa fa-external-link'
+  mailto: 'fa fa-envelope-o'
+extlink_icon_placement: '0'
+whitelisted_domains: {  }
+_core:
+  default_config_hash: kL9d-UuNbBrRxajhG6NU-3Iq_YUe8BUMSEAxrUuQBoU

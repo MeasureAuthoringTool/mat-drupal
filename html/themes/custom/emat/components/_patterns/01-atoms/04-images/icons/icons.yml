@@ -1,0 +1,19 @@
+items:
+  - name: "Search"
+    value: search
+  - name: "Lock"
+    value: "lock"
+  - name: Chevron right
+    value: chevron-right
+  - name: Angle right
+    value: angle-right
+  - name: Angle double right
+    value: angle-double-right
+  - name: Long arrow right
+    value: long-arrow-right
+  - name: Facebook
+    value: facebook-f
+  - name: Twitter
+    value: twitter
+  - name: LinkedIn
+    value: linkedin-in

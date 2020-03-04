@@ -1,0 +1,77 @@
+/// Mixin - list-reset
+/// Reset list item defaults when no margin, padding, list styles needed
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  padding-left: $space;
+
+  ul,
+  ol {
+    padding-left: $space-double;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+ol {
+  list-style: none;
+  counter-reset: li;
+
+  & > li {
+    counter-increment: li;
+  }
+
+  ol {
+    counter-reset: nested;
+
+    & > li {
+      counter-increment: nested;
+    }
+  }
+}
+
+.list-item {
+  margin-bottom: $space;
+  position: relative;
+
+  &::before {
+    color: $dragonfruit;
+    position: absolute;
+    top: 0;
+    left: -1rem;
+  }
+
+  ul &::before {
+    content: "\2022";
+  }
+
+  ul ul &::before {
+    content: "\25cb";
+  }
+
+  ol &::before {
+    content: counter(li) ".";
+  }
+
+  ol ol &::before {
+    content: counter(nested, lower-alpha) ".";
+  }
+}
+
+// TODO: BEM selectors should be applied to wysiwyg-created content
+
+.text-long {
+  ol,
+  ul {
+    li {
+      @extend .list-item;
+    }
+  }
+}
