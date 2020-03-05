@@ -33,5 +33,9 @@ services:
       - database
     ports:
       - 8080:80
-    # volumes: ['./:/var/www/html:rw,delegated']
-# Uncomment above line for local dev
+    # volumes:
+      # - './private:/var/www/private:rw,delegated'
+      # - './:/var/www:rw,delegated'
+
+# Uncomment above line for local dev.
+# Alternatively, only use the private file volume to simulate the cloud env.
