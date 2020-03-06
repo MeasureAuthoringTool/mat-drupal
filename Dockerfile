@@ -81,6 +81,9 @@ COPY config/ /var/www/config/
 COPY load.environment.php /var/www/load.environment.php
 COPY mat.settings.php /var/www/html/sites/default/settings.php
 
+# Make sure config/sync is writable.
+RUN chmod -R g+w,g+r config
+
 # Fix file ownership on docroot.
 RUN chown -R www-data:www-data /var/www/html
 
