@@ -1,6 +1,7 @@
 {% set resource_nav_base_class = resource_nav_base_class|default('resource-nav') %}
+{% set resource_nav_js_class = resource_nav_js_class|default(['js-extlink-allow']) %}
 
-<ul {{ bem('items', '', resource_nav_base_class) }}>
+<ul {{ bem('items', '', resource_nav_base_class, resource_nav_js_class) }}>
 	{% for item in items %}
 		<li {{ bem('item', '', resource_nav_base_class) }}>
 			{% include "@atoms/01-links/link/link.twig" with {
