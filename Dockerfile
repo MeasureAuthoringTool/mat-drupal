@@ -76,13 +76,16 @@ RUN echo '# LimitRequest*' >> /etc/apache2/conf-enabled/security.conf
 RUN echo 'LimitRequestline 4096' >> /etc/apache2/conf-enabled/security.conf
 RUN echo 'LimitRequestBody 20971520' >> /etc/apache2/conf-enabled/security.conf
 
+# Increase max upload size.
+RUN sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 50M/' /usr/local/etc/php/php.ini
+
 # Copy other required configuration into the contianer.
 COPY config/ /var/www/config/
 COPY load.environment.php /var/www/load.environment.php
 COPY mat.settings.php /var/www/html/sites/default/settings.php
 
 # Make sure config/sync is writable.
-RUN chmod -R g+w,g+r config
+RUN chmod -R g+w,g+r /var/www/config
 
 # Fix file ownership on docroot.
 RUN chown -R www-data:www-data /var/www/html
