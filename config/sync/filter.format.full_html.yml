@@ -35,19 +35,6 @@ filters:
     status: true
     weight: -10
     settings: {  }
-  filter_html_image_secure:
-    id: filter_html_image_secure
-    provider: filter
-    status: false
-    weight: -50
-    settings: {  }
-  filter_url:
-    id: filter_url
-    provider: filter
-    status: false
-    weight: 9
-    settings:
-      filter_url_length: 72
   filter_html:
     id: filter_html
     provider: filter
@@ -63,6 +50,19 @@ filters:
     status: false
     weight: 0
     settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -50
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: 9
+    settings:
+      filter_url_length: 72
   media_embed:
     id: media_embed
     provider: media
