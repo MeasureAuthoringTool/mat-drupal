@@ -1,0 +1,33 @@
+uuid: 3e0ad2af-37e8-43d7-a17c-cf22a6705145
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: default
+label: Default
+description: ''
+attributes: {  }
+matchers:
+  23a2bd43-35f4-44fe-80ea-f61e222dbe55:
+    uuid: 23a2bd43-35f4-44fe-80ea-f61e222dbe55
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: '[node:url:path]'
+      bundles: {  }
+      group_by_bundle: true
+      include_unpublished: false
+  c986e825-cdd5-4ec7-8e11-7e54c991d686:
+    uuid: c986e825-cdd5-4ec7-8e11-7e54c991d686
+    id: 'entity:file'
+    weight: 0
+    settings:
+      result_description: Files
+      bundles: null
+      group_by_bundle: null
+      images:
+        show_dimensions: false
+        show_thumbnail: false
+        thumbnail_image_style: null
