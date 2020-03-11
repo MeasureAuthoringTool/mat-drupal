@@ -30,6 +30,7 @@ module:
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  linkit: 0
   media: 0
   media_library: 0
   menu_trail_by_path: 0
@@ -41,6 +42,7 @@ module:
   path_alias: 0
   quickedit: 0
   rdf: 0
+  redirect: 0
   shortcut: 0
   system: 0
   taxonomy: 0
@@ -61,6 +63,7 @@ module:
   pathauto: 1
   views: 10
   paragraphs: 11
+  minimal: 1000
 theme:
   stable: 0
   classy: 0

@@ -10,7 +10,7 @@ extlink_include: ''
 extlink_class: '0'
 extlink_label: '(link is external)'
 extlink_img_class: false
-extlink_css_exclude: .js-extlink-allow
+extlink_css_exclude: '.js-extlink-allow, .user-logged-in.path-admin'
 extlink_css_explicit: ''
 extlink_mailto_class: '0'
 extlink_mailto_label: '(link sends email)'
@@ -19,6 +19,19 @@ extlink_font_awesome_classes:
   links: 'fa fa-external-link'
   mailto: 'fa fa-envelope-o'
 extlink_icon_placement: '0'
-whitelisted_domains: {  }
+whitelisted_domains:
+  - medicare.gov
+  - www.medicare.gov
+  - mymedicare.gov
+  - www.mymedicare.gov
+  - medicaid.gov
+  - www.medicaid.gov
+  - insurekidsnow.gov
+  - www.insurekidsnow.gov
+  - healthcare.gov
+  - www.healthcare.gov
+  - hhs.gov
+  - oig.hhs.gov
+  - www.hhs.gov
 _core:
   default_config_hash: kL9d-UuNbBrRxajhG6NU-3Iq_YUe8BUMSEAxrUuQBoU
