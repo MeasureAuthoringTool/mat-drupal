@@ -1,0 +1,17 @@
+uuid: 92a5c094-75b1-46fe-8fbd-f6bc8a753524
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: Local
+description: ''
+folder: ../config/local
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist:
+  - core.extension
+  - phpmailer_smtp.settings
+graylist_dependents: true
+graylist_skip_equal: false
+weight: 0
