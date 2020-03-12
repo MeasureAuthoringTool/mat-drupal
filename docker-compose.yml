@@ -21,6 +21,7 @@ services:
   drupal:
     build: .
     restart: always
+    env_file: .env
     environment:
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
