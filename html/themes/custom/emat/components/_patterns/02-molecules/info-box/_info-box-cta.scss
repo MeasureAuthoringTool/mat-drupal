@@ -30,20 +30,7 @@
     line-height: 1.5;
   }
 
-  &__button {
-    @include button-primary;
-
-    margin-top: $space;
-    padding: 0;
-    border-width: 3px;
-  }
-
   &__link {
-    color: $blueberry;
-    font-family: $font-heading;
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,6 +40,19 @@
       color: lighten($blueberry, 30%);
       width: 2rem;
       height: 2rem;
+    }
+
+    &--primary {
+      @include button-primary;
+
+      padding: 0.75rem;
+      margin-top: $space;
+      border-width: 3px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $blueberry;
+      font-family: $font-heading;
+      text-decoration: none;
     }
 
     &--secondary {

@@ -23,22 +23,18 @@
 {% endblock %}
 
 {% block infobox_actions %}
-  {% embed "@atoms/06-buttons/01-button.twig" with {
-    button_blockname: ib_base_class,
+
+  {% embed "@atoms/01-links/link/link.twig" with {
+    link_url: cta_primary_link_url,
+    link_blockname: ib_base_class,
+    link_base_class: 'link',
+    link_modifiers: ['primary'],
   } %}
-    {% block button_content %}
-      {% embed "@atoms/01-links/link/link.twig" with {
-        link_url: cta_primary_link_url,
-        link_blockname: ib_base_class,
-        link_base_class: 'link',
+    {% block link_content %}
+      {{ cta_primary_link_text }}
+      {% include "@atoms/04-images/icons/_icon.twig" with {
+        icon_name: 'angle-right',
       } %}
-        {% block link_content %}
-          {{ cta_primary_link_text }}
-          {% include "@atoms/04-images/icons/_icon.twig" with {
-            icon_name: 'angle-right',
-          } %}
-        {% endblock %}
-      {% endembed %}
     {% endblock %}
   {% endembed %}
 
