@@ -6,6 +6,21 @@
 } %}
 
   {% block page_header %}
+    {% embed "@molecules/status/_status.twig" with {
+      status_type: "warning",
+      status_countdown_target: "+5 days",
+      status_js_class: [
+        'animate-flip-in-x',
+      ]
+    } %}
+      {% block status_message_content %}
+        {% include "@atoms/countdown/countdown.twig" with {
+          countdown_date: "May 6, 2020",
+          countdown_granularity: "d",
+        } %}
+        remaining to sign up for your HARP ID. <a href="/training-resources">Click here for more info.</a>
+      {% endblock %}
+    {% endembed %}
     {% embed "@organisms/site/site-header/site-header.twig" with {
       site_header_modifiers: ['hero']
     } %}

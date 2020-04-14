@@ -1,0 +1,8 @@
+uuid: 06e03222-ce22-4717-ae44-bc33edf935d2
+langcode: en
+status: true
+dependencies: {  }
+id: site_status
+label: 'Site Status'
+revision: 0
+description: 'Display a site-wide status message.'

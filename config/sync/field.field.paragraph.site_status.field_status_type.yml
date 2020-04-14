@@ -1,0 +1,23 @@
+uuid: 2acab66c-379e-4b7f-94e9-f831df2e1316
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_status_type
+    - paragraphs.paragraphs_type.site_status
+  module:
+    - options
+id: paragraph.site_status.field_status_type
+field_name: field_status_type
+entity_type: paragraph
+bundle: site_status
+label: 'Status Type'
+description: 'Determines the color variation for the status message.'
+required: true
+translatable: false
+default_value:
+  -
+    value: warning
+default_value_callback: ''
+settings: {  }
+field_type: list_string

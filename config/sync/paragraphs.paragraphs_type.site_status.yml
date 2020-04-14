@@ -1,0 +1,10 @@
+uuid: 70b6514b-47e1-40b6-9400-9f41b8fd87ac
+langcode: en
+status: true
+dependencies: {  }
+id: site_status
+label: 'Site Status'
+icon_uuid: null
+icon_default: null
+description: 'Display a site-wide status message. A countdown timer will be prepended to the body text if a countdown date is provided.'
+behavior_plugins: {  }

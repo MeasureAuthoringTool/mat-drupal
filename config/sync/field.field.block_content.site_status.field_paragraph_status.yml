@@ -1,0 +1,34 @@
+uuid: 1fbc6bbe-14bd-4fda-842e-6a1c85ab496a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.site_status
+    - field.storage.block_content.field_paragraph_status
+    - paragraphs.paragraphs_type.site_status
+  module:
+    - entity_reference_revisions
+id: block_content.site_status.field_paragraph_status
+field_name: field_paragraph_status
+entity_type: block_content
+bundle: site_status
+label: Status
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      site_status: site_status
+    target_bundles_drag_drop:
+      cta_with_image:
+        weight: 3
+        enabled: false
+      site_status:
+        enabled: true
+        weight: 4
+field_type: entity_reference_revisions

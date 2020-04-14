@@ -1,0 +1,21 @@
+uuid: 58629573-b0a9-41d6-8a04-19a8e0e1b8bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_status_message
+    - paragraphs.paragraphs_type.site_status
+  module:
+    - text
+id: paragraph.site_status.field_status_message
+field_name: field_status_message
+entity_type: paragraph
+bundle: site_status
+label: 'Status Message'
+description: 'Can contain links, but should be kept brief.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
