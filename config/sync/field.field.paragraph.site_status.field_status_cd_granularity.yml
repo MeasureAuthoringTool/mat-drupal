@@ -1,0 +1,23 @@
+uuid: fcab3cdf-5947-43d6-9ffc-a048d56aa939
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_status_cd_granularity
+    - paragraphs.paragraphs_type.site_status
+  module:
+    - options
+id: paragraph.site_status.field_status_cd_granularity
+field_name: field_status_cd_granularity
+entity_type: paragraph
+bundle: site_status
+label: 'Status Countdown Granularity'
+description: 'Choose the granularity that the countdown timer will display.'
+required: false
+translatable: false
+default_value:
+  -
+    value: d
+default_value_callback: ''
+settings: {  }
+field_type: list_string

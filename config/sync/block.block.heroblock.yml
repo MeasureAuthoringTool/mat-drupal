@@ -10,7 +10,7 @@ dependencies:
 id: heroblock
 theme: emat
 region: header
-weight: 0
+weight: -5
 provider: null
 plugin: emat_hero_block
 settings:

@@ -1,0 +1,30 @@
+uuid: 89fe469d-8437-4078-a752-ffda811007cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_status_type
+field_name: field_status_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: status
+      label: 'Status (green)'
+    -
+      value: warning
+      label: 'Warning (yellow)'
+    -
+      value: Error
+      label: 'Error (red)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
