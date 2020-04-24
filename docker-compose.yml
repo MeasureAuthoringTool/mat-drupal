@@ -42,6 +42,3 @@ services:
     image: mailhog/mailhog:latest
     ports:
       - 8025:8025
-
-# Uncomment above line for local dev.
-# Alternatively, only use the private file volume to simulate the cloud env.
