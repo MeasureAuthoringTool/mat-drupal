@@ -25,7 +25,7 @@ settings:
   cta_primary_link_text: 'Log in to the MAT'
   cta_primary_link_url: 'https://www.emeasuretool.cms.gov/MeasureAuthoringTool/Login.html'
   cta_secondary_link_text: 'New User Registration'
-  cta_secondary_link_url: 'https://www.emeasuretool.cms.gov/web/guest/training-resources'
+  cta_secondary_link_url: 'https://www.emeasuretool.cms.gov/training-resources/mat-user-registration'
   cta:
     cta_box_title: null
 visibility:
