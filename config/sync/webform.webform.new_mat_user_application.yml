@@ -12,7 +12,7 @@ id: new_mat_user_application
 title: 'New MAT User Application'
 description: ''
 category: ''
-elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name:'\n  '#required': true\nlast_name_:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number:'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address:'\n  '#required': true\norganization:\n  '#type': textfield\n  '#title': 'Organization:'\n  '#required': true\nharp_user_id:\n  '#type': textfield\n  '#title': 'HARP User ID:'\n  '#required': true\nadditional_information:\n  '#type': textarea\n  '#title': 'Additional Information:'"
+elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name:'\n  '#required': true\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name:'\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number:'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address:'\n  '#required': true\norganization:\n  '#type': textfield\n  '#title': 'Organization:'\n  '#required': true\nharp_user_id:\n  '#type': textfield\n  '#title': 'HARP User ID:'\n  '#required': true\nadditional_information:\n  '#type': textarea\n  '#title': 'Additional Information:'"
 css: ''
 javascript: ''
 settings:
@@ -175,5 +175,41 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    label: Email
+    handler_id: email
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: sb-mat-help@semanticbits.com
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: sb-mat-help@semanticbits.com
+      from_options: {  }
+      from_name: _default
+      subject: 'New MAT User ID Request'
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
 variants: {  }
