@@ -12,7 +12,7 @@ id: new_mat_user_application
 title: 'New MAT User Application'
 description: ''
 category: ''
-elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name:'\n  '#required': true\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name:'\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number:'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address:'\n  '#required': true\norganization:\n  '#type': textfield\n  '#title': 'Organization:'\n  '#required': true\nharp_user_id:\n  '#type': textfield\n  '#title': 'HARP User ID:'\n  '#required': true\nadditional_information:\n  '#type': textarea\n  '#title': 'Additional Information:'"
+elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name:'\n  '#required': true\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name:'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number:'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address:'\n  '#required': true\norganization:\n  '#type': textfield\n  '#title': 'Organization:'\n  '#required': true\nharp_user_id:\n  '#type': textfield\n  '#title': 'HARP User ID:'\n  '#required': true\nadditional_information:\n  '#type': textarea\n  '#title': 'Additional Information:'"
 css: ''
 javascript: ''
 settings:
