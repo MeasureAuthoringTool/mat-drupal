@@ -9,6 +9,21 @@
   }
 }
 
+.webform-flexbox {
+  max-width: 32em;
+  margin: 0;
+}
+
+.webform-flex {
+  &:last-of-type {
+    margin-left: $space-one-half;
+  }
+
+  &--container {
+    margin: 0;
+  }
+}
+
 .webform-required {
   position: relative;
   max-width: 32em;
@@ -17,6 +32,10 @@
     position: absolute;
     right: 0;
     bottom: -2rem;
+
+    .webform-submission-new-mat-user-application-form  &{
+      position: unset;
+    }
   }
 }
 
