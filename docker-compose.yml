@@ -20,6 +20,7 @@ services:
 
   drupal:
     build: .
+    # image: tcfunksb/mat-drupal:latest
     restart: always
     env_file: .env
     environment:
@@ -41,4 +42,5 @@ services:
   mailhog:
     image: mailhog/mailhog:latest
     ports:
+      - 1025:1025
       - 8025:8025
