@@ -32,7 +32,7 @@
       {% if messages|length > 1 %}
         <ul>
           {% for message in messages %}
-            {% include "_status.twig" with {
+            {% include "@molecules/status/_status.twig" with {
               status_element_type: 'li',
               status_type: type,
               status_message: message,
@@ -40,7 +40,7 @@
           {% endfor %}
         </ul>
       {% else %}
-        {% include "_status.twig" with {
+        {% include "@molecules/status/_status.twig" with {
           status_type: type,
           status_message: messages|first
         } %}
