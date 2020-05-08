@@ -16,8 +16,13 @@
 
   var updateTimers = function() {
     var timerSlots = document.querySelectorAll('.js-countdown');
+    for (var i = 0; i < timerSlots.length; i++) {
+      var timer = timerSlots[i];
+      setTimer(timerSlots[i]);
+    }
+  }
 
-    timerSlots.forEach(function (timer) {
+  var setTimer = function (timer) {
 
       var countDownDate = new Date(timer.dataset.countdownDate);
       var now = new Date().getTime();
@@ -45,7 +50,6 @@
       }
 
       timer.textContent = timerText.trim();
-    });
-  }
+    };
 
 })();
