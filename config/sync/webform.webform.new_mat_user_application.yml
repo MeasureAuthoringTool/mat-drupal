@@ -1,4 +1,3 @@
-uuid: 128d9589-63b2-44cd-bea8-972be9028ae7
 langcode: en
 status: open
 dependencies: {  }
@@ -12,7 +11,7 @@ id: new_mat_user_application
 title: 'New MAT User Application'
 description: ''
 category: ''
-elements: "flexbox:\n  '#type': webform_flexbox\n  first_name:\n    '#type': textfield\n    '#title': 'First Name:'\n    '#required': true\n    '#flex': '3'\n  middle_initial:\n    '#type': textfield\n    '#title': 'Middle Initial'\n    '#maxlength': '1'\n    '#size': '1'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name:'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number:'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address:'\n  '#required': true\norganization:\n  '#type': textfield\n  '#title': 'Organization:'\n  '#required': true\nharp_user_id:\n  '#type': textfield\n  '#title': 'HARP User ID:'\n  '#required': true\nadditional_information:\n  '#type': textarea\n  '#title': 'Additional Information:'"
+elements: "flexbox:\n  '#type': webform_flexbox\n  first_name:\n    '#type': textfield\n    '#title': 'First Name:'\n    '#required': true\n    '#flex': 3\n  middle_initial:\n    '#type': textfield\n    '#title': 'Middle Initial'\n    '#maxlength': 1\n    '#size': 1\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name:'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number:'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address:'\n  '#required': true\norganization:\n  '#type': textfield\n  '#title': 'Organization:'\n  '#required': true\nharp_user_id:\n  '#type': textfield\n  '#title': 'HARP User ID:'\n  '#required': true\nadditional_information:\n  '#type': textarea\n  '#title': 'Additional Information:'\n"
 css: ''
 javascript: ''
 settings:
@@ -128,6 +127,7 @@ settings:
   purge_days: null
   results_disabled: true
   results_disabled_ignore: false
+  results_customize: false
   token_view: false
   token_update: false
 access:
@@ -215,3 +215,4 @@ handlers:
       theme_name: ''
       parameters: {  }
 variants: {  }
+uuid: 128d9589-63b2-44cd-bea8-972be9028ae7
