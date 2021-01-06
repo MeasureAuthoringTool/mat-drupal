@@ -4,7 +4,7 @@ FROM drupal:8
 RUN apt-get update && apt-get install -y \
 	curl \
 	git \
-	mysql-client \
+	default-mysql-client \
 	vim \
 	wget
 
