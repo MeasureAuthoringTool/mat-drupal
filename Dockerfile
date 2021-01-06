@@ -1,4 +1,4 @@
-FROM drupal:8
+FROM drupal:9
 
 # Install extras; mysql-client is for Drush
 RUN apt-get update && apt-get install -y \
