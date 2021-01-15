@@ -6,6 +6,7 @@ $settings['file_private_path'] = '../private';
 
 // Disallow access to update.php by anonymous users.
 $settings['update_free_access'] = FALSE;
+$settings['rebuild_access'] = FALSE;
 
 $settings['hash_salt'] = getenv('DRUPAL_HASH_SALT');
 $settings['entity_update_batch_size'] = 50;
