@@ -1,0 +1,47 @@
+uuid: 5a737c09-7e54-4d69-8d34-d6db856b5018
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.site_status.field_status_cd_date
+    - field.field.paragraph.site_status.field_status_cd_granularity
+    - field.field.paragraph.site_status.field_status_message
+    - field.field.paragraph.site_status.field_status_type
+    - paragraphs.paragraphs_type.site_status
+  module:
+    - datetime
+    - text
+id: paragraph.site_status.default
+targetEntityType: paragraph
+bundle: site_status
+mode: default
+content:
+  field_status_cd_date:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_status_cd_granularity:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_status_message:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_status_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

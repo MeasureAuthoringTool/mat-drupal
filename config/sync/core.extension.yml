@@ -11,6 +11,8 @@ module:
   color: 0
   components: 0
   config: 0
+  config_filter: 0
+  config_split: 0
   contextual: 0
   ctools: 0
   datetime: 0
@@ -25,11 +27,14 @@ module:
   filter: 0
   help: 0
   history: 0
+  honeypot: 0
   image: 0
   inline_form_errors: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  linkit: 0
+  mailsystem: 0
   media: 0
   media_library: 0
   menu_trail_by_path: 0
@@ -39,8 +44,10 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  phpmailer_smtp: 0
   quickedit: 0
   rdf: 0
+  redirect: 0
   shortcut: 0
   system: 0
   taxonomy: 0
@@ -61,13 +68,13 @@ module:
   pathauto: 1
   views: 10
   paragraphs: 11
-  standard: 1000
+  minimal: 1000
 theme:
   stable: 0
   classy: 0
   bartik: 0
   seven: 0
   emat: 0
-profile: standard
+profile: minimal
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

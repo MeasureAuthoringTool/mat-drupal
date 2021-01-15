@@ -1,0 +1,21 @@
+uuid: b44eee2f-16d1-4dd4-8a1f-6658a2b77970
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_status_cd_date
+    - paragraphs.paragraphs_type.site_status
+  module:
+    - datetime
+id: paragraph.site_status.field_status_cd_date
+field_name: field_status_cd_date
+entity_type: paragraph
+bundle: site_status
+label: 'Status Countdown Date'
+description: 'Optionally provide an end date to display a countdown timer.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

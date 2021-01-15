@@ -2,21 +2,23 @@
 
 {% set hhs_logo = hhs_logo|default('/' ~ directory ~ '/images/Logo-HHS@3x.png') %}
 {% set cms_logo = cms_logo|default('/' ~ directory ~ '/images/Logo-CMS@3x.png') %}
+{% set cms_logo_link = cms_logo_link|default('https://www.cms.gov') %}
+{% set hhs_logo_link = hhs_logo_link|default('https://www.hhs.gov') %}
 
 <section {{ bem(hhs_cms_base_class, (hhs_cms_modifiers), hhs_cms_blockname) }}>
 
-  <div {{ bem('logos', '', hhs_cms_base_class) }}>
+  <div {{ bem('logos', '', hhs_cms_base_class, ['js-extlink-allow']) }}>
     {% include "@atoms/04-images/00-image/figure.twig" with {
       img_src: hhs_logo,
       img_alt: 'Logo',
-      img_url: logo_link_url|default('/'),
+      img_url: hhs_logo_link,
       image_figure_base_class: 'logo',
       image_link_blockname: 'logo',
     } %}
     {% include "@atoms/04-images/00-image/figure.twig" with {
       img_src: cms_logo,
       img_alt: 'Logo',
-      img_url: logo_link_url|default('/'),
+      img_url: cms_logo_link,
       image_figure_base_class: 'logo',
       image_link_blockname: 'logo',
     } %}

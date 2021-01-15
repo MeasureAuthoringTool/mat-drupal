@@ -185,8 +185,6 @@ requirements:
   bootstrap: true
   spam: true
 langcode: en
-third_party_settings:
-  captcha:
-    replace_administration_mode: true
+third_party_settings: {  }
 _core:
   default_config_hash: RUwrG7wWV4Ub64Us9Wn4rm9qshWG3yKfNeT_LpB6fYs

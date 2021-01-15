@@ -38,3 +38,7 @@ external-link:
   dependencies:
     - core/jquery
     - core/jquery.once
+
+countdown:
+  js:
+    dist/01-atoms/countdown/countdown.js: {}

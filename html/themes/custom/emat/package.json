@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "gulp compile && gulp theme",
+    "build": "gulp build",
     "postinstall": "./scripts/pattern_lab.sh && ./scripts/twig_functions.sh"
   },
   "precommit.silent": true,

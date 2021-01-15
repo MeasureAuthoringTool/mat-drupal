@@ -1,0 +1,33 @@
+uuid: 3370acb4-971f-4fb7-b409-5a61d77860b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_status_cd_granularity
+field_name: field_status_cd_granularity
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: d
+      label: Days
+    -
+      value: h
+      label: Hours
+    -
+      value: m
+      label: Minutes
+    -
+      value: s
+      label: Seconds
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

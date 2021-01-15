@@ -40,3 +40,10 @@ function emat_page_attachments_alter(array &$attachments) {
     $attachments['#attached']['library'][] = 'emat/external-link';
   }
 }
+
+/**
+ * Implements hook_form_alter().
+ */
+function emat_form_webform_submission_contact_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  honeypot_add_form_protection($form, $form_state, ['honeypot', 'time_restriction']);
+}

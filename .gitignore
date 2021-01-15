@@ -10,9 +10,12 @@
 # Ignore sensitive information
 /html/sites/*/settings.php
 /html/sites/*/settings.local.php
+html/sites/settings.local.php
+html/sites/default/services.yml
 
 # Ignore Drupal's file directory
 /html/sites/*/files/
+/private
 
 # Ignore SimpleTest multi-site environment.
 /html/sites/simpletest
