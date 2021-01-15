@@ -1,5 +1,5 @@
 # PHP Dependency install via Composer.
-FROM composer as vendor
+FROM composer:2 as vendor
 
 COPY composer.json composer.json
 COPY composer.lock composer.lock
