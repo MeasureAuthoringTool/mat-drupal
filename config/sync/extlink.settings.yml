@@ -35,3 +35,4 @@ whitelisted_domains:
   - www.hhs.gov
 _core:
   default_config_hash: kL9d-UuNbBrRxajhG6NU-3Iq_YUe8BUMSEAxrUuQBoU
+extlink_exclude_admin_routes: false
