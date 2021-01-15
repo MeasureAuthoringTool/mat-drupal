@@ -1,7 +1,7 @@
 ## Prerequisites
 
-- PHP >= 7.0.8 (just to run composer)
-- [Composer](https://getcomposer.org/)
+- PHP ^7.3
+- [Composer ^2.0](https://getcomposer.org/)
 - [Docker](https://docs.docker.com/get-docker/)
 - [Node v11.15](https://nodejs.org/en/download)
 
@@ -27,12 +27,29 @@ The drush site installer command generates an admin username and password. You c
 2. Comment out the volumes line in `docker-compose.yml`.
 3. Install composer dependencies `composer install`
 4. Install theme dependencies `cd html/themes/custom/emat && npm install`
-5. Build the theme `npm start`. You can stop this once it's done, or just leave it running and change to anoter terminal/tab.
+5. Build the theme `npm run-script build`.
 6. Copy `.env.example` to `.env` and provide some values for the MySQL variables. Doesn't really matter
 what you use, except that MYSQL_HOSTNAME should match docker-compose service name for MySQL ("database").
 7. Start docker-compose `docker-compose up -d --build`.
 8. Run drupal installer `docker-compose exec drupal drush si`. You'll have to provide some values here for MySQL username and password, etc.
 9. Import Drupal config `docker-compose exec drupal drush cim -y`.
+
+## Local theming
+
+The `eMAT` theme uses the atomic design principle, built with [patternlab](https://patternlab.io/). These components are
+then consumed by Drupal templates. Unfortunately the base theme project that this was built on has been deprecated, so
+updates to the package dependencies here is tricky. Development of theme components is still possible, but
+it may be worth it to put in some time to update the underlying design system in the future.
+
+0. You'll need node v11, as specified in the prerequisites section at the top of the README.
+1. Navigate to the theme directory `cd html/themes/custom/emat`.
+2. Install package dependencies `npm install`
+3. Start pattern lab `npm start`.
+4. Once ready, you should get a URL like `http://localhost:3000/pattern-lab/public`.
+
+For modifying existing components, you should be able to work exclusively within patterlab, but when adding new
+components, you'll need to first theme the element in patternlab, and then create the corresponding Drupal template
+to consume that themed component.
 
 ## Usage
 
