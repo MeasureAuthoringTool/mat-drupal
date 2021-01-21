@@ -14,6 +14,25 @@ RUN composer install \
 
 FROM drupal:8
 
+# NewRelic
+ARG PHP_AGENT_URL="https://download.newrelic.com/php_agent/release/newrelic-php5-9.15.0.293-linux.tar.gz"
+RUN \
+  curl -L ${PHP_AGENT_URL} | tar -C /tmp -zx && \
+  export NR_INSTALL_USE_CP_NOT_LN=1 && \
+  export NR_INSTALL_SILENT=1 && \
+  /tmp/newrelic-php5-*/newrelic-install install && \
+  rm -rf /tmp/newrelic-php5-* /tmp/nrinstall* && \
+  sed -i \
+      -e 's/;newrelic.daemon.collector_host =.*/newrelic.daemon.collector_host = "gov-collector.newrelic.com"/' \
+      -e 's/;newrelic.daemon.app_connect_timeout =.*/newrelic.daemon.app_connect_timeout=15s/' \
+      -e 's/;newrelic.daemon.start_timeout =.*/newrelic.daemon.start_timeout=5s/' \
+      -e 's/;newrelic.distributed_tracing_enabled =.*/newrelic.distributed_tracing_enabled=true/' \
+      -e 's/\"REPLACE_WITH_REAL_KEY\"/\"${NEW_RELIC_LICENSE_KEY}\"/' \
+      -e 's/newrelic.appname = \"PHP Application\"/newrelic.appname = \"${NEW_RELIC_APP_NAME}\"/' \
+      /usr/local/etc/php/conf.d/newrelic.ini
+
+
+
 # Copy precompiled codebase into the container.
 COPY --from=vendor /app/ /var/www
 
