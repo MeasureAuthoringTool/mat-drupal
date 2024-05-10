@@ -1,5 +1,5 @@
 # PHP Dependency install via Composer.
-FROM composer:2 as vendor
+FROM composer:2 AS vendor
 
 COPY composer.json composer.json
 COPY composer.lock composer.lock
@@ -15,26 +15,23 @@ RUN composer install \
 FROM drupal:8
 
 # NewRelic
-ARG PHP_AGENT_URL="https://download.newrelic.com/php_agent/release/newrelic-php5-9.15.0.293-linux.tar.gz"
-RUN \
-  curl -L ${PHP_AGENT_URL} | tar -C /tmp -zx && \
-  export NR_INSTALL_USE_CP_NOT_LN=1 && \
-  export NR_INSTALL_SILENT=1 && \
-  /tmp/newrelic-php5-*/newrelic-install install && \
-  rm -rf /tmp/newrelic-php5-* /tmp/nrinstall* && \
-  sed -i \
-      -e 's/;newrelic.daemon.collector_host =.*/newrelic.daemon.collector_host = "gov-collector.newrelic.com"/' \
-      -e 's/;newrelic.daemon.app_connect_timeout =.*/newrelic.daemon.app_connect_timeout=15s/' \
-      -e 's/;newrelic.daemon.start_timeout =.*/newrelic.daemon.start_timeout=5s/' \
-      -e 's/;newrelic.distributed_tracing_enabled =.*/newrelic.distributed_tracing_enabled=true/' \
-      -e 's/\"REPLACE_WITH_REAL_KEY\"/\"${NEW_RELIC_LICENSE_KEY}\"/' \
-      -e 's/newrelic.appname = \"PHP Application\"/newrelic.appname = \"${NEW_RELIC_APP_NAME}\"/' \
-      /usr/local/etc/php/conf.d/newrelic.ini
-
-
-
-# Copy precompiled codebase into the container.
-COPY --from=vendor /app/ /var/www
+#ARG PHP_AGENT_URL="https://download.newrelic.com/php_agent/release/newrelic-php5-10.19.0.9-linux.tar.gz"
+#RUN \
+#  curl -L ${PHP_AGENT_URL} | tar -C /tmp -zx && \
+#  export NR_INSTALL_USE_CP_NOT_LN=1 && \
+#  export NR_INSTALL_SILENT=1 && \
+#  /tmp/newrelic-php5-*/newrelic-install install && \
+#  rm -rf /tmp/newrelic-php5-* /tmp/nrinstall* && \
+#  sed -i \
+#      -e 's/;newrelic.daemon.collector_host =.*/newrelic.daemon.collector_host = "gov-collector.newrelic.com"/' \
+#      -e 's/;newrelic.daemon.app_connect_timeout =.*/newrelic.daemon.app_connect_timeout=15s/' \
+#      -e 's/;newrelic.daemon.start_timeout =.*/newrelic.daemon.start_timeout=5s/' \
+#      -e 's/;newrelic.distributed_tracing_enabled =.*/newrelic.distributed_tracing_enabled=true/' \
+#      -e 's/\"REPLACE_WITH_REAL_KEY\"/\"${NEW_RELIC_LICENSE_KEY}\"/' \
+#      -e 's/newrelic.appname = \"PHP Application\"/newrelic.appname = \"${NEW_RELIC_APP_NAME}\"/' \
+#      /usr/local/etc/php/conf.d/newrelic.ini
+#
+#
 
 # Install extras; mysql-client is for Drush
 RUN apt-get update && apt-get install -y \
@@ -43,6 +40,10 @@ RUN apt-get update && apt-get install -y \
 	default-mysql-client \
 	vim \
 	wget
+
+# Copy precompiled codebase into the container.
+RUN rm /var/www/html
+COPY --from=vendor /app/ /var/www
 
 # Install Drush
 RUN wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar && \
