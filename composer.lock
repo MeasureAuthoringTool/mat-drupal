@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6a5da53ed65b00a7bd4da4b137ef3ea1",
+    "content-hash": "7e71dd560c16cc8a1b2c4ba1c8fff7c9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2554,26 +2554,26 @@
         },
         {
             "name": "drupal/extlink",
-            "version": "1.5.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/extlink.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/extlink-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "5a2b74d12ff9e9257a0566cca8dac3872da64970"
+                "url": "https://ftp.drupal.org/files/projects/extlink-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "38650688b5a58496db59f40b2a7f36c4bedcbfb4"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8 || ^9 || ^10"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1601382250",
+                    "version": "8.x-1.7",
+                    "datestamp": "1665770295",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2599,6 +2599,10 @@
                     "name": "Neslee Canil Pinto",
                     "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "quicksketch",
+                    "homepage": "https://www.drupal.org/user/35821"
                 }
             ],
             "description": "Modify behavior and appearance of external links.",
