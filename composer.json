@@ -21,7 +21,6 @@
         "cweagans/composer-patches": "^1.6.5",
         "drupal/admin_toolbar": "^2.5",
         "drupal/config_split": "^2.0",
-        "drupal/console": "^1.0.2",
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
         "drupal/devel": "^4.2",
@@ -37,7 +36,9 @@
         "drupal/twig_field_value": "^2.0",
         "drupal/views_infinite_scroll": "^1.9",
         "drupal/webform": "^6.2",
+        "drush/drush": "^10.6",
         "fourkitchens/emulsify": "^3.1",
+        "vlucas/phpdotenv": "^5.6",
         "webflo/drupal-finder": "^1.0.0"
     },
     "require-dev": {
