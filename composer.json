@@ -34,7 +34,7 @@
         "drupal/pathauto": "^1.6",
         "drupal/phpmailer_smtp": "^1.2",
         "drupal/redirect": "^1.5",
-        "drupal/twig_field_value": "^1.2",
+        "drupal/twig_field_value": "^2.0",
         "drupal/views_infinite_scroll": "^1.6",
         "drupal/webform": "^5.8",
         "fourkitchens/emulsify": "^3.1",
