@@ -5,7 +5,7 @@ extlink_follow_no_override: false
 extlink_subdomains: true
 extlink_alert: true
 extlink_alert_text: 'You are leaving the Measure Authoring Tool web site and entering another web site. The Measure Authoring Tool cannot attest to the accuracy of information provided by linked sites. You will be subject to the destination site''s Privacy Policy when you leave the Measure Authoring Tool website.'
-extlink_exclude: ''
+extlink_exclude: 'zoom\.us.*'
 extlink_include: ''
 extlink_class: '0'
 extlink_label: '(link is external)'
@@ -20,6 +20,8 @@ extlink_font_awesome_classes:
   mailto: 'fa fa-envelope-o'
 extlink_icon_placement: '0'
 whitelisted_domains:
+  - cms.gov
+  - www.cms.gov
   - medicare.gov
   - www.medicare.gov
   - mymedicare.gov
@@ -33,6 +35,6 @@ whitelisted_domains:
   - hhs.gov
   - oig.hhs.gov
   - www.hhs.gov
+  - zoom.us
 _core:
   default_config_hash: kL9d-UuNbBrRxajhG6NU-3Iq_YUe8BUMSEAxrUuQBoU
-extlink_exclude_admin_routes: false
