@@ -1,0 +1,15 @@
+{% set link_base_class = 'social-link' %}
+
+{% extends "@atoms/01-links/link/link.twig" %}
+
+{% block link_content %}
+  <span {{ bem('sr-only', '', link_base_class) }}>{{ link_title }}</span>
+  {% include "@atoms/04-images/icons/_icon.twig" with {
+    icon_name: icon_name,
+    icon_role: icon_role,
+    icon_title: icon_title,
+    icon_desc: icon_desc,
+    icon_decorative: icon_decorative,
+    icon_blockname: link_base_class,
+  } %}
+{% endblock %}

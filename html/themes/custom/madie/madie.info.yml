@@ -1,0 +1,33 @@
+name: madie
+type: theme
+base theme: stable9
+description: A flexible theme with a responsive, mobile-first layout.
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - madie/global
+regions:
+  system: System
+  branding: Branding
+  header: Header
+  content: Content  # the content region is required
+  sidebar: 'Sidebar'
+  footer_left: Footer Blocks Left
+  footer_right: Footer Blocks Right
+  footer: Footer
+
+components:
+  namespaces:
+    base:
+      - components/_patterns/00-base
+    atoms:
+      - components/_patterns/01-atoms
+    molecules:
+      - components/_patterns/02-molecules
+    organisms:
+      - components/_patterns/03-organisms
+    templates:
+      - components/_patterns/04-templates
+    pages:
+      - components/_patterns/05-pages

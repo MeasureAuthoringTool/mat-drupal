@@ -1,0 +1,61 @@
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: $space-double 0 $space-quadruple;
+
+  @include large {
+    flex-wrap: nowrap;
+    padding: $space-triple 0 $space-sextuple;
+  }
+
+  @include xl {
+    padding: $space-quadruple 0 $space-octuple;
+  }
+
+  &__header {
+    @include medium {
+      flex: 1 1 66%;
+      padding-right: $space-quadruple;
+    }
+  }
+
+  &__title {
+    @include heading($font-size: rem(58px));
+
+    color: $white;
+  }
+
+  &__lead {
+    font-family: $font-heading;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: $white;
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 100%;
+
+    .info-box-cta {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    @include large {
+      flex: 1 0 40%;
+
+      .info-box-cta {
+        max-width: 100%;
+      }
+    }
+
+    @include xl {
+      flex: 1 0 33%;
+    }
+  }
+}

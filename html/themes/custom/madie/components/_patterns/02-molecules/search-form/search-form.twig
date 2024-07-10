@@ -1,0 +1,17 @@
+{% set search_form_base_class = 'search-form' %}
+
+<form {{ bem(search_form_base_class, (search_form_modifiers), search_form_blockname) }}>
+
+  {% if children %}
+    {{ children }}
+  {% else %}
+    <div {{ bem('toggle', '', search_form_base_class) }}>
+      {% include "@atoms/04-images/icons/_icon.twig" with {
+        icon_name: 'search',
+        icon_blockname: search_form_base_class,
+      } %}
+      {{ search_form_toggle_text }}
+    </div>
+  {% endif %}
+
+</form>

@@ -1,0 +1,9 @@
+{% extends "@molecules/_block.twig" %}
+
+{% block content %}
+  {% include "@atoms/02-text/00-headings/_heading.twig" with {
+    "heading_level": 1,
+    "heading": content,
+    "heading_modifiers": ['page-title']
+  } %}
+{% endblock %}

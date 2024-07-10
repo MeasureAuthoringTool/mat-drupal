@@ -1,0 +1,12 @@
+<section {{ bem('right', (footer_right_modifiers), 'footer-blocks') }}>
+  {% block footer_right_content %}
+    {% include "@molecules/blocks/hhs-cms/hhs-cms.twig" with {
+      hhs_logo: footer_right.hhs_logo,
+      cms_logo: footer_right.cms_logo,
+      hhs_cms_body: footer_right.hhs_cms.body,
+      hhs_cms_facebook_url: footer_right.hhs_cms.facebook_url,
+      hhs_cms_twitter_url: footer_right.hhs_cms.twitter_url,
+      hhs_cms_linkedin_url: footer_right.hhs_cms.linkedin_url,
+    } %}
+  {% endblock %}
+</section>
