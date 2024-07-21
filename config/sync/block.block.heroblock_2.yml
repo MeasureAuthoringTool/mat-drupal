@@ -6,9 +6,9 @@ dependencies:
     - emat_blocks
     - system
   theme:
-    - emat
+    - madie
 id: heroblock_2
-theme: emat
+theme: madie
 region: header
 weight: 0
 provider: null
@@ -16,8 +16,8 @@ plugin: emat_hero_block
 settings:
   id: emat_hero_block
   label: 'Measure Authoring Development Integrated Environment (MADiE)'
-  provider: emat_blocks
   label_display: visible
+  provider: emat_blocks
   lead: 'MADiE (MVP) allows users to develop and test measures in an integrated workspace. MADiE supports QI-Core profile informed authoring and testing of FHIR measures.'
   cta_box_title: 'Secure Login'
   cta_box_description: 'To log in to MADiE, a user account is required. If you are unable to log in to your MADiE account, please contact the support desk.'
@@ -28,6 +28,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /madie-mvp
     negate: false
     context_mapping: {  }
+    pages: /madie-mvp

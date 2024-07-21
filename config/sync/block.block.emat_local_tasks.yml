@@ -3,20 +3,20 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - emat
+    - madie
 _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
 id: emat_local_tasks
-theme: emat
+theme: madie
 region: system
-weight: -5
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
   label: Tabs
-  provider: core
   label_display: '0'
+  provider: core
   primary: true
   secondary: true
 visibility: {  }

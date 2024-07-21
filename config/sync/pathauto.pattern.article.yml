@@ -10,13 +10,13 @@ type: 'canonical_entities:node'
 pattern: '/news-alerts/[node:title]'
 selection_criteria:
   7ee701dc-b58e-41d4-83c3-fcde3740125d:
-    id: node_type
-    bundles:
-      article: article
+    id: 'entity_bundle:node'
     negate: false
+    uuid: 7ee701dc-b58e-41d4-83c3-fcde3740125d
     context_mapping:
       node: node
-    uuid: 7ee701dc-b58e-41d4-83c3-fcde3740125d
+    bundles:
+      article: article
 selection_logic: and
 weight: -5
 relationships: {  }

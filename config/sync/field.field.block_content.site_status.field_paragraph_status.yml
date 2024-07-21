@@ -21,14 +21,14 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
     target_bundles:
       site_status: site_status
+    negate: 0
     target_bundles_drag_drop:
       cta_with_image:
         weight: 3
         enabled: false
       site_status:
-        enabled: true
         weight: 4
+        enabled: true
 field_type: entity_reference_revisions

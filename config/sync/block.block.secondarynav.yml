@@ -7,9 +7,9 @@ dependencies:
   module:
     - system
   theme:
-    - emat
+    - madie
 id: secondarynav
-theme: emat
+theme: madie
 region: branding
 weight: -7
 provider: null
@@ -17,8 +17,8 @@ plugin: 'system_menu_block:secondary'
 settings:
   id: 'system_menu_block:secondary'
   label: 'Secondary nav'
-  provider: system
   label_display: '0'
+  provider: system
   level: 1
   depth: 1
   expand_all_items: false

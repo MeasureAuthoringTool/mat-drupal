@@ -1,3 +1,6 @@
+_core:
+  default_config_hash: kL9d-UuNbBrRxajhG6NU-3Iq_YUe8BUMSEAxrUuQBoU
+extlink_exclude_admin_routes: false
 extlink_target: false
 extlink_target_no_override: false
 extlink_nofollow: false
@@ -36,5 +39,3 @@ whitelisted_domains:
   - oig.hhs.gov
   - www.hhs.gov
   - zoom.us
-_core:
-  default_config_hash: kL9d-UuNbBrRxajhG6NU-3Iq_YUe8BUMSEAxrUuQBoU

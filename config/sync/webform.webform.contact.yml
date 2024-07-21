@@ -7,9 +7,9 @@ dependencies:
       - webform
 _core:
   default_config_hash: z-xqCZwXhZ-pXe52c0MCf7kYjLzvlLDyOusIt5u1C0g
+weight: 0
 open: null
 close: null
-weight: 0
 uid: null
 template: false
 archive: false
@@ -17,7 +17,45 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: "name:\n  '#title': 'Name:'\n  '#type': textfield\n  '#required': true\n  '#placeholder': 'Enter your name'\nemail:\n  '#title': 'Email Address:'\n  '#type': email\n  '#required': true\n  '#placeholder': 'Enter your email address'\norganization:\n  '#title': 'Organization:'\n  '#type': textfield\n  '#placeholder': 'Enter your organization name'\nphone:\n  '#title': 'Phone Number:'\n  '#type': tel\n  '#required': true\n  '#placeholder': 'Enter your phone number'\nsubject:\n  '#title': 'Subject:'\n  '#type': textfield\n  '#required': true\n  '#placeholder': 'Enter your subject'\nmessage:\n  '#title': 'Message:'\n  '#type': textarea\n  '#required': true\n  '#placeholder': 'Enter your message'\nattachment:\n  '#type': managed_file\n  '#title': 'Attachment:'\n  '#file_extensions': '''gif jpg jpeg png bmp txt rtf odf pdf doc docx ppt pptx xls xlsx xml'\n  '#upload_location': 'public://uploads/contact-us'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Send"
+elements: |-
+  name:
+    '#title': 'Name:'
+    '#type': textfield
+    '#required': true
+    '#placeholder': 'Enter your name'
+  email:
+    '#title': 'Email Address:'
+    '#type': email
+    '#required': true
+    '#placeholder': 'Enter your email address'
+  organization:
+    '#title': 'Organization:'
+    '#type': textfield
+    '#placeholder': 'Enter your organization name'
+  phone:
+    '#title': 'Phone Number:'
+    '#type': tel
+    '#required': true
+    '#placeholder': 'Enter your phone number'
+  subject:
+    '#title': 'Subject:'
+    '#type': textfield
+    '#required': true
+    '#placeholder': 'Enter your subject'
+  message:
+    '#title': 'Message:'
+    '#type': textarea
+    '#required': true
+    '#placeholder': 'Enter your message'
+  attachment:
+    '#type': managed_file
+    '#title': 'Attachment:'
+    '#file_extensions': '''gif jpg jpeg png bmp txt rtf odf pdf doc docx ppt pptx xls xlsx xml'
+    '#upload_location': 'public://uploads/contact-us'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': Send
 css: ''
 javascript: ''
 settings:
@@ -29,38 +67,51 @@ settings:
   page: true
   page_submit_path: ''
   page_confirm_path: ''
-  page_admin_theme: false
+  page_theme_name: ''
   form_title: source_entity_webform
   form_submit_once: true
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
+  form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: true
   form_disable_inline_errors: false
   form_required: true
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
   submission_user_columns: {  }
@@ -69,11 +120,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -88,7 +134,17 @@ settings:
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -105,9 +161,9 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: inline
+  confirmation_url: '<front>'
   confirmation_title: ''
   confirmation_message: "<h2>Thank You</h2>\r\n\r\n<p>Your submission has been received. We will review it and get back to you as soon as possible.</p>"
-  confirmation_url: '<front>'
   confirmation_attributes:
     class:
       - text-long
@@ -133,8 +189,11 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  results_customize: false
   token_view: false
   token_update: false
+  token_delete: false
+  serial_disabled: false
 access:
   create:
     roles:
@@ -185,23 +244,28 @@ access:
 handlers:
   email_confirmation:
     id: email
-    label: 'Email confirmation'
     handler_id: email_confirmation
+    label: 'Email confirmation'
+    notes: ''
     status: false
     conditions: {  }
     weight: 1
     settings:
       states:
         - completed
-      to_mail: '[webform_submission:values:email:raw]'
+      to_mail: '[current-user:mail]'
       to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
       from_mail: _default
       from_options: {  }
       from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
       subject: '[webform_submission:values:subject:raw]'
       body: '[webform_submission:values:message:value]'
       excluded_elements: {  }
@@ -215,14 +279,11 @@ handlers:
       theme_name: ''
       parameters: {  }
       debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
   email_notification:
     id: email
-    label: 'MAT Contact Us Submission'
     handler_id: email_notification
+    label: 'MAT Contact Us Submission'
+    notes: ''
     status: true
     conditions: {  }
     weight: 2
@@ -231,13 +292,17 @@ handlers:
         - completed
       to_mail: sb-mat-help@semanticbits.com
       to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
       from_mail: _default
       from_options: {  }
       from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
       subject: 'MAT Contact Us Submission'
       body: _default
       excluded_elements: {  }
@@ -251,8 +316,4 @@ handlers:
       theme_name: ''
       parameters: {  }
       debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
 variants: {  }

@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies:
   module:
-    - ctools
+    - node
     - system
   theme:
-    - emat
+    - madie
 _core:
   default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
 id: emat_page_title
-theme: emat
+theme: madie
 region: content
 weight: -5
 provider: null
@@ -18,18 +18,18 @@ plugin: page_title_block
 settings:
   id: page_title_block
   label: 'Page title'
-  provider: core
   label_display: '0'
+  provider: core
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: true
     context_mapping: {  }
+    pages: '<front>'
   'entity_bundle:node':
     id: 'entity_bundle:node'
-    bundles:
-      page: page
     negate: true
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      page: page

@@ -2,9 +2,9 @@ uuid: 128d9589-63b2-44cd-bea8-972be9028ae7
 langcode: en
 status: open
 dependencies: {  }
+weight: 0
 open: null
 close: null
-weight: 0
 uid: 1
 template: false
 archive: false
@@ -12,7 +12,47 @@ id: new_mat_user_application
 title: 'New MAT User Application'
 description: ''
 category: ''
-elements: "madie_announcement_banner:\n  '#type': webform_message\n  '#display_on': both\n  '#message_type': error\n  '#message_message': 'The MAT and all Bonnies will no longer be accessible after June 28, 2024.&nbsp; Please read <a href=\"http://www.emeasuretool.cms.gov/news-alerts/mat-and-bonnie-migration-action-needed\">this announcement from CMS</a> for more details.'\nflexbox:\n  '#type': webform_flexbox\n  first_name:\n    '#type': textfield\n    '#title': 'First Name:'\n    '#required': true\n    '#flex': '3'\n  middle_initial:\n    '#type': textfield\n    '#title': 'Middle Initial'\n    '#maxlength': '1'\n    '#size': '1'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name:'\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number:'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address:'\n  '#required': true\norganization:\n  '#type': textfield\n  '#title': 'Organization:'\n  '#required': true\nharp_user_id:\n  '#type': textfield\n  '#title': 'HARP User ID:'\n  '#required': true\nadditional_information:\n  '#type': textarea\n  '#title': 'Additional Information:'"
+elements: |-
+  madie_announcement_banner:
+    '#type': webform_message
+    '#display_on': both
+    '#message_type': error
+    '#message_message': 'The MAT and all Bonnies will no longer be accessible after June 28, 2024.&nbsp; Please read <a href="http://www.emeasuretool.cms.gov/news-alerts/mat-and-bonnie-migration-action-needed">this announcement from CMS</a> for more details.'
+  flexbox:
+    '#type': webform_flexbox
+    first_name:
+      '#type': textfield
+      '#title': 'First Name:'
+      '#required': true
+      '#flex': 3
+    middle_initial:
+      '#type': textfield
+      '#title': 'Middle Initial'
+      '#maxlength': 1
+      '#size': 1
+  last_name:
+    '#type': textfield
+    '#title': 'Last Name:'
+    '#required': true
+  phone_number:
+    '#type': tel
+    '#title': 'Phone Number:'
+    '#required': true
+  email_address:
+    '#type': email
+    '#title': 'Email Address:'
+    '#required': true
+  organization:
+    '#type': textfield
+    '#title': 'Organization:'
+    '#required': true
+  harp_user_id:
+    '#type': textfield
+    '#title': 'HARP User ID:'
+    '#required': true
+  additional_information:
+    '#type': textarea
+    '#title': 'Additional Information:'
 css: ''
 javascript: ''
 settings:
@@ -24,38 +64,51 @@ settings:
   page: true
   page_submit_path: ''
   page_confirm_path: ''
-  page_admin_theme: false
+  page_theme_name: ''
   form_title: source_entity_webform
   form_submit_once: true
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
+  form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: true
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
   submission_user_columns: {  }
@@ -64,11 +117,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -83,7 +131,17 @@ settings:
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -100,9 +158,9 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: inline
+  confirmation_url: ''
   confirmation_title: ''
   confirmation_message: "<h2>Thank You</h2>\r\n\r\n<p>Your submission has been received. We will review it and get back to you as soon as possible.</p>"
-  confirmation_url: ''
   confirmation_attributes:
     class:
       - text-long
@@ -128,8 +186,11 @@ settings:
   purge_days: null
   results_disabled: true
   results_disabled_ignore: false
+  results_customize: false
   token_view: false
   token_update: false
+  token_delete: false
+  serial_disabled: false
 access:
   create:
     roles:
@@ -180,9 +241,9 @@ access:
 handlers:
   email:
     id: email
+    handler_id: email
     label: Email
     notes: ''
-    handler_id: email
     status: true
     conditions: {  }
     weight: 0
@@ -191,13 +252,17 @@ handlers:
         - completed
       to_mail: sb-mat-help@semanticbits.com
       to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
       from_mail: sb-mat-help@semanticbits.com
       from_options: {  }
       from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
       subject: 'New MAT User ID Request'
       body: _default
       excluded_elements: {  }
@@ -208,11 +273,7 @@ handlers:
       html: true
       attachments: false
       twig: false
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
       theme_name: ''
       parameters: {  }
+      debug: false
 variants: {  }

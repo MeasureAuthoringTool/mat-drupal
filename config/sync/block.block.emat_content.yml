@@ -5,11 +5,11 @@ dependencies:
   module:
     - system
   theme:
-    - emat
+    - madie
 _core:
   default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
 id: emat_content
-theme: emat
+theme: madie
 region: content
 weight: -3
 provider: null
@@ -17,6 +17,6 @@ plugin: system_main_block
 settings:
   id: system_main_block
   label: 'Main page content'
-  provider: system
   label_display: '0'
+  provider: system
 visibility: {  }

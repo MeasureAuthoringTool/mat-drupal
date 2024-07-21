@@ -7,9 +7,9 @@ dependencies:
   module:
     - system
   theme:
-    - emat
+    - madie
 id: cmshhswebsites
-theme: emat
+theme: madie
 region: footer_left
 weight: -8
 provider: null
@@ -17,8 +17,8 @@ plugin: 'system_menu_block:cms-hhs-websites'
 settings:
   id: 'system_menu_block:cms-hhs-websites'
   label: 'CMS & HHS Websites'
-  provider: system
   label_display: visible
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false

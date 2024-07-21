@@ -18,33 +18,33 @@ bundle: site_status
 mode: default
 content:
   field_status_cd_date:
-    weight: 5
+    type: datetime_default
     label: hidden
     settings:
       timezone_override: ''
       format_type: html_datetime
     third_party_settings: {  }
-    type: datetime_default
+    weight: 5
     region: content
   field_status_cd_granularity:
-    weight: 4
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 4
     region: content
   field_status_message:
-    weight: 1
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 1
     region: content
   field_status_type:
-    weight: 2
+    type: list_key
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_key
+    weight: 2
     region: content
 hidden: {  }

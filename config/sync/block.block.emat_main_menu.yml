@@ -1,4 +1,4 @@
-uuid: a0cb55be-bd11-49e9-8443-762cb71b011d
+uuid: 2beccaf2-13d5-47e4-a635-07ec09cc8d85
 langcode: en
 status: true
 dependencies:
@@ -7,11 +7,9 @@ dependencies:
   module:
     - system
   theme:
-    - emat
-_core:
-  default_config_hash: ChCx7DYNUrPTt5uiRdQAPDKJQMc-_SyAQTrZh8H0o-c
+    - madie
 id: emat_main_menu
-theme: emat
+theme: madie
 region: header
 weight: -6
 provider: null
@@ -19,9 +17,9 @@ plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
   label: 'Main navigation'
-  provider: system
   label_display: '0'
+  provider: system
   level: 1
-  depth: 1
+  depth: 0
   expand_all_items: false
 visibility: {  }

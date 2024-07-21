@@ -1,22 +1,22 @@
-uuid: fff6b77b-0b52-4f08-8166-e44bd72ac019
+uuid: 56a56001-554b-478e-a14e-5de6af2f3452
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - emat
+    - madie
 _core:
-  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+  default_config_hash: XJqWwLt1LDCnazcEN6QkJmCLjk4R0__-8s0OO9xeNjg
 id: emat_messages
-theme: emat
+theme: madie
 region: system
-weight: -4
+weight: -5
 provider: null
 plugin: system_messages_block
 settings:
   id: system_messages_block
   label: 'Status messages'
-  provider: system
   label_display: '0'
+  provider: system
 visibility: {  }
