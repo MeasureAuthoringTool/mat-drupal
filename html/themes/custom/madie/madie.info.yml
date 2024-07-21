@@ -17,6 +17,7 @@ regions:
   footer_right: Footer Blocks Right
   footer: Footer
 
+logo: 'images/Logo-CMSgov@3x.png'
 components:
   namespaces:
     base:
