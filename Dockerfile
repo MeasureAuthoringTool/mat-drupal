@@ -34,12 +34,16 @@ FROM drupal:8
 #
 
 # Install extras; mysql-client is for Drush
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y && apt-get upgrade -y \
 	curl \
 	git \
 	default-mysql-client \
 	vim \
-	wget
+  nodejs \
+	wget \
+  gnutls-bin \
+  zip  \
+  unzip
 
 # Copy precompiled codebase into the container.
 RUN rm /var/www/html
@@ -99,6 +103,9 @@ RUN echo 'LimitRequestBody 20971520' >> /etc/apache2/conf-enabled/security.conf
 # Increase max upload size.
 RUN sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 50M/' /usr/local/etc/php/php.ini
 
+# Increase memory limit
+RUN sed -i 's/memory_limit = .*/memory_limit = 1024M/' /usr/local/etc/php/php.ini
+
 # Copy other required configuration into the contianer.
 COPY config/ /var/www/config/
 COPY load.environment.php /var/www/load.environment.php
@@ -109,6 +116,11 @@ RUN chmod -R g+w,g+r /var/www/config
 
 # Fix file ownership on docroot.
 RUN chown -R www-data:www-data /var/www/html
+
+RUN composer self-update --2
+
+ENV COMPOSER_MEMORY_LIMIT=-1
+ENV COMPOSER_PROCESS_TIMEOUT=2000
 
 # So that drush works from outside the container.
 WORKDIR /var/www
