@@ -10,7 +10,7 @@ dependencies:
     - madie
 _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
-id: emat_footer
+id: madie_footer
 theme: madie
 region: footer
 weight: -5

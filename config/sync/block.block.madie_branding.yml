@@ -8,7 +8,7 @@ dependencies:
     - madie
 _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
-id: emat_branding
+id: madie_branding
 theme: madie
 region: branding
 weight: -8

@@ -8,7 +8,7 @@ dependencies:
     - madie
 _core:
   default_config_hash: XJqWwLt1LDCnazcEN6QkJmCLjk4R0__-8s0OO9xeNjg
-id: emat_messages
+id: madie_messages
 theme: madie
 region: system
 weight: -5

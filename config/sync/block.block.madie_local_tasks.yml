@@ -6,7 +6,7 @@ dependencies:
     - madie
 _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
-id: emat_local_tasks
+id: madie_local_tasks
 theme: madie
 region: system
 weight: -6

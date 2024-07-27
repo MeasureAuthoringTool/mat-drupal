@@ -6,7 +6,7 @@ dependencies:
     - madie
 _core:
   default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
-id: emat_local_actions
+id: madie_local_actions
 theme: madie
 region: content
 weight: -4

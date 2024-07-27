@@ -8,7 +8,7 @@ dependencies:
     - system
   theme:
     - madie
-id: emat_main_menu
+id: madie_main_menu
 theme: madie
 region: header
 weight: -6
