@@ -1,0 +1,26 @@
+uuid: 5c25db03-e1e7-417a-9aa5-72dd89537209
+langcode: en
+status: true
+dependencies:
+  module:
+    - emat_blocks
+  theme:
+    - emat
+id: emat_hhscmsbrandingblock
+theme: emat
+region: footer_right
+weight: 0
+provider: null
+plugin: emat_cms_branding_block
+settings:
+  id: emat_cms_branding_block
+  label: 'HHS/CMS Branding Block'
+  label_display: '0'
+  provider: emat_blocks
+  description:
+    value: ''
+    format: plain_text
+  facebook_url: ''
+  twitter_url: ''
+  linkedin_url: ''
+visibility: {  }

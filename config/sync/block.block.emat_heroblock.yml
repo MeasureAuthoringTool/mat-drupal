@@ -1,0 +1,36 @@
+uuid: 904777a6-21a2-4db0-9cfb-009309eb825f
+langcode: en
+status: true
+dependencies:
+  module:
+    - emat_blocks
+    - system
+  theme:
+    - emat
+id: emat_heroblock
+theme: emat
+region: header
+weight: -5
+provider: null
+plugin: emat_hero_block
+settings:
+  id: emat_hero_block
+  label: 'Important announcement from CMS - MAT & all Bonnies decommissioning June 28, 2024'
+  label_display: visible
+  provider: emat_blocks
+  title: null
+  lead: 'The Measure Authoring Tool (MAT) and all Bonnies will be replaced by the Measure Authoring Development Integrated Environment (MADiE) on June 28, 2024.'
+  cta_box_title: 'Secure Login'
+  cta_box_description: 'To log in to the MAT, a user account is required. If you are unable to log in to your MAT account, please contact the MAT Support desk.'
+  cta_primary_link_text: 'Log in to the MAT'
+  cta_primary_link_url: 'https://www.emeasuretool.cms.gov/MeasureAuthoringTool/Login.html'
+  cta_secondary_link_text: 'New User Registration'
+  cta_secondary_link_url: 'https://www.emeasuretool.cms.gov/training-resources/mat-user-registration'
+  cta:
+    cta_box_title: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: '<front>'
