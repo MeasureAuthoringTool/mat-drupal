@@ -1,6 +1,6 @@
-uuid: aebaf261-3c79-4d8f-9d7b-d85e9457e4ab
+uuid: fb26368a-775d-408a-bc25-c46575ebbc16
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ _core:
   default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
 id: emat_content
 theme: emat
-region: system
+region: content
 weight: -3
 provider: null
 plugin: system_main_block

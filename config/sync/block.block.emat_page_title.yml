@@ -1,9 +1,9 @@
-uuid: 5f5fab61-89a9-4e42-abe2-0e8d80243739
+uuid: 874f03b1-f2c8-41aa-8761-c23d6ed0d92d
 langcode: en
-status: false
+status: true
 dependencies:
   module:
-    - node
+    - ctools
     - system
   theme:
     - emat
@@ -11,7 +11,7 @@ _core:
   default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
 id: emat_page_title
 theme: emat
-region: system
+region: content
 weight: -5
 provider: null
 plugin: page_title_block

@@ -1,6 +1,6 @@
-uuid: 1e144207-99b5-4b18-8fd0-f7d59ec17007
+uuid: e053eff3-37a6-48dd-ac1e-cfe70a0fa50a
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: emat_branding
 theme: emat
-region: system
+region: branding
 weight: -8
 provider: null
 plugin: system_branding_block

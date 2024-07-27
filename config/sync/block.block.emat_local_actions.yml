@@ -1,6 +1,6 @@
-uuid: c0cbbd13-8f03-4c02-9045-9251027bed26
+uuid: 76946636-ce77-4018-9d6b-25cccf152151
 langcode: en
-status: false
+status: true
 dependencies:
   theme:
     - emat
@@ -8,7 +8,7 @@ _core:
   default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
 id: emat_local_actions
 theme: emat
-region: system
+region: content
 weight: -4
 provider: null
 plugin: local_actions_block

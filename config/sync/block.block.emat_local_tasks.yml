@@ -1,6 +1,6 @@
-uuid: 507efb52-599e-4b19-886b-bf488c5ad625
+uuid: 48dbd0d8-a1a6-4319-9a89-415268f8b617
 langcode: en
-status: false
+status: true
 dependencies:
   theme:
     - emat
@@ -9,7 +9,7 @@ _core:
 id: emat_local_tasks
 theme: emat
 region: system
-weight: -6
+weight: -5
 provider: null
 plugin: local_tasks_block
 settings:
