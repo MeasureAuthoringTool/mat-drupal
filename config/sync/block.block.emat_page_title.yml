@@ -1,6 +1,6 @@
 uuid: 5f5fab61-89a9-4e42-abe2-0e8d80243739
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - node
@@ -11,7 +11,7 @@ _core:
   default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
 id: emat_page_title
 theme: emat
-region: content
+region: system
 weight: -5
 provider: null
 plugin: page_title_block

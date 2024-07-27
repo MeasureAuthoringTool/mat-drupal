@@ -1,6 +1,6 @@
 uuid: 0777b042-258f-4c3f-a85a-526d7d5478a4
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.helpful-links
@@ -10,7 +10,7 @@ dependencies:
     - emat
 id: emat_helpfullinks
 theme: emat
-region: footer_left
+region: system
 weight: -7
 provider: null
 plugin: 'system_menu_block:helpful-links'

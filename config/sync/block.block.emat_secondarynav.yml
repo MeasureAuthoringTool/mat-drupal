@@ -1,6 +1,6 @@
 uuid: 0c8664da-0784-476b-8c37-a02298528ee0
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.secondary
@@ -10,7 +10,7 @@ dependencies:
     - emat
 id: emat_secondarynav
 theme: emat
-region: branding
+region: system
 weight: -7
 provider: null
 plugin: 'system_menu_block:secondary'

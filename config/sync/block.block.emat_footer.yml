@@ -1,6 +1,6 @@
 uuid: a83347a1-dde5-481b-8204-f54274c2bc79
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -12,7 +12,7 @@ _core:
   default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
 id: emat_footer
 theme: emat
-region: footer
+region: system
 weight: -5
 provider: null
 plugin: 'system_menu_block:footer'
