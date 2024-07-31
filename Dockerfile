@@ -34,7 +34,7 @@ FROM drupal:8
 #
 
 # Install extras; mysql-client is for Drush
-RUN apt-get update && apt-get install -y && apt-get upgrade -y \
+RUN echo 'Acquire::http::timeout "300"; ' > /etc/apt/apt.conf.d/99timeouts   && apt-get update && apt-get install -y && apt-get upgrade -y \
 	curl \
 	git \
 	default-mysql-client \
