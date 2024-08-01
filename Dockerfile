@@ -31,7 +31,6 @@ FROM drupal:8
 #      -e 's/newrelic.appname = \"PHP Application\"/newrelic.appname = \"${NEW_RELIC_APP_NAME}\"/' \
 #      /usr/local/etc/php/conf.d/newrelic.ini
 #
-#
 
 # Install extras; mysql-client is for Drush
 RUN echo 'Acquire::http::timeout "300"; ' > /etc/apt/apt.conf.d/99timeouts   && apt-get update && apt-get install -y && apt-get upgrade -y \
