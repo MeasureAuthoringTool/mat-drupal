@@ -55,7 +55,7 @@ RUN wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/down
 	mv drush.phar /usr/local/bin/drush
 
 # Grab DB PEM from AWS.
-RUN wget -O /var/www/html/sites/default/rds-combined-ca-bundle.pem https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
+RUN wget -O /var/www/html/sites/default/us-east-1-bundle.pem https://truststore.pki.rds.amazonaws.com/us-east-1/us-east-1-bundle.pem
 
 # Disabling unused Apache modules
 RUN a2dismod status -f
