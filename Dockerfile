@@ -115,10 +115,7 @@ COPY mat.settings.php /var/www/html/sites/default/settings.php
 RUN chmod -R g+w,g+r /var/www/config
 
 # Fix file ownership on docroot.
-RUN chown -R www-data:www-data /var/www/html
-
-# Fix file ownership on vendor.
-RUN chown -R www-data:www-data /var/www/vendor
+RUN chown -R www-data:www-data /var/www
 
 RUN composer self-update --2
 
