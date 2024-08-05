@@ -1,0 +1,64 @@
+.main-nav {
+  @include list-reset;
+
+  display: none;
+
+  &::after {
+    content: " ";
+    padding-top: $space;
+    display: block;
+    width: 100%;
+    max-width: 5rem;
+    border-bottom: 0.5rem solid $lime;
+  }
+
+  @include large {
+    display: block;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &--pl-demo {
+    background-image: linear-gradient(to right, #44499b, #4481ca);
+  }
+
+  &__item {
+    display: list-item;
+    padding: $space 0;
+
+    @include large {
+      display: inline-flex;
+      margin-right: $space-double;
+      padding: $space-double 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    font-family: $font-heading;
+    font-size: rem(20px);
+    font-weight: 700;
+    color: $white;
+    text-decoration: none;
+    line-height: 1.5;
+    border-bottom: 0.25rem solid transparent;
+
+    @include large {
+      font-size: 1rem;
+    }
+
+    @include xl {
+      font-size: rem(20px);
+    }
+
+    &--active,
+    &:hover {
+      border-color: $lemon;
+    }
+  }
+}

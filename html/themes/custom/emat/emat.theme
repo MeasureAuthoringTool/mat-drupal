@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Pattern Lab theme.
+ */
+
+/**
+ * Implements template_preprocess_page().
+ */
+function emat_preprocess_page(&$variables) {
+  if (isset($variables['node'])) {
+    $node = $variables['node'];
+    $variables['attributes']['class'][] = 'node--' . $node->getType();
+  }
+
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $variables['attributes']['class'][] = 'front';
+  }
+ }
+
+ /**
+  * Implemenets template_preprocess_file_link().
+  */
+function emat_preprocess_file_link(&$variables) {
+
+  if (isset($variables['link'])) {
+    $variables['link']['#attributes'] = $variables['link']['#attributes'] ?? [];
+    $variables['link']['#attributes']['class'] = $variables['link']['#attributes']['class'] ?? [];
+    $variables['link']['#attributes']['class'][] = 'link';
+  }
+
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function emat_page_attachments_alter(array &$attachments) {
+  if (in_array('extlink/drupal.extlink', $attachments['#attached']['library'])) {
+    $attachments['#attached']['library'][] = 'emat/external-link';
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function emat_form_webform_submission_contact_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  honeypot_add_form_protection($form, $form_state, ['honeypot', 'time_restriction']);
+}

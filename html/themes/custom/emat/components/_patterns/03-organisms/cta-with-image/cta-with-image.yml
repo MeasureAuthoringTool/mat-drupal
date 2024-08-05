@@ -1,0 +1,20 @@
+cwi_heading: Measure Authoring Tool Overview
+cwi_lead_text: >-
+  Using the tool, authors create Clinical Quality Language (CQL) expressions,
+  which have the conceptual portion of the Quality Data Model (QDM) as their foundation.
+cwi_body: >-
+  The tool provides the capability to express complex measure logic and export measures in several
+  formats, including a human-readable document that can be viewed in a web browser, an eCQM
+  HQMF XML document which provides metadata, terminology, data elements and specific
+  population definitions respective to the measure, a CQL file which contains the terminology and
+  expression logic used by the measure, an ELM XML export that is a computer-readable XML
+  version of the CQL file, and a Javascipt Object Notation (JSON) export which is a serialized format
+  of the ELM file. The data expressed in the tool by the users serves as the input for the creation of
+  the defined export files.
+cwi_cta:
+  title: Learn More in Training & Resources
+  url: "#"
+cwi_image:
+  alt: "Female Doctor"
+  title: "Female Doctor"
+  src: /images/Female-Doctor@2x.png

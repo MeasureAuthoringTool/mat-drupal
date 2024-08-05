@@ -1,0 +1,13 @@
+{% set resource_nav_base_class = resource_nav_base_class|default('resource-nav') %}
+
+<nav {{ bem(resource_nav_base_class, (resource_nav_modifiers), resource_nav_blockname) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h3 {{ bem('label', '', resource_nav_base_class) }}>{{ label }}</h3>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% block menu_content %}
+    {% include "@molecules/menus/resource-nav/_resource-nav-list.twig" %}
+  {% endblock %}
+</nav>
