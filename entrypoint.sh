@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-set -ev
+set -e
 
 repo_root="/var/www/html/"
 cd $repo_root
@@ -17,4 +17,8 @@ drush config-import --no-interaction -v
 echo 'Clearing drush cache again.'
 drush cr -y -v
 
-docker-php-entrypoint
+if [ "${1#-}" != "$1" ]; then
+        set -- apache2-foreground "$@"
+fi
+
+exec "$@"

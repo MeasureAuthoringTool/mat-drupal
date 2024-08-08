@@ -127,4 +127,4 @@ WORKDIR /var/www
 
 # Entrypoint
 RUN ["chmod", "+x", "/var/www/entrypoint.sh"]
-ENTRYPOINT [ "entrypoint.sh" ]
+ENTRYPOINT [ "/var/www/entrypoint.sh", "apache2-foreground"]
