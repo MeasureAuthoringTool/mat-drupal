@@ -109,6 +109,7 @@ RUN sed -i 's/memory_limit = .*/memory_limit = 1024M/' /usr/local/etc/php/php.in
 COPY config/ /var/www/config/
 COPY load.environment.php /var/www/load.environment.php
 COPY mat.settings.php /var/www/html/sites/default/settings.php
+COPY entrypoint.sh /var/www/entrypoint.sh
 
 # Make sure config/sync is writable.
 RUN chmod -R g+w,g+r /var/www/config
@@ -123,3 +124,7 @@ ENV COMPOSER_PROCESS_TIMEOUT=2000
 
 # So that drush works from outside the container.
 WORKDIR /var/www
+
+# Entrypoint
+RUN ["chmod", "+x", "/var/www/entrypoint.sh"]
+ENTRYPOINT [ "entrypoint.sh" ]
