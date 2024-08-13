@@ -18,9 +18,9 @@ settings:
   label_display: '0'
   provider: emat_blocks
   description:
-    value: ''
+    value: "A federal government website managed and paid for by the U.S. Centers for Medicare & Medicaid Services.\r\n\r\n7500 Security Boulevard, Baltimore, MD 21244"
     format: plain_text
-  facebook_url: ''
-  twitter_url: ''
-  linkedin_url: ''
+  facebook_url: 'https://www.facebook.com/pages/Centers-for-Medicare-and-Medicaid-Services/130543856995834'
+  twitter_url: 'https://twitter.com/cmsgov'
+  linkedin_url: 'https://www.linkedin.com/company/centers-for-medicare-&-medicaid-services/'
 visibility: {  }

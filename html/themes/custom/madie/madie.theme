@@ -6,22 +6,10 @@
  */
 
 /**
- * Implements hook_preprocess_HOOK() for html.html.twig.
+ * Implements hook_page_attachments_alter().
  */
-function madie_preprocess_html(&$variables) {
-
-}
-
-/**
- * Implements hook_preprocess_HOOK() for page.html.twig.
- */
-function madie_preprocess_page(&$variables) {
-
-}
-
-/**
- * Implements hook_preprocess_HOOK() for node.html.twig.
- */
-function madie_preprocess_node(&$variables) {
-
+function madie_page_attachments_alter(array &$attachments) {
+  if (in_array('extlink/drupal.extlink', $attachments['#attached']['library'])) {
+    $attachments['#attached']['library'][] = 'madie/external-link';
+  }
 }
