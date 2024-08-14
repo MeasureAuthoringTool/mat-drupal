@@ -5,13 +5,14 @@ dependencies: {  }
 id: local
 label: Local
 description: ''
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
 folder: ../config/local
 module: {  }
 theme: {  }
-blacklist: {  }
-graylist:
+complete_list: {  }
+partial_list:
   - core.extension
   - phpmailer_smtp.settings
-graylist_dependents: true
-graylist_skip_equal: false
-weight: 0

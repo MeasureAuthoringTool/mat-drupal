@@ -1,0 +1,63 @@
+// Create a mixin for paragraph styles that can be implemented
+// in components with other classnames.
+@mixin paragraph($margin: 0 0 1em) {
+  margin: #{$margin};
+}
+
+@mixin body-copy {
+  font-family: $font-body;
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+body {
+  color: $charcoal;
+
+  @include body-copy;
+}
+
+.paragraph {
+  @include paragraph;
+
+  line-height: 1.5em;
+
+  &--lead {
+    font-size: rem(20px);
+    font-style: italic;
+  }
+
+  &--small {
+    font-size: rem(12px);
+  }
+}
+
+.blockquote {
+  font-family: $font-heading;
+  font-style: italic;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: rem(20px);
+  line-height: 1.75em;
+}
+
+.hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: currentColor;
+}
+
+// TODO: BEM selectors should be applied to wysiwyg-created content
+
+.text-long {
+  p {
+    @extend .paragraph;
+  }
+
+  blockquote {
+    @extend .blockquote;
+  }
+
+  hr {
+    @extend .hr;
+  }
+}

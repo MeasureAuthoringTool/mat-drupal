@@ -1,0 +1,25 @@
+uuid: fd3f9c86-2e48-4565-89a0-9c86bde2992d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - madie
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: madie_branding
+theme: madie
+region: branding
+weight: -8
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: true
+visibility: {  }

@@ -1,13 +1,13 @@
-uuid: b151bf44-387a-43fa-8fa3-7233688956bb
+uuid: bcc92a91-5720-4512-8737-ee9fcce3d54f
 langcode: en
 status: true
 dependencies:
   module:
     - emat_blocks
   theme:
-    - emat
+    - madie
 id: hhscmsbrandingblock
-theme: emat
+theme: madie
 region: footer_right
 weight: 0
 provider: null
@@ -15,8 +15,8 @@ plugin: emat_cms_branding_block
 settings:
   id: emat_cms_branding_block
   label: 'HHS/CMS Branding Block'
-  provider: emat_blocks
   label_display: '0'
+  provider: emat_blocks
   description:
     value: "A federal government website managed and paid for by the U.S. Centers for Medicare & Medicaid Services.\r\n\r\n7500 Security Boulevard, Baltimore, MD 21244"
     format: plain_text

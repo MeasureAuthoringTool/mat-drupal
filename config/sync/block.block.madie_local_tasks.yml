@@ -1,0 +1,22 @@
+uuid: 48dbd0d8-a1a6-4319-9a89-415268f8b634
+langcode: en
+status: true
+dependencies:
+  theme:
+    - madie
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: madie_local_tasks
+theme: madie
+region: system
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

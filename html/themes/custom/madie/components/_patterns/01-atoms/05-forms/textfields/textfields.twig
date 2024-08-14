@@ -1,0 +1,68 @@
+{{ attach_library('madie/file-fields') }}
+
+<div class="form-item">
+  <label for="edit-name" class="form-item__label form-item__label--required form-item__label--textfield">Name:</label>
+  <input autocorrect="none" autocapitalize="none" spellcheck="false" aria-describedby="edit-name--description" type="text" name="name" value="" size="60" maxlength="60" class="form-item__textfield form-item__textfield--required" required="required" aria-required="true" placeholder="First, Middle, Last">
+</div>
+
+<div class="form-item">
+  <label for="edit-pass" class="form-item__label form-item__label--required form-item__label--textfield">Password:</label>
+  <input aria-describedby="edit-pass--description" type="password" name="pass" size="60" maxlength="128" class="form-item__textfield form-item__textfield--password form-item__textfield--required" required="required" aria-required="true">
+  <div class="form-item__description">
+    Enter the password that accompanies your username.
+  </div>
+</div>
+
+<form>
+  <fieldset class="form-fieldset">
+  <legend class="heading-2 with-icon">Web and Email Address (fieldset example)</legend>
+    <div class="form-item">
+       <label for="webaddress" class="form-item__label form-item__label--textfield">Web Address</label>
+       <input type="url" class="form-item__textfield" placeholder="http://yoursite.com">
+     </div>
+
+     <div class="form-item">
+       <label for="emailaddress" class="form-item__label form-item__label--textfield">Email Address</label>
+       <input type="email" class="form-item__textfield" placeholder="name@email.com">
+     </div>
+  </fieldset>
+ </form>
+
+ <div class="form-item">
+   <label for="text" class="form-item__label form-item__label--textfield">Number Input</label>
+   <input type="number" class="form-item__textfield" placeholder="Enter a Number" pattern="[0-9]*">
+ </div>
+
+ <div class="form-item">
+   <label for="textarea" class="form-item__label form-item__label--textfield">Message:</label>
+   <textarea class="form-item__textfield form-item__textarea"  rows="8" cols="52" placeholder="Enter your message"></textarea>
+ </div>
+
+<div class="form-item js-form-type-managed-file">
+  <label for="attachment" class="form-item__label form-item__label--file">
+    Attachment:
+  </label>
+  <label class="js-file-box" for="attachment">
+    <div class="file-box">
+      <span class="file-box__label">No file selected</span>
+      <span class="file-box__button">Browse</span>
+    </div>
+  </label>
+  <input name="attachment" id="attachment" class="form-item__file" placeholder="No file selected" type="file" />
+  <div class="form-item__description">
+    One file only. <br />
+    2 MB limit. <br />
+    Allowed types: txt jpg jpeg png svg.
+  </div>
+</div>
+
+<div class="form-item js-form-type-managed-file">
+  <label for="attachment2" class="form-item__label form-item__label--file">
+    Attachment:
+  </label>
+  <div class="file-box">
+    <input name="attachment2" id="attachment2" class="form-item__file" placeholder="No file selected" type="file" />
+    <span class="file file-box__label"><a href="#" class="link">selected-file-name.txt</a></span>
+    <input type="submit" class="button js-form-submit form-submit" value="Remove">
+  </div>
+</div>

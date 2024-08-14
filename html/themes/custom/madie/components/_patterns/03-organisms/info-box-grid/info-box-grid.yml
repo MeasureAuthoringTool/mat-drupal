@@ -1,0 +1,35 @@
+grid_label:
+  "Latest News & Alerts"
+
+grid_cta:
+  title: "View All"
+  url: "#"
+
+boxes:
+  one:
+    ib_modifiers:
+      1:
+        "grid-item"
+    infobox_title: "MAT Downtime Notification - September Monthly Maintenance"
+    infobox_subtitle: Sep 12, 2019
+    infobox_text: "The Measure Authoring Tool (MAT) will be unavailable from Friday, September 13, 2019 at…"
+    infobox_link_title: "Read More"
+    infobox_link_url: "#"
+  two:
+    ib_modifiers:
+      1:
+        "grid-item"
+    infobox_title: "Measure Authoring Tool version 5.8 Released"
+    infobox_subtitle: Aug 27, 2019
+    infobox_text: "The deployment of the MAT version 5.8 into the production environment was successful. Please note, the MAT is now …"
+    infobox_link_title: "Read More"
+    infobox_link_url: "#"
+  three:
+    ib_modifiers:
+      1:
+        "grid-item"
+    infobox_title: "MAT Downtime Notification - August Monthly Maintenance"
+    infobox_subtitle: Aug 8, 2019
+    infobox_text: "The Measure Authoring Tool (MAT) will be unavailable from Friday, August 9, 2019 at…"
+    infobox_link_title: "Read More"
+    infobox_link_url: "#"

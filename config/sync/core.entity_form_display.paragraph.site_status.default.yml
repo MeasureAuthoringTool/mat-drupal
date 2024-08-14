@@ -17,31 +17,31 @@ bundle: site_status
 mode: default
 content:
   field_status_cd_date:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
     type: datetime_default
+    weight: 5
     region: content
-  field_status_cd_granularity:
-    weight: 4
     settings: {  }
     third_party_settings: {  }
+  field_status_cd_granularity:
     type: options_select
+    weight: 4
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_status_message:
+    type: text_textarea
     weight: 1
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_status_type:
+    type: options_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
 hidden:
   created: true
   status: true

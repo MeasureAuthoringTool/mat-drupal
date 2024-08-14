@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the madie theme.
+ */
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function madie_page_attachments_alter(array &$attachments) {
+  if (in_array('extlink/drupal.extlink', $attachments['#attached']['library'])) {
+    $attachments['#attached']['library'][] = 'madie/external-link';
+  }
+}

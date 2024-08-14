@@ -1,0 +1,18 @@
+{
+  "name": "madie",
+  "private": true,
+  "scripts": {
+    "sass-watch": "node-sass -w --output-style expanded scss -o css",
+    "sass-compile": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js components/_patterns/style.scss dist/style.css"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "node-sass-glob-importer": "^5.3.3",
+    "normalize-scss": "^7.0.1",
+    "normalize.css": "^8.0.1",
+    "sass-rem": "^2.0.1"
+  }
+}

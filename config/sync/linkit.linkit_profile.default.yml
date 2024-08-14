@@ -5,29 +5,34 @@ dependencies:
   module:
     - file
     - node
-id: default
 label: Default
+id: default
 description: ''
-attributes: {  }
 matchers:
   23a2bd43-35f4-44fe-80ea-f61e222dbe55:
-    uuid: 23a2bd43-35f4-44fe-80ea-f61e222dbe55
     id: 'entity:node'
-    weight: 0
+    uuid: 23a2bd43-35f4-44fe-80ea-f61e222dbe55
     settings:
-      result_description: '[node:url:path]'
+      metadata: '[node:url:path]'
       bundles: {  }
       group_by_bundle: true
+      substitution_type: canonical
+      limit: 100
       include_unpublished: false
-  c986e825-cdd5-4ec7-8e11-7e54c991d686:
-    uuid: c986e825-cdd5-4ec7-8e11-7e54c991d686
-    id: 'entity:file'
     weight: 0
+  c986e825-cdd5-4ec7-8e11-7e54c991d686:
+    id: 'entity:file'
+    uuid: c986e825-cdd5-4ec7-8e11-7e54c991d686
     settings:
-      result_description: Files
+      metadata: Files
       bundles: null
       group_by_bundle: null
+      substitution_type: file
+      limit: 100
+      file_extensions: ''
+      file_status: 1
       images:
         show_dimensions: false
         show_thumbnail: false
         thumbnail_image_style: null
+    weight: 0

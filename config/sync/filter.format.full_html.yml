@@ -35,6 +35,21 @@ filters:
     status: false
     weight: -10
     settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-entity-substitution data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre> <a href hreflang !href accesskey id rel target title data-entity-type data-entity-uuid data-entity-substitution>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: 0
+    settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
@@ -48,27 +63,10 @@ filters:
     weight: 9
     settings:
       filter_url_length: 72
-  filter_html:
-    id: filter_html
-    provider: filter
-    status: false
-    weight: -10
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -11
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre> <a href hreflang !href accesskey id rel target title>'
-      filter_html_help: true
-      filter_html_nofollow: false
-  filter_html_escape:
-    id: filter_html_escape
-    provider: filter
-    status: false
-    weight: 0
-    settings: {  }
-  media_embed:
-    id: media_embed
-    provider: media
-    status: false
-    weight: 100
-    settings:
-      default_view_mode: default
-      allowed_media_types: {  }
-      allowed_view_modes: {  }
+      title: false

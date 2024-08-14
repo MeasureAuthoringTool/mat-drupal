@@ -1,0 +1,73 @@
+.info-box-cta {
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 0 $space $charcoal;
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid $lime;
+  padding: $space-double;
+
+  &__label {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__title {
+    @include heading($font-size: rem(28px));
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    color: $lemon;
+    margin-left: $space;
+    filter: drop-shadow(2px 2px 2px $charcoal20);
+  }
+
+  &__body {
+    margin-top: 0;
+    font-size: rem(20px);
+    line-height: 1.5;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+
+    .icon {
+      color: lighten($blueberry, 30%);
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &--primary {
+      @include button-primary;
+
+      padding: 0.75rem;
+      margin-top: $space;
+      border-width: 3px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: $blueberry;
+      font-family: $font-heading;
+      text-decoration: none;
+    }
+
+    &--secondary {
+      color: $charcoal;
+      font-family: $font-body;
+      text-decoration: underline;
+      font-size: 1.25rem;
+      font-weight: normal;
+      margin-top: $space-one-half;
+
+      .icon {
+        color: $charcoal;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}

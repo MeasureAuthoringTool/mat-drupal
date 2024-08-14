@@ -1,0 +1,22 @@
+uuid: 56a56001-554b-478e-a14e-5de6af2f3452
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - madie
+_core:
+  default_config_hash: XJqWwLt1LDCnazcEN6QkJmCLjk4R0__-8s0OO9xeNjg
+id: madie_messages
+theme: madie
+region: system
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

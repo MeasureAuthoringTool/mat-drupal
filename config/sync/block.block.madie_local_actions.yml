@@ -1,0 +1,20 @@
+uuid: c5e24047-e29b-45f3-a424-96b94ba69abb
+langcode: en
+status: true
+dependencies:
+  theme:
+    - madie
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: madie_local_actions
+theme: madie
+region: content
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

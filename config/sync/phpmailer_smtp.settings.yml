@@ -1,11 +1,14 @@
-smtp_host: 172.23.20.122
+_core:
+  default_config_hash: YJQk79ZpBxHqF7kBO65qqcwG0BGuohBx1ijpXo0EtgI
+smtp_host: mailrelay.hcqis.org
 smtp_hostbackup: ''
 smtp_port: 25
 smtp_protocol: tls
 smtp_username: ''
 smtp_password: ''
 smtp_hide_password: false
-smtp_fromname: sb-mat-help@semanticbits.com
+smtp_authentication_type: basic_auth
+smtp_fromname: sb-mat-help@hcqis.org
 smtp_always_replyto: true
 smtp_keepalive: false
 smtp_debug: 0
@@ -14,8 +17,7 @@ phpmailer_smtp_test: ''
 smtp_ssl_verify_peer: false
 smtp_ssl_verify_peer_name: false
 smtp_ssl_allow_self_signed: false
-smtp_envelope_sender_option: default
-smtp_envelope_sender: ''
+smtp_envelope_sender_option: other
+smtp_envelope_sender: sb-mat-help@hcqis.org
 smtp_ehlo_host: ''
-_core:
-  default_config_hash: YJQk79ZpBxHqF7kBO65qqcwG0BGuohBx1ijpXo0EtgI
+smtp_timeout: 30

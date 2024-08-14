@@ -1,0 +1,22 @@
+uuid: 399c9429-12c6-4f13-be5e-01d86afbef2e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - madie
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: madie_content
+theme: madie
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

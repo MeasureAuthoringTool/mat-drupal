@@ -5,16 +5,16 @@ dependencies:
   module:
     - help
   theme:
-    - emat
+    - madie
 id: help
-theme: emat
+theme: madie
 region: system
-weight: -3
+weight: -4
 provider: null
 plugin: help_block
 settings:
   id: help_block
   label: Help
-  provider: help
   label_display: '0'
+  provider: help
 visibility: {  }

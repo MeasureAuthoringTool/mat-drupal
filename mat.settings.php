@@ -30,4 +30,4 @@ $databases['default']['default'] = [
 ];
 
 // Comment this out for local dev, rebuild docker.
-$databases['default']['default']['pdo'] = [PDO::MYSQL_ATTR_SSL_CA => '/var/www/html/sites/default/rds-combined-ca-bundle.pem'];
+$databases['default']['default']['pdo'] = [PDO::MYSQL_ATTR_SSL_CA => '/var/www/html/sites/default/us-east-1-bundle.pem'];

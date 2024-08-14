@@ -1,0 +1,25 @@
+uuid: 0777b042-258f-4c3f-a85a-526d7d5478a4
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.helpful-links
+  module:
+    - system
+  theme:
+    - emat
+id: emat_helpfullinks
+theme: emat
+region: system
+weight: -7
+provider: null
+plugin: 'system_menu_block:helpful-links'
+settings:
+  id: 'system_menu_block:helpful-links'
+  label: 'Helpful Links'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

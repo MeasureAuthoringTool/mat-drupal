@@ -1,0 +1,33 @@
+uuid: 3fbb733f-84b4-424d-b51b-53332f6dbb95
+langcode: en
+status: true
+dependencies:
+  module:
+    - emat_blocks
+    - system
+  theme:
+    - madie
+id: heroblock_2
+theme: madie
+region: header
+weight: 0
+provider: null
+plugin: emat_hero_block
+settings:
+  id: emat_hero_block
+  label: 'Measure Authoring Development Integrated Environment (MADiE)'
+  label_display: visible
+  provider: emat_blocks
+  lead: 'MADiE (MVP) allows users to develop and test measures in an integrated workspace. MADiE supports QI-Core profile informed authoring and testing of FHIR measures.'
+  cta_box_title: 'Secure Login'
+  cta_box_description: 'To log in to MADiE, a user account is required. If you are unable to log in to your MADiE account, please contact the support desk.'
+  cta_primary_link_text: 'Log in to MADiE'
+  cta_primary_link_url: 'https://madie.cms.gov/'
+  cta_secondary_link_text: 'MADiE Access Guide'
+  cta_secondary_link_url: 'https://www.emeasuretool.cms.gov/sites/default/files/2022-11/MADiEAccessGuide_1.0_508.pdf'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /madie
