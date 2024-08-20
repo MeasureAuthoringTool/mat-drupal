@@ -15,11 +15,11 @@ provider: null
 plugin: emat_hero_block
 settings:
   id: emat_hero_block
-  label: 'MAT & all Bonnies Have Been Decomissioned as of June 28, 2024'
+  label: 'Measure Authoring Development Integrated Environment (MADiE)'
   label_display: visible
   provider: emat_blocks
   title: null
-  lead: 'The Measure Authoring Tool (MAT) and all Bonnies have been replaced by the Measure Authoring Development Integrated Environment (MADiE) as of June 28, 2024.'
+  lead: 'MADiE (MVP) allows users to develop and test measures in an integrated workspace. MADiE supports QI-Core profile informed authoring and testing of FHIR measures.'
   cta_box_title: 'Secure Login'
   cta_box_description: 'To log in to MADiE, a user account is required. If you are unable to log in to your MADiE account, please contact the support desk.'
   cta_primary_link_text: 'Log in to MADiE'
