@@ -12,7 +12,7 @@ RUN composer install \
   --no-dev \
   --prefer-dist
 
-FROM drupal:8
+FROM drupal:9
 
 # NewRelic
 #ARG PHP_AGENT_URL="https://download.newrelic.com/php_agent/release/newrelic-php5-10.19.0.9-linux.tar.gz"

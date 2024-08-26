@@ -7,18 +7,32 @@
  * `Drupal\Core\Template\TwigTransTokenParser` from Drupal 8 core.
  */
 
+use Twig\Compiler;
+use Twig\Error\SyntaxError;
+use Twig\Node\Expression\AbstractExpression;
+use Twig\Node\Expression\NameExpression;
+use Twig\Node\Expression\ConstantExpression;
+use Twig\Node\Node;
+use Twig\Node\TextNode;
+use Twig\Token;
+use Twig\TokenParser\AbstractTokenParser;
+use Twig\Node\PrintNode;
+use Twig\Node\Expression\FilterExpression;
+use Twig\Node\Expression\FunctionExpression;
+use Twig\Node\Expression\TempNameExpression;
+
 // These files are loaded three times and we can't re-set a class.
 if (!class_exists("Project_pl_trans_Node")) {
 
   /**
    * Class Project_trans_Node.
    */
-  class Project_pl_trans_Node extends \Twig_Node {
+  class Project_pl_trans_Node extends Node {
 
     /**
      * {@inheritdoc}
      */
-    public function __construct(\Twig_Node $body, \Twig_Node $plural = NULL, \Twig_Node_Expression $count = NULL, \Twig_Node_Expression $options = NULL, $lineno, $tag = NULL) {
+    public function __construct(Node $body, Node $plural = NULL, AbstractExpression $count = NULL, AbstractExpression $options = NULL, $lineno, $tag = NULL) {
       parent::__construct(array(
         'count' => $count,
         'body' => $body,
@@ -30,7 +44,7 @@ if (!class_exists("Project_pl_trans_Node")) {
     /**
      * {@inheritdoc}
      */
-    public function compile(\Twig_Compiler $compiler) {
+    public function compile(Compiler $compiler) {
       list($singular) = $this->compileString($this->getNode('body'));
 
       $compiler->addDebugInfo($this);
@@ -44,7 +58,7 @@ if (!class_exists("Project_pl_trans_Node")) {
     /**
      * Extracts the text and tokens for the "trans" tag.
      *
-     * @param \Twig_Node $body
+     * @param Node $body
      *   The node to compile.
      *
      * @return array
@@ -52,10 +66,10 @@ if (!class_exists("Project_pl_trans_Node")) {
      *   - string $text
      *       The extracted text.
      *   - array $tokens
-     *       The extracted tokens as new \Twig_Node_Expression_Name instances.
+     *       The extracted tokens as new Twig_Node_Expression_Name instances.
      */
-    protected function compileString(\Twig_Node $body) {
-      if ($body instanceof \Twig_Node_Expression_Name || $body instanceof \Twig_Node_Expression_Constant || $body instanceof \Twig_Node_Expression_TempName) {
+    protected function compileString(Node $body) {
+      if ($body instanceof NameExpression || $body instanceof ConstantExpression || $body instanceof TempNameExpression) {
         return array($body, array());
       }
 
@@ -68,16 +82,16 @@ if (!class_exists("Project_pl_trans_Node")) {
             $node = $node->getNode(1);
           }
 
-          if ($node instanceof \Twig_Node_Print) {
+          if ($node instanceof PrintNode) {
             $n = $node->getNode('expr');
-            while ($n instanceof \Twig_Node_Expression_Filter) {
+            while ($n instanceof FilterExpression) {
               $n = $n->getNode('node');
             }
 
             $args = $n;
 
             // Support TwigExtension->renderVar() function in chain.
-            if ($args instanceof \Twig_Node_Expression_Function) {
+            if ($args instanceof FunctionExpression) {
               $args = $n->getNode('arguments')->getNode(0);
             }
 
@@ -87,7 +101,7 @@ if (!class_exists("Project_pl_trans_Node")) {
             // them safe for templates.
             // @see TwigExtension::getFilters()
             $argPrefix = '@';
-            while ($args instanceof \Twig_Node_Expression_Filter) {
+            while ($args instanceof FilterExpression) {
               switch ($args->getNode('filter')->getAttribute('value')) {
                 case 'placeholder':
                   $argPrefix = '%';
@@ -104,7 +118,7 @@ if (!class_exists("Project_pl_trans_Node")) {
               $argName[] = $args->getNode('attribute')->getAttribute('value');
               while ($args->hasNode('node')) {
                 $args = $args->getNode('node');
-                if ($args instanceof \Twig_Node_Expression_Name) {
+                if ($args instanceof NameExpression) {
                   $argName[] = $args->getAttribute('name');
                 }
                 else {
@@ -119,7 +133,7 @@ if (!class_exists("Project_pl_trans_Node")) {
               if (!is_null($args)) {
                 $argName = $args->getAttribute('name');
               }
-              $expr = new \Twig_Node_Expression_Name($argName, $n->getLine());
+              $expr = new NameExpression($argName, $n->getLine());
             }
             $placeholder = sprintf('%s%s', $argPrefix, $argName);
             $text .= $placeholder;
@@ -136,8 +150,8 @@ if (!class_exists("Project_pl_trans_Node")) {
       }
 
       return array(
-        new \Twig_Node(
-          array(new \Twig_Node_Expression_Constant(trim($text), $body->getLine()))
+        new Node(
+          array(new ConstantExpression(trim($text), $body->getTemplateLine()))
         ),
         $tokens,
       );
@@ -153,12 +167,12 @@ if (!class_exists("Project_pl_trans_TokenParser")) {
   /**
    * Class Project_pl_trans_TokenParser.
    */
-  class Project_pl_trans_TokenParser extends \Twig_TokenParser {
+  class Project_pl_trans_TokenParser extends AbstractTokenParser {
 
     /**
      * {@inheritdoc}
      */
-    public function parse(\Twig_Token $token) {
+    public function parse(Token $token) {
       $lineno = $token->getLine();
       $stream = $this->parser->getStream();
       $body = NULL;
@@ -166,24 +180,24 @@ if (!class_exists("Project_pl_trans_TokenParser")) {
       $count = NULL;
       $plural = NULL;
 
-      if (!$stream->test(\Twig_Token::BLOCK_END_TYPE) && $stream->test(\Twig_Token::STRING_TYPE)) {
+      if (!$stream->test(Token::BLOCK_END_TYPE) && $stream->test(Token::STRING_TYPE)) {
         $body = $this->parser->getExpressionParser()->parseExpression();
       }
-      if (!$stream->test(\Twig_Token::BLOCK_END_TYPE) && $stream->test(\Twig_Token::NAME_TYPE, 'with')) {
+      if (!$stream->test(Token::BLOCK_END_TYPE) && $stream->test(Token::NAME_TYPE, 'with')) {
         $stream->next();
         $options = $this->parser->getExpressionParser()->parseExpression();
       }
       if (!$body) {
-        $stream->expect(\Twig_Token::BLOCK_END_TYPE);
+        $stream->expect(Token::BLOCK_END_TYPE);
         $body = $this->parser->subparse(array($this, 'decideForFork'));
         if ('plural' === $stream->next()->getValue()) {
           $count = $this->parser->getExpressionParser()->parseExpression();
-          $stream->expect(\Twig_Token::BLOCK_END_TYPE);
+          $stream->expect(Token::BLOCK_END_TYPE);
           $plural = $this->parser->subparse(array($this, 'decideForEnd'), TRUE);
         }
       }
 
-      $stream->expect(\Twig_Token::BLOCK_END_TYPE);
+      $stream->expect(Token::BLOCK_END_TYPE);
 
       $this->checkTransString($body, $lineno);
 
@@ -216,29 +230,29 @@ if (!class_exists("Project_pl_trans_TokenParser")) {
     /**
      * Ensure that any nodes that are parsed are only of allowed types.
      *
-     * @param \Twig_Node $body
+     * @param Node $body
      *   The expression to check.
      * @param int $lineno
      *   The source line.
      *
-     * @throws \Twig_Error_Syntax
+     * @throws SyntaxError
      *   Twig error.
      */
-    protected function checkTransString(\Twig_Node $body, $lineno) {
+    protected function checkTransString(Node $body, $lineno) {
       foreach ($body as $node) {
         if (
-          $node instanceof \Twig_Node_Text
+          $node instanceof TextNode
           ||
-          ($node instanceof \Twig_Node_Print && $node->getNode('expr') instanceof \Twig_Node_Expression_Name)
+          ($node instanceof PrintNode && $node->getNode('expr') instanceof NameExpression)
           ||
-          ($node instanceof \Twig_Node_Print && $node->getNode('expr') instanceof \Twig_Node_Expression_GetAttr)
+          ($node instanceof PrintNode && $node->getNode('expr') instanceof \Twig_Node_Expression_GetAttr)
           ||
-          ($node instanceof \Twig_Node_Print && $node->getNode('expr') instanceof \Twig_Node_Expression_Filter)
+          ($node instanceof PrintNode && $node->getNode('expr') instanceof \Twig_Node_Expression_Filter)
         ) {
           continue;
         }
 
-        throw new \Twig_Error_Syntax(sprintf('The text to be translated with "trans" can only contain references to simple variables'), $lineno);
+        throw new SyntaxError(sprintf('The text to be translated with "trans" can only contain references to simple variables'), $lineno);
       }
     }
 

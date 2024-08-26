@@ -5,8 +5,9 @@
  */
 
 use Symfony\Component\Yaml\Yaml;
+use Twig\TwigFunction;
 
-$function = new Twig_SimpleFunction('attach_library', function ($string) {
+$function = new TwigFunction('attach_library', function ($string) {
   // Get Library Name from string.
   $libraryName = substr($string, strpos($string, "/") + 1);
 

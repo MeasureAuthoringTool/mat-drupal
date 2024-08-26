@@ -5,7 +5,8 @@
  *
  * Bring Drupal filters in just so Pattern Lab doesn't bork.
  */
+use Twig\TwigFilter;
 
-$filter = new Twig_SimpleFilter('render', function ($string) {
+$filter = new TwigFilter('render', function ($string) {
   return $string;
 });
