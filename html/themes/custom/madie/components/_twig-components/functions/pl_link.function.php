@@ -4,6 +4,8 @@
  * Add "link" function for Pattern Lab.
  */
 
-$function = new Twig_SimpleFunction('link', function ($string) {
+use Twig\TwigFunction;
+
+$function = new TwigFunction('link', function ($string) {
   return $string;
 });

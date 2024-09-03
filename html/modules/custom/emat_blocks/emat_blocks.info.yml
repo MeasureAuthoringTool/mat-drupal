@@ -1,7 +1,7 @@
 name: 'MAT Blocks'
 type: module
 description: 'Provides custom blocks for MAT site.'
-core_version_requirement: ^9.3
+core_version_requirement: ^9 || ^10
 package: 'CMS'
 dependencies:
   - block

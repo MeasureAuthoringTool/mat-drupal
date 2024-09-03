@@ -11,7 +11,7 @@ archive: false
 id: new_mat_user_application
 title: 'New MAT User Application'
 description: ''
-category: ''
+categories: {  }
 elements: |-
   madie_announcement_banner:
     '#type': webform_message

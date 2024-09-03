@@ -3,8 +3,7 @@ type: theme
 base theme: stable9
 description: A flexible theme with a responsive, mobile-first layout.
 package: Custom
-core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 libraries:
   - madie/global
 regions:

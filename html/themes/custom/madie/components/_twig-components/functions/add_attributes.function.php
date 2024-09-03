@@ -5,8 +5,9 @@
  */
 
 use Drupal\Core\Template\Attribute;
+use Twig\TwigFunction;
 
-$function = new Twig_SimpleFunction('add_attributes', function ($context, $additional_attributes = []) {
+$function = new TwigFunction('add_attributes', function ($context, $additional_attributes = []) {
   if (class_exists('Drupal')) {
     $attributes = new Attribute();
 

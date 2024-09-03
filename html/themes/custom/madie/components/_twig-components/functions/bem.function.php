@@ -5,8 +5,9 @@
  */
 
 use Drupal\Core\Template\Attribute;
+use Twig\TwigFunction;
 
-$function = new Twig_SimpleFunction('bem', function ($context, $base_class, $modifiers = array(), $blockname = '', $extra = array()) {
+$function = new TwigFunction('bem', function ($context, $base_class, $modifiers = array(), $blockname = '', $extra = array()) {
   $classes = [];
 
   // If using a blockname to override default class.

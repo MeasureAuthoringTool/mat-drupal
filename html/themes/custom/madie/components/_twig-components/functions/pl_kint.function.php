@@ -3,7 +3,8 @@
  * @file
  * Add "kint" function for Pattern Lab.
  */
+use Twig\TwigFunction;
 
-$function = new Twig_SimpleFunction('kint', function ($string) {
+$function = new TwigFunction('kint', function ($string) {
   return $string;
 });
