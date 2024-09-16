@@ -282,7 +282,7 @@ handlers:
   email_notification:
     id: email
     handler_id: email_notification
-    label: 'MAT Contact Us Submission'
+    label: 'Contact Us Submission'
     notes: ''
     status: true
     conditions: {  }
