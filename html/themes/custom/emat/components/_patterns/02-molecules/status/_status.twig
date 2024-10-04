@@ -1,7 +1,0 @@
-{% set status_element_type = status_element_type|default('span') %}
-
-<{{ status_element_type }} {{ bem('status', [status_type], '', (status_js_class)) }}>
-  {% block status_message_content %}
-    {{ status_message }}
-  {% endblock %}
-</{{ status_element_type }}>

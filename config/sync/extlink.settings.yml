@@ -7,7 +7,7 @@ extlink_nofollow: false
 extlink_follow_no_override: false
 extlink_subdomains: true
 extlink_alert: true
-extlink_alert_text: 'You are leaving the Measure Authoring Tool web site and entering another web site. The Measure Authoring Tool cannot attest to the accuracy of information provided by linked sites. You will be subject to the destination site''s Privacy Policy when you leave the Measure Authoring Tool website.'
+extlink_alert_text: 'You are leaving the MADiE web site and entering another web site. The MADiE cannot attest to the accuracy of information provided by linked sites. You will be subject to the destination site''s Privacy Policy when you leave the MADiE website.'
 extlink_exclude: 'zoom\.us.*'
 extlink_include: ''
 extlink_class: '0'
