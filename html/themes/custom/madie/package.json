@@ -2,11 +2,13 @@
   "name": "madie",
   "private": true,
   "scripts": {
+    "build-js": "./minify-js.sh",
     "sass-watch": "node-sass -w --output-style expanded scss -o css",
     "sass-compile": "node-sass --importer node_modules/node-sass-glob-importer/dist/cli.js components/_patterns/style.scss dist/style.css"
   },
   "devDependencies": {
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "uglify-js": "^3.19.3"
   },
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
