@@ -58,7 +58,7 @@ external-link:
     dist/02-molecules/extlink/external-link.js: {}
   dependencies:
     - core/jquery
-    - core/jquery.once
+    - core/once
 
 countdown:
   js:

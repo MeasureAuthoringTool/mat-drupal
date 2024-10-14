@@ -11,8 +11,10 @@
   Drupal.behaviors.externalLink = {
     attach: function(context, settings) {
 
-      $(document).once('mat-external-link').each(function() {
-
+      $(once(
+        'mat-external-link',
+        document
+      )).each(function () {
         if (drupalSettings.data.extlink.extAlertText) {
           $('#js-extlink-alert-text').html(drupalSettings.data.extlink.extAlertText);
         }
