@@ -2,7 +2,7 @@ _core:
   default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
 langcode: en
 uuid: 734474d6-ac9b-425c-9317-18ec8039e07e
-name: 'Measure Authoring Tool'
+name: MADiE
 mail: semanticbits-madie-help@icf.com
 slogan: 'The Centers for Medicare & Medicaid Services'
 page:
