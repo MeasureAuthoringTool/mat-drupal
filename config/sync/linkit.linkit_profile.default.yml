@@ -13,7 +13,7 @@ matchers:
     id: 'entity:node'
     uuid: 23a2bd43-35f4-44fe-80ea-f61e222dbe55
     settings:
-      metadata: '[node:url:path]'
+      metadata: null
       bundles: {  }
       group_by_bundle: true
       substitution_type: canonical
@@ -24,7 +24,7 @@ matchers:
     id: 'entity:file'
     uuid: c986e825-cdd5-4ec7-8e11-7e54c991d686
     settings:
-      metadata: Files
+      metadata: null
       bundles: null
       group_by_bundle: null
       substitution_type: file

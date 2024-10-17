@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: site_status
 label: 'Site Status'
-revision: 0
+revision: false
 description: 'Display a site-wide status message.'

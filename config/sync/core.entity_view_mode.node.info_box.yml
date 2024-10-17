@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.info_box
 label: 'Info Box'
+description: ''
 targetEntityType: node
 cache: true
