@@ -12,7 +12,7 @@ RUN composer install \
   --no-dev \
   --prefer-dist
 
-FROM drupal:9
+FROM drupal:10
 
 # NewRelic
 #ARG PHP_AGENT_URL="https://download.newrelic.com/php_agent/release/newrelic-php5-10.19.0.9-linux.tar.gz"
@@ -48,10 +48,8 @@ RUN echo 'Acquire::http::timeout "300"; ' > /etc/apt/apt.conf.d/99timeouts   && 
 RUN rm /var/www/html
 COPY --from=vendor /app/ /var/www
 
-# Install Drush
-RUN wget -O drush.phar https://github.com/drush-ops/drush-launcher/releases/download/0.6.0/drush.phar && \
-	chmod +x drush.phar && \
-	mv drush.phar /usr/local/bin/drush
+# Add Drush to PATH
+ENV PATH="/var/www/vendor/bin:${PATH}"
 
 # Grab DB PEM from AWS.
 RUN wget -O /var/www/html/sites/default/us-east-1-bundle.pem https://truststore.pki.rds.amazonaws.com/us-east-1/us-east-1-bundle.pem

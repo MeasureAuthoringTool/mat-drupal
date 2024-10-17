@@ -57,6 +57,7 @@ external-link:
     libraries/magnific/jquery.magnific-popup.js: {}
     dist/02-molecules/extlink/external-link.js: {}
   dependencies:
+    - core/drupal
     - core/jquery
     - core/once
 
