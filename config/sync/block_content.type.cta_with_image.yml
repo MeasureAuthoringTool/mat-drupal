@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: cta_with_image
 label: 'CTA With Image'
-revision: 0
+revision: false
 description: ''
