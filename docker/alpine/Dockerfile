@@ -1,4 +1,4 @@
-FROM node:11.15-alpine
+FROM node:23-alpine
 
 # Install PHP and required extensions
 RUN apk add --no-cache \
