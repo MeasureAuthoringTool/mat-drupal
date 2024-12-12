@@ -1,4 +1,4 @@
-FROM php:7.3-cli
+FROM php:8.2-cli
 
 # Install required PHP extensions dependencies
 RUN apt-get update && apt-get install -y \
