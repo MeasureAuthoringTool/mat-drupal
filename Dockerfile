@@ -120,6 +120,9 @@ RUN composer self-update --2
 ENV COMPOSER_MEMORY_LIMIT=-1
 ENV COMPOSER_PROCESS_TIMEOUT=2000
 
+# module to route logs to stdout
+composer require 'drupal/log_stdout:^3.0'
+
 # So that drush works from outside the container.
 WORKDIR /var/www
 
