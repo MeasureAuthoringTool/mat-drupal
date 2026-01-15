@@ -43,6 +43,7 @@
         "drupal/twig_field_value": "^2.0",
         "drupal/unified_twig_ext": "^1.0",
         "drupal/upgrade_status": "^4.3",
+        "drupal/uswds": "^3.0",
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/webform": "^6.2",
         "drush/drush": "^12",
