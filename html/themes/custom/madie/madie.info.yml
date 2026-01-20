@@ -31,3 +31,5 @@ components:
       - components/_patterns/04-templates
     pages:
       - components/_patterns/05-pages
+    uswds:
+      - components/_patterns/06-uswds
