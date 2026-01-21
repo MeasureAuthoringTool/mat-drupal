@@ -64,3 +64,12 @@ external-link:
 countdown:
   js:
     dist/01-atoms/countdown/countdown.js: {}
+    
+usa-banner:
+  css:
+    theme:
+      node_modules/@uswds/uswds/dist/css/uswds.min.css: {}
+  js:
+  dependencies:
+    - core/drupal
+    - core/jquery

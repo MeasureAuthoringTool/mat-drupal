@@ -13,3 +13,7 @@ function madie_page_attachments_alter(array &$attachments) {
     $attachments['#attached']['library'][] = 'madie/external-link';
   }
 }
+
+function madie_preprocess_page(array &$variables) {
+  $variables['#attached']['library'][] = 'madie/usa-banner';
+}
