@@ -17,10 +17,11 @@
 <div {{ bem('layout-container', (layout_modifiers), '', (layout_extra_classes)) }}>
   {{ attach_library('madie/usa_banner') }}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.13.0/js/uswds.js"></script>
+  <header class="header">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.13.0/css/uswds.css">
     <div class="usa-banner" aria-label="Official website of the United States government">
       <div class="usa-accordion">
-        <header class="usa-banner__header">
+        <header class="usa-banner__header" justify-items="center">
           <div class="usa-banner__inner">
             <div class="grid-col-auto">
               <img class="usa-banner__header-flag" aria-hidden="true" src="/themes/custom/madie/images/us_flag_small.png" alt="">
@@ -69,7 +70,6 @@
       </div>
     </div>
 
-  <header class="header">
 {#    {% block usa_banner %}#}
 {#      {% include "@uswds/usa-banner/src/usa-banner.twig" with {#}
 {#        banner: {#}
