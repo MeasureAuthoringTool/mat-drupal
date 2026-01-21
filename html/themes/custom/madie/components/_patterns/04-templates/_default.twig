@@ -18,7 +18,25 @@
 
   <header class="header">
     <div>TEST</div>
-    {% block usa_banner %}{% endblock %}
+    {% block usa_banner %}
+      {% include "@uswds/usa-banner/src/usa-banner.twig" with {
+        banner: {
+          aria_label: 'Official government website',
+          text: 'An official website of the United States government',
+          action: 'Here’s how you know',
+          id: 'gov-banner',
+        },
+        domain: {
+          heading: 'Official website',
+          text: 'The .gov means it’s official.',
+        },
+        https: {
+          heading: 'Secure connection',
+          pretext: 'The https:// ensures that you are connecting to the official website and that any information you provide is encrypted and transmitted securely.',
+          posttext: '',
+        }
+      } %}
+    {% endblock %}
 
     {% block page_branding %}
       {% include "@organisms/site/site-branding/site-branding.twig" %}
