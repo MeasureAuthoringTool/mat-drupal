@@ -32,4 +32,4 @@ components:
     pages:
       - components/_patterns/05-pages
     uswds:
-      - node_modules/@uswds/uswds
+      - node_modules/@uswds/uswds/packages
