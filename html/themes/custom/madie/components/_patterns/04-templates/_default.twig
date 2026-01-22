@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uswds/3.13.0/css/uswds.css">
     <div class="usa-banner" aria-label="Official website of the United States government">
       <div class="usa-accordion">
-        <header class="usa-banner__header" justify-items="center">
+        <header class="usa-banner__header" >
           <div class="usa-banner__inner">
             <div class="grid-col-auto">
               <img class="usa-banner__header-flag" aria-hidden="true" src="/themes/custom/madie/images/us_flag_small.png" alt="">
@@ -69,6 +69,10 @@
         </div>
       </div>
     </div>
+    <style>
+      /* Quick fix to ensure it looks right if USWDS CSS is slow to load */
+      .usa-banner__header { justify-items: center; }
+    </style>
 
 {#    {% block usa_banner %}#}
 {#      {% include "@uswds/usa-banner/src/usa-banner.twig" with {#}
