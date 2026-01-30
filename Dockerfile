@@ -32,6 +32,10 @@ FROM drupal:10
 #      /usr/local/etc/php/conf.d/newrelic.ini
 #
 
+# DataDog
+RUN curl -LO https://github.com/DataDog/dd-trace-php/releases/latest/download/datadog-setup.php \
+        && php datadog-setup.php --php-bin=all --enable-appsec --enable-profiling
+
 # Install extras; mysql-client is for Drush
 RUN echo 'Acquire::http::timeout "300"; ' > /etc/apt/apt.conf.d/99timeouts   && apt-get update && apt-get install -y && apt-get upgrade -y \
 	curl \
