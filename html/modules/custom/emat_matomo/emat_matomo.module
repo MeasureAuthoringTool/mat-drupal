@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Adds the Matomo Tag Manager script to all pages.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function emat_matomo_page_attachments(array &$attachments) {
+  $container_id = getenv('MATOMO_CONTAINER_ID');
+  if (empty($container_id)) {
+    return;
+  }
+
+  $attachments['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'script',
+      '#value' => "var _mtm = window._mtm = window._mtm || [];
+_mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+(function() {
+  var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+  g.async=true; g.src='https://qnetmatomo.cms.gov/js/" . $container_id . "'; s.parentNode.insertBefore(g,s);
+})();",
+    ],
+    'emat_matomo_tag_manager',
+  ];
+}
