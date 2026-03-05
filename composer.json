@@ -32,7 +32,7 @@
         "drupal/devel_entity_updates": "^4.2",
         "drupal/extlink": "^1.7",
         "drupal/honeypot": "2.1.4",
-        "drupal/linkit": "^6.0",
+        "drupal/linkit": "^7.0",
         "drupal/mailsystem": "^4.2",
         "drupal/menu_trail_by_path": "^2.1",
         "drupal/paragraphs": "^1.13",
