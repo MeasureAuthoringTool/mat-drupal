@@ -2,7 +2,7 @@
 
 // Config sync directory.
 $settings['config_sync_directory'] = '../config/sync';
-$settings['file_private_path'] = '../private';
+$settings['file_private_path'] = '/var/www/private';
 
 // Disallow access to update.php by anonymous users.
 $settings['update_free_access'] = FALSE;
