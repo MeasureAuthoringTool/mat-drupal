@@ -290,7 +290,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: sb-mat-help@semanticbits.com
+      to_mail: MADiE@cms.hhs.gov
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
