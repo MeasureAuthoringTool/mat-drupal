@@ -16,18 +16,17 @@
         }
     ],
     "require": {
-        "php": ">=7.4",
-        "composer/installers": "^1.9",
+        "php": ">=8.3",
+        "composer/installers": "^2.3",
         "cweagans/composer-patches": "^1.6.5",
         "drupal/admin_toolbar": "^3.5",
-        "drupal/ckeditor": "^1.0",
-        "drupal/classy": "^1.0",
+        "drupal/classy": "^2.0",
         "drupal/components": "^3.0@beta",
         "drupal/config_filter": "^2.6",
         "drupal/config_split": "^2.0",
-        "drupal/core-composer-scaffold": "^10.6",
-        "drupal/core-project-message": "^10.6",
-        "drupal/core-recommended": "^10.6",
+        "drupal/core-composer-scaffold": "^11",
+        "drupal/core-project-message": "^11",
+        "drupal/core-recommended": "^11",
         "drupal/devel": "^5.0",
         "drupal/devel_entity_updates": "^5.0",
         "drupal/extlink": "^2.0",
@@ -47,12 +46,12 @@
         "drupal/views_infinite_scroll": "^2.0",
         "drupal/webform": "^6.3",
         "drupal/webform_views": "^5.6",
-        "drush/drush": "^13",
+        "drush/drush": "^13.8",
         "vlucas/phpdotenv": "^5.6",
         "webflo/drupal-finder": "^1.0.0"
     },
     "require-dev": {
-        "drupal/core-dev": "^10"
+        "drupal/core-dev": "^11"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -62,14 +61,15 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "cweagans/composer-patches": true,
             "composer/installers": true,
-            "drupal/core-composer-scaffold": true,
-            "drupal/console-extend-plugin": true,
+            "cweagans/composer-patches": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/console-extend-plugin": true,
+            "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
+            "symfony/runtime": true,
             "tbachert/spi": true
         }
     },
