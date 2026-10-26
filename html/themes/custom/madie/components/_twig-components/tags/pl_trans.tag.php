@@ -181,17 +181,17 @@ if (!class_exists("Project_pl_trans_TokenParser")) {
       $plural = NULL;
 
       if (!$stream->test(Token::BLOCK_END_TYPE) && $stream->test(Token::STRING_TYPE)) {
-        $body = $this->parser->getExpressionParser()->parseExpression();
+        $body = $this->parser->parseExpression();
       }
       if (!$stream->test(Token::BLOCK_END_TYPE) && $stream->test(Token::NAME_TYPE, 'with')) {
         $stream->next();
-        $options = $this->parser->getExpressionParser()->parseExpression();
+        $options = $this->parser->parseExpression();
       }
       if (!$body) {
         $stream->expect(Token::BLOCK_END_TYPE);
         $body = $this->parser->subparse(array($this, 'decideForFork'));
         if ('plural' === $stream->next()->getValue()) {
-          $count = $this->parser->getExpressionParser()->parseExpression();
+          $count = $this->parser->parseExpression();
           $stream->expect(Token::BLOCK_END_TYPE);
           $plural = $this->parser->subparse(array($this, 'decideForEnd'), TRUE);
         }

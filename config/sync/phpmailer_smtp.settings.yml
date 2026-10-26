@@ -8,7 +8,7 @@ smtp_username: ''
 smtp_password: ''
 smtp_hide_password: false
 smtp_authentication_type: basic_auth
-smtp_fromname: no-reply@cms.gov 
+smtp_fromname: no-reply@cms.gov
 smtp_always_replyto: true
 smtp_keepalive: false
 smtp_debug: 0

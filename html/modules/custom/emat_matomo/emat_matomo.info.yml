@@ -1,5 +1,5 @@
 name: MAT Matomo Tag Manager
 type: module
 description: 'Adds the Matomo Tag Manager script with environment-specific container ID.'
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10 || ^11
 package: Custom

@@ -98,6 +98,7 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_file_limit_message: ''
   form_attributes: {  }
   form_method: ''
   form_action: ''
@@ -200,7 +201,6 @@ settings:
   token_update: false
   token_delete: false
   serial_disabled: false
-  form_file_limit_message: ''
 access:
   create:
     roles:
@@ -284,9 +284,9 @@ handlers:
       attachments: false
       twig: false
       theme_name: ''
+      langcode: ''
       parameters: {  }
       debug: false
-      langcode: ''
   email_notification:
     id: email
     handler_id: email_notification
@@ -322,7 +322,7 @@ handlers:
       attachments: false
       twig: false
       theme_name: ''
+      langcode: ''
       parameters: {  }
       debug: false
-      langcode: ''
 variants: {  }
