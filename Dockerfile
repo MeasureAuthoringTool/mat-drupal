@@ -1,5 +1,5 @@
 # PHP Dependency install via Composer.
-FROM composer:2 AS vendor
+FROM composer:2.11 AS vendor
 
 COPY composer.json composer.json
 COPY composer.lock composer.lock
@@ -12,7 +12,7 @@ RUN composer install \
   --no-dev \
   --prefer-dist
 
-FROM drupal:10
+FROM drupal:11
 
 # NewRelic
 #ARG PHP_AGENT_URL="https://download.newrelic.com/php_agent/release/newrelic-php5-10.19.0.9-linux.tar.gz"
