@@ -48,6 +48,9 @@ RUN echo 'Acquire::http::timeout "300"; ' > /etc/apt/apt.conf.d/99timeouts   && 
   zip  \
   unzip
 
+# Remove openssh-client to avoid CVE-2026-123158
+RUN apt-get remove -y openssh-client && apt-get autoremove -y
+
 # Copy precompiled codebase into the container.
 RUN rm /var/www/html
 COPY --from=vendor /app/ /var/www
